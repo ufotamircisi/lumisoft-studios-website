@@ -9,38 +9,38 @@ import StoreBadges from "@/components/StoreBadges";
 export const metadata: Metadata = {
   title: "Lumisoft Studio",
   description:
-    "Thoughtfully crafted mobile apps for the moments that matter most.",
+    "En önemli anlara yönelik, özenle tasarlanmış mobil uygulamalar.",
 };
 
 const apps = [
   {
     iconImage: "/images/lumibaby-icon.png",
     name: "LumiBaby",
-    tagline: "Minik Uyku — Baby Sleep Support",
+    tagline: "Minik Uyku — Bebek Uyku Desteği",
     description:
-      "Lullabies, sleep tracking, cry detection, white noise, and sleep stories for calmer nights.",
-    href: "/lumibaby",
-    badge: "Available Now",
+      "Ninni, uyku takibi, ağlama algılama, beyaz gürültü ve uyku hikayeleriyle daha huzurlu geceler.",
+    href: "/tr/lumibaby",
+    badge: "Şimdi Mevcut",
   },
   {
     icon: "✨",
     name: "Lumiora",
-    tagline: "A luminous daily companion",
+    tagline: "Aydınlık bir günlük yoldaş",
     description:
-      "Crafted with calm and care for moments of creativity and clarity.",
-    badge: "Coming Soon",
+      "Yaratıcılık ve berraklık anları için huzurla ve özenle tasarlandı.",
+    badge: "Yakında",
   },
   {
     icon: "⚡",
     name: "Neon Siege",
-    tagline: "Fast-paced mobile action",
+    tagline: "Hızlı tempolu mobil aksiyon",
     description:
-      "A high-energy mobile game built for those who love strategy and adrenaline.",
-    badge: "Coming Soon",
+      "Strateji ve adrenalin sevenlere yönelik yüksek enerjili bir mobil oyun.",
+    badge: "Yakında",
   },
 ];
 
-export default function HomePage() {
+export default function HomePageTR() {
   return (
     <>
       <Header />
@@ -48,7 +48,6 @@ export default function HomePage() {
 
         {/* ── Hero ────────────────────────────────────────────── */}
         <section className="relative overflow-hidden px-4 py-28 sm:py-40">
-          {/* deep purple nebula glow */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -56,17 +55,14 @@ export default function HomePage() {
                 "radial-gradient(ellipse 90% 70% at 50% 10%, rgba(109,40,217,0.32), rgba(79,70,229,0.12) 50%, transparent 80%)",
             }}
           />
-          {/* bottom fade */}
           <div
             className="absolute bottom-0 inset-x-0 h-32 pointer-events-none"
             style={{
-              background:
-                "linear-gradient(to bottom, transparent, #080b1a)",
+              background: "linear-gradient(to bottom, transparent, #080b1a)",
             }}
           />
 
           <div className="relative max-w-4xl mx-auto text-center">
-            {/* Emblem */}
             <div className="flex justify-center mb-8">
               <div className="relative">
                 <div
@@ -89,7 +85,7 @@ export default function HomePage() {
             </p>
 
             <h1 className="text-5xl sm:text-7xl font-bold tracking-tight leading-[1.07] mb-6">
-              <span className="text-white">Apps built</span>{" "}
+              <span className="text-white">Kalpten yapılmış</span>{" "}
               <span
                 style={{
                   background:
@@ -99,61 +95,61 @@ export default function HomePage() {
                   backgroundClip: "text",
                 }}
               >
-                with heart
+                uygulamalar
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed mb-10">
-              Thoughtfully crafted mobile experiences for the moments that
-              matter most &mdash; from your baby&apos;s first lullaby to your
-              next great adventure.
+              En önemli anlara yönelik, özenle tasarlanmış mobil deneyimler —
+              bebeğinizin ilk ninnisinden bir sonraki büyük maceranıza kadar.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
               <Link
-                href="/lumibaby"
+                href="/tr/lumibaby"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white transition-all duration-200 shadow-[0_0_24px_rgba(139,92,246,0.4)] hover:shadow-[0_0_32px_rgba(139,92,246,0.6)]"
                 style={{
                   background:
                     "linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #4f46e5 100%)",
                 }}
               >
-                🌙 Explore LumiBaby
+                🌙 LumiBaby&apos;yi Keşfet
               </Link>
               <a
                 href="mailto:support@lumisoftstudios.com"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-violet-400/30 text-violet-200 hover:text-white hover:border-violet-400/60 font-medium transition-colors duration-200"
               >
-                Get in touch
+                İletişime Geç
               </a>
             </div>
           </div>
         </section>
 
-        {/* ── Studio intro ────────────────────────────────────── */}
+        {/* ── Studio intro ─────────────────────────────────────── */}
         <section className="py-20 px-4 border-t border-violet-500/10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">
-              Independent studio, thoughtful products
+              Bağımsız stüdyo, düşünceli ürünler
             </h2>
             <p className="text-slate-200 leading-relaxed text-lg">
-              We are a small, independent app studio focused on building
-              meaningful, polished experiences. Every product we ship is crafted
-              with attention to detail, deep respect for user privacy, and a
-              commitment to quality that our users deserve.
+              Anlamlı ve özenle tasarlanmış deneyimler geliştirmeye odaklanmış
+              küçük, bağımsız bir uygulama stüdyosuyuz. Yayınladığımız her
+              ürün, detaylara dikkat edilerek, kullanıcı gizliliğine derin
+              saygıyla ve kullanıcılarımızın hak ettiği kalite taahhüdüyle
+              hazırlanır.
             </p>
           </div>
         </section>
 
-        {/* ── Apps ────────────────────────────────────────────── */}
+        {/* ── Apps ─────────────────────────────────────────────── */}
         <section className="py-16 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-                Our apps
+                Uygulamalarımız
               </h2>
               <p className="text-slate-300 text-sm">
-                What we have built &mdash; and what&apos;s coming next.
+                Yaptıklarımız ve sırada ne olduğu.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -161,9 +157,10 @@ export default function HomePage() {
                 <AppCard
                   key={app.name}
                   {...app}
+                  learnMoreLabel="Daha fazla →"
                   badges={
                     app.name === "LumiBaby" ? (
-                      <StoreBadges align="start" />
+                      <StoreBadges lang="tr" align="start" />
                     ) : undefined
                   }
                 />
@@ -172,14 +169,18 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Contact ─────────────────────────────────────────── */}
-        <section className="py-20 px-4 border-t border-violet-500/10" id="contact">
+        {/* ── Contact ──────────────────────────────────────────── */}
+        <section
+          className="py-20 px-4 border-t border-violet-500/10"
+          id="iletisim"
+        >
           <div className="max-w-xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Say hello
+              Merhaba Deyin
             </h2>
             <p className="text-slate-200 leading-relaxed mb-8">
-              Questions, ideas, or partnership proposals? We read every message.
+              Sorularınız, fikirleriniz veya iş birliği önerileriniz mi var?
+              Her mesajı okuyoruz.
             </p>
             <a
               href="mailto:support@lumisoftstudios.com"
@@ -195,7 +196,7 @@ export default function HomePage() {
         </section>
 
       </main>
-      <Footer />
+      <Footer lang="tr" />
     </>
   );
 }
