@@ -1,6 +1,7 @@
-// Placeholder store badges — no real store URLs yet.
-// To ship: swap each inner <div> for <a href="...">, swap icon+text for
-// an official <Image> badge file, and remove the opacity/cursor-not-allowed.
+const APP_STORE_URL =
+  "https://apps.apple.com/tr/app/lumibaby-baby-sleep-tracker/id6762529949";
+const GOOGLE_PLAY_URL =
+  "https://play.google.com/store/apps/details?id=com.lumisoft.lumibaby";
 
 function AppleIcon() {
   return (
@@ -40,35 +41,37 @@ export default function StoreBadges({
   align = "center",
 }: StoreBadgesProps) {
   const isTR = lang === "tr";
-  const comingSoon = isTR ? "Yakında" : "Coming soon";
 
   const alignClass = align === "center" ? "justify-center" : "justify-start";
 
   const badges = [
     {
       icon: <AppleIcon />,
+      href: APP_STORE_URL,
       topLabel: isTR ? "İndir" : "Download on the",
       name: "App Store",
-      ariaLabel: `App Store — ${comingSoon}`,
+      ariaLabel: isTR ? "App Store'dan indir" : "Download on the App Store",
     },
     {
       icon: <PlayIcon />,
+      href: GOOGLE_PLAY_URL,
       topLabel: isTR ? "Edinin" : "Get it on",
       name: "Google Play",
-      ariaLabel: `Google Play — ${comingSoon}`,
+      ariaLabel: isTR ? "Google Play'den edinin" : "Get it on Google Play",
     },
   ];
 
   return (
     <div className={`flex flex-wrap items-center gap-2.5 ${alignClass}`}>
       {badges.map((b) => (
-        <button
+        <a
           key={b.name}
-          className="inline-flex items-center gap-2.5 pl-3 pr-4 py-2.5 rounded-xl bg-white/[0.06] border border-white/10 opacity-55 cursor-not-allowed select-none min-w-[148px]"
-          disabled
+          href={b.href}
+          className="inline-flex min-h-[64px] min-w-[148px] items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.06] py-2.5 pl-3 pr-4 transition-colors hover:border-white/25 hover:bg-white/[0.1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-300"
           aria-label={b.ariaLabel}
           title={b.ariaLabel}
-          type="button"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="text-white flex-shrink-0">{b.icon}</div>
           <div>
@@ -78,11 +81,8 @@ export default function StoreBadges({
             <p className="text-sm font-semibold text-white leading-tight mt-0.5">
               {b.name}
             </p>
-            <p className="text-[9px] text-violet-400 leading-none mt-0.5">
-              {comingSoon}
-            </p>
           </div>
-        </button>
+        </a>
       ))}
     </div>
   );

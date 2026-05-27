@@ -24,10 +24,13 @@ export default function AppCard({
   learnMoreLabel,
   badges,
 }: AppCardProps) {
+  const linksWholeCard = Boolean(href && !badges);
   const cardClass = [
     "relative rounded-2xl border p-6 h-full transition-all duration-300",
     href
-      ? "border-violet-500/20 bg-[#0d1230]/70 hover:border-violet-400/50 hover:bg-violet-900/20 cursor-pointer"
+      ? `border-violet-500/20 bg-[#0d1230]/70 hover:border-violet-400/50 hover:bg-violet-900/20 ${
+          linksWholeCard ? "cursor-pointer" : ""
+        }`
       : "border-violet-500/15 bg-[#0d1230]/50",
   ].join(" ");
 
@@ -57,16 +60,24 @@ export default function AppCard({
       <p className="text-sm text-violet-300 font-medium mb-3">{tagline}</p>
       <p className="text-sm text-slate-300 leading-relaxed">{description}</p>
 
-      {href && (
+      {href && linksWholeCard && (
         <p className="mt-5 text-sm font-medium text-violet-400 group-hover:text-violet-300 transition-colors">
           {learnMoreLabel ?? "Learn more →"}
         </p>
+      )}
+      {href && !linksWholeCard && (
+        <Link
+          href={href}
+          className="mt-5 inline-block text-sm font-medium text-violet-400 hover:text-violet-300 transition-colors"
+        >
+          {learnMoreLabel ?? "Learn more →"}
+        </Link>
       )}
       {badges && <div className="mt-4">{badges}</div>}
     </>
   );
 
-  if (href) {
+  if (href && linksWholeCard) {
     return (
       <Link href={href} className="group block">
         <div className={cardClass}>{inner}</div>
@@ -74,5 +85,9 @@ export default function AppCard({
     );
   }
 
-  return <div className={cardClass}>{inner}</div>;
+  return (
+    <div className="group block">
+      <div className={cardClass}>{inner}</div>
+    </div>
+  );
 }
