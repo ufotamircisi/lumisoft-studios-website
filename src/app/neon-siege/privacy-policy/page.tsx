@@ -34,10 +34,12 @@ export default function NeonSiegePrivacyPolicyPage() {
         </section>
 
         {[
+          ["Arcade Game", "Neon Siege is an arcade game developed and published by Lumisoft Studio."],
           ["Local Game Progress", "Game progress, settings, scores, achievements, and similar gameplay data may be stored locally on your device."],
           ["Accounts", "No account login is required to use Neon Siege."],
           ["Advertising", "The App may use Google AdMob to show ads. Ad formats may include rewarded ads, interstitial ads, and banner ads. Rewarded ads are optional."],
           ["Purchases", "The App may use Google Play Billing or App Store purchases. RevenueCat may be used to manage purchases and entitlements. Lumisoft Studio does not collect or store your payment card details."],
+          ["Remove Forced Ads", "Remove Forced Ads removes forced ads between levels. Rewarded ads remain optional and may still be available when you choose to watch them."],
           ["Sensitive Data", "The App does not intentionally collect health, financial, government, or other sensitive personal data."],
           ["Children and Families", "Neon Siege is an entertainment game. It should be used according to the age rating, store listing, parental controls, and family settings available on your device and app store account."],
           ["Privacy Questions", "You can contact support@lumisoftstudios.com for privacy questions or requests related to Neon Siege."],
