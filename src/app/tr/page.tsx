@@ -33,10 +33,11 @@ const apps = [
   {
     icon: "⚡",
     name: "Neon Siege",
-    tagline: "Hızlı tempolu mobil aksiyon",
+    tagline: "Hızlı tempolu neon tuğla nişancısı",
     description:
-      "Strateji ve adrenalin sevenlere yönelik yüksek enerjili bir mobil oyun.",
-    badge: "Yakında",
+      "Güçlendirmeler, elmaslar, bombalar ve seviye ilerlemesiyle parlak bir arcade oyunu.",
+    href: "/tr/neon-siege",
+    badge: "Testte",
   },
 ];
 

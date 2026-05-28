@@ -11,11 +11,19 @@ const routeMap: Record<string, string> = {
   "/lumibaby/support": "/tr/lumibaby/destek",
   "/lumibaby/privacy": "/tr/lumibaby/gizlilik",
   "/lumibaby/terms": "/tr/lumibaby/kullanim-kosullari",
+  "/neon-siege": "/tr/neon-siege",
+  "/neon-siege/support": "/tr/neon-siege/destek",
+  "/neon-siege/privacy-policy": "/tr/neon-siege/gizlilik",
+  "/neon-siege/terms-of-use": "/tr/neon-siege/kullanim-kosullari",
   "/tr": "/",
   "/tr/lumibaby": "/lumibaby",
   "/tr/lumibaby/destek": "/lumibaby/support",
   "/tr/lumibaby/gizlilik": "/lumibaby/privacy",
   "/tr/lumibaby/kullanim-kosullari": "/lumibaby/terms",
+  "/tr/neon-siege": "/neon-siege",
+  "/tr/neon-siege/destek": "/neon-siege/support",
+  "/tr/neon-siege/gizlilik": "/neon-siege/privacy-policy",
+  "/tr/neon-siege/kullanim-kosullari": "/neon-siege/terms-of-use",
 };
 
 export default function Header() {
@@ -29,6 +37,7 @@ export default function Header() {
   const trHref = isTR ? pathname : counterpart;
   const homeHref = isTR ? "/tr" : "/";
   const lumiBabyHref = isTR ? "/tr/lumibaby" : "/lumibaby";
+  const neonSiegeHref = isTR ? "/tr/neon-siege" : "/neon-siege";
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-violet-500/10 bg-[#080b1a]/85 backdrop-blur-md">
@@ -62,6 +71,12 @@ export default function Header() {
               className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
             >
               LumiBaby
+            </Link>
+            <Link
+              href={neonSiegeHref}
+              className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
+            >
+              Neon Siege
             </Link>
           </nav>
 
@@ -135,6 +150,13 @@ export default function Header() {
               onClick={() => setOpen(false)}
             >
               LumiBaby
+            </Link>
+            <Link
+              href={neonSiegeHref}
+              className="text-sm text-slate-200 hover:text-white py-2 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              Neon Siege
             </Link>
           </nav>
           <div className="flex items-center gap-1 mt-3 pt-3 border-t border-violet-500/10">

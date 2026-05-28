@@ -33,10 +33,11 @@ const apps = [
   {
     icon: "⚡",
     name: "Neon Siege",
-    tagline: "Fast-paced mobile action",
+    tagline: "Fast-paced neon brick shooter",
     description:
-      "A high-energy mobile game built for those who love strategy and adrenaline.",
-    badge: "Coming Soon",
+      "A glowing arcade brick shooter with power-ups, diamonds, bombs, and level progression.",
+    href: "/neon-siege",
+    badge: "In Testing",
   },
 ];
 
