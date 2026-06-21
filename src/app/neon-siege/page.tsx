@@ -3,21 +3,24 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const GOOGLE_PLAY_URL =
+  "https://play.google.com/store/apps/details?id=com.erolozcitak.neonsiege";
+const APP_STORE_URL =
+  "https://apps.apple.com/tr/app/neon-siege-brick-breaker/id6774618872";
+
 export const metadata: Metadata = {
-  title: "Neon Siege - Fast-paced neon brick shooter",
+  title: "Neon Siege - Neon arcade brick breaker",
   description:
-    "Neon Siege is a fast-paced arcade brick shooter with glowing visuals, power-ups, diamonds, bombs, multipliers, achievements, and optional rewarded ads.",
+    "Fast-paced neon brick breaker with shapes, skills, boosters, bombs, multipliers, upgrades, and intense levels.",
 };
 
 const features = [
-  "Neon Brick Shooter",
-  "Power-Ups & Multipliers",
-  "Bombs & Special Abilities",
+  "Neon Block Shapes",
+  "Skills & Boosters",
+  "Bombs & Multipliers",
   "Level Progression",
-  "Diamonds & In-Game Market",
-  "Achievements",
-  "Optional Rewarded Ads",
-  "Remove Forced Ads Purchase",
+  "Offline Arcade Gameplay",
+  "Performance Mode",
 ];
 
 const notes = [
@@ -25,7 +28,7 @@ const notes = [
   "In-game diamonds are virtual items for gameplay use only.",
   "Rewarded ads are optional.",
   "Remove Forced Ads removes forced ads between levels; rewarded ads remain optional.",
-  "Purchases are managed through Google Play / App Store when available.",
+  "Purchases are managed through Google Play / App Store.",
 ];
 
 export default function NeonSiegePage() {
@@ -57,27 +60,41 @@ export default function NeonSiegePage() {
             </div>
 
             <p className="text-cyan-300 text-sm font-bold uppercase tracking-widest mb-4">
-              Closed Testing
+              Neon arcade brick breaker
             </p>
             <h1 className="text-4xl sm:text-6xl font-bold text-white tracking-tight mb-3">
               Neon Siege
             </h1>
             <p className="text-fuchsia-300 text-lg font-semibold mb-5">
-              Fast-paced neon brick shooter
+              Fast-paced neon brick breaker
             </p>
             <p className="text-slate-200 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-              Neon Siege is a fast-paced arcade brick shooter with glowing
-              visuals, strategic power-ups, level progression, diamonds, bombs,
-              multipliers, achievements, and optional rewarded ads.
+              Neon Siege is a fast neon brick breaker game built around glowing
+              block shapes, geometric waves, powerful skills, boosters, bombs,
+              multipliers, upgrades, and intense level progression.
+              <br />
+              <br />
+              Aim your shot, break neon formations, unlock power-ups, collect
+              rewards, and survive the siege.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
-              <span className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-cyan-300/35 bg-cyan-400/10 text-cyan-100 text-sm font-semibold">
-                Google Play - Closed Testing
-              </span>
-              <span className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/15 bg-white/[0.03] text-slate-200 text-sm font-semibold">
-                App Store - Coming Soon
-              </span>
+              <a
+                href={GOOGLE_PLAY_URL}
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-cyan-300/35 bg-cyan-400/10 text-cyan-100 text-sm font-semibold transition-colors hover:border-cyan-200/70 hover:bg-cyan-400/15"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download on Google Play
+              </a>
+              <a
+                href={APP_STORE_URL}
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/15 bg-white/[0.03] text-slate-200 text-sm font-semibold transition-colors hover:border-white/30 hover:bg-white/[0.07]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download on the App Store
+              </a>
             </div>
 
             <div className="flex flex-wrap justify-center gap-3">

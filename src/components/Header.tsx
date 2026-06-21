@@ -12,6 +12,8 @@ const routeMap: Record<string, string> = {
   "/lumibaby/privacy": "/tr/lumibaby/gizlilik",
   "/lumibaby/terms": "/tr/lumibaby/kullanim-kosullari",
   "/neon-siege": "/tr/neon-siege",
+  "/neon-siege/download": "/tr/neon-siege",
+  "/neon-siege/download/": "/tr/neon-siege",
   "/neon-siege/support": "/tr/neon-siege/destek",
   "/neon-siege/privacy-policy": "/tr/neon-siege/gizlilik",
   "/neon-siege/terms-of-use": "/tr/neon-siege/kullanim-kosullari",

@@ -3,21 +3,24 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const GOOGLE_PLAY_URL =
+  "https://play.google.com/store/apps/details?id=com.erolozcitak.neonsiege";
+const APP_STORE_URL =
+  "https://apps.apple.com/tr/app/neon-siege-brick-breaker/id6774618872";
+
 export const metadata: Metadata = {
-  title: "Neon Siege - Hızlı tempolu neon tuğla nişancısı",
+  title: "Neon Siege - Neon arcade brick breaker",
   description:
-    "Neon Siege; parlak görseller, güçlendirmeler, elmaslar, bombalar, çarpanlar, başarımlar ve isteğe bağlı ödüllü reklamlar içeren hızlı tempolu bir arcade oyunudur.",
+    "Şekiller, yetenekler, güçlendiriciler, bombalar, çarpanlar, yükseltmeler ve yoğun seviyeler içeren hızlı tempolu neon brick breaker.",
 };
 
 const features = [
-  "Neon Tuğla Nişancısı",
-  "Güçlendirmeler ve Çarpanlar",
-  "Bombalar ve Özel Yetenekler",
+  "Neon Blok Şekilleri",
+  "Yetenekler ve Güçlendiriciler",
+  "Bombalar ve Çarpanlar",
   "Seviye İlerlemesi",
-  "Elmaslar ve Oyun İçi Market",
-  "Başarımlar",
-  "İsteğe Bağlı Ödüllü Reklamlar",
-  "Zorunlu Reklamları Kaldırma",
+  "Çevrimdışı Arcade Oynanış",
+  "Performans Modu",
 ];
 
 const notes = [
@@ -25,7 +28,7 @@ const notes = [
   "Oyun içi elmaslar yalnızca oynanışta kullanılan sanal öğelerdir.",
   "Ödüllü reklamlar isteğe bağlıdır.",
   "Zorunlu Reklamları Kaldır satın alımı seviyeler arasındaki zorunlu reklamları kaldırır; ödüllü reklamlar isteğe bağlı kalır.",
-  "Satın alımlar kullanıma sunulduğunda Google Play / App Store üzerinden yönetilir.",
+  "Satın alımlar Google Play / App Store üzerinden yönetilir.",
 ];
 
 export default function NeonSiegeTRPage() {
@@ -54,27 +57,42 @@ export default function NeonSiegeTRPage() {
             </div>
 
             <p className="text-cyan-300 text-sm font-bold uppercase tracking-widest mb-4">
-              Kapalı Test
+              Neon arcade brick breaker
             </p>
             <h1 className="text-4xl sm:text-6xl font-bold text-white tracking-tight mb-3">
               Neon Siege
             </h1>
             <p className="text-fuchsia-300 text-lg font-semibold mb-5">
-              Hızlı tempolu neon tuğla nişancısı
+              Hızlı tempolu neon brick breaker
             </p>
             <p className="text-slate-200 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-              Neon Siege; parlak görseller, stratejik güçlendirmeler, seviye
-              ilerlemesi, elmaslar, bombalar, çarpanlar, başarımlar ve isteğe
-              bağlı ödüllü reklamlar içeren hızlı tempolu bir arcade oyunudur.
+              Neon Siege; parlak blok şekilleri, geometrik dalgalar, güçlü
+              yetenekler, güçlendiriciler, bombalar, çarpanlar, yükseltmeler ve
+              yoğun seviye ilerlemesi üzerine kurulu hızlı bir neon brick
+              breaker oyunudur.
+              <br />
+              <br />
+              Atışını nişanla, neon formasyonları kır, güçleri aç, ödülleri
+              topla ve kuşatmadan sağ çık.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
-              <span className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-cyan-300/35 bg-cyan-400/10 text-cyan-100 text-sm font-semibold">
-                Google Play - Kapalı Test
-              </span>
-              <span className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/15 bg-white/[0.03] text-slate-200 text-sm font-semibold">
-                App Store - Yakında
-              </span>
+              <a
+                href={GOOGLE_PLAY_URL}
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-cyan-300/35 bg-cyan-400/10 text-cyan-100 text-sm font-semibold transition-colors hover:border-cyan-200/70 hover:bg-cyan-400/15"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Play
+              </a>
+              <a
+                href={APP_STORE_URL}
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/15 bg-white/[0.03] text-slate-200 text-sm font-semibold transition-colors hover:border-white/30 hover:bg-white/[0.07]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                App Store
+              </a>
             </div>
 
             <div className="flex flex-wrap justify-center gap-3">
