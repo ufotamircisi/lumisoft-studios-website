@@ -39,6 +39,15 @@ const apps = [
     href: "/tr/neon-siege",
     badge: "Şimdi Mevcut",
   },
+  {
+    icon: "🍬",
+    name: "Jelly Chain Rush",
+    tagline: "Şeker bulmaca macerası",
+    description:
+      "Şekerleri eşleştir, zincirleme patlamalar oluştur, bölümleri aç ve Şeker Adanı yenile.",
+    href: "/tr/jelly-chain-rush",
+    badge: "Geliştiriliyor",
+  },
 ];
 
 export default function HomePageTR() {
@@ -153,12 +162,16 @@ export default function HomePageTR() {
                 Yaptıklarımız ve sırada ne olduğu.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {apps.map((app) => (
                 <AppCard
                   key={app.name}
                   {...app}
-                  learnMoreLabel="Daha fazla →"
+                  learnMoreLabel={
+                    app.name === "Jelly Chain Rush"
+                      ? "Detayları gör →"
+                      : "Daha fazla →"
+                  }
                   badges={
                     app.name === "LumiBaby" ? (
                       <StoreBadges lang="tr" align="start" />

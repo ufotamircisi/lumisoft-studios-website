@@ -17,6 +17,10 @@ const routeMap: Record<string, string> = {
   "/neon-siege/support": "/tr/neon-siege/destek",
   "/neon-siege/privacy-policy": "/tr/neon-siege/gizlilik",
   "/neon-siege/terms-of-use": "/tr/neon-siege/kullanim-kosullari",
+  "/jelly-chain-rush": "/tr/jelly-chain-rush",
+  "/jelly-chain-rush/privacy": "/tr/jelly-chain-rush/gizlilik",
+  "/jelly-chain-rush/terms": "/tr/jelly-chain-rush/kullanim-kosullari",
+  "/contact": "/tr/contact",
   "/tr": "/",
   "/tr/lumibaby": "/lumibaby",
   "/tr/lumibaby/destek": "/lumibaby/support",
@@ -26,6 +30,10 @@ const routeMap: Record<string, string> = {
   "/tr/neon-siege/destek": "/neon-siege/support",
   "/tr/neon-siege/gizlilik": "/neon-siege/privacy-policy",
   "/tr/neon-siege/kullanim-kosullari": "/neon-siege/terms-of-use",
+  "/tr/jelly-chain-rush": "/jelly-chain-rush",
+  "/tr/jelly-chain-rush/gizlilik": "/jelly-chain-rush/privacy",
+  "/tr/jelly-chain-rush/kullanim-kosullari": "/jelly-chain-rush/terms",
+  "/tr/contact": "/contact",
 };
 
 export default function Header() {
@@ -40,6 +48,9 @@ export default function Header() {
   const homeHref = isTR ? "/tr" : "/";
   const lumiBabyHref = isTR ? "/tr/lumibaby" : "/lumibaby";
   const neonSiegeHref = isTR ? "/tr/neon-siege" : "/neon-siege";
+  const jellyChainRushHref = isTR
+    ? "/tr/jelly-chain-rush"
+    : "/jelly-chain-rush";
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-violet-500/10 bg-[#080b1a]/85 backdrop-blur-md">
@@ -79,6 +90,12 @@ export default function Header() {
               className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
             >
               Neon Siege
+            </Link>
+            <Link
+              href={jellyChainRushHref}
+              className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
+            >
+              Jelly Chain Rush
             </Link>
           </nav>
 
@@ -159,6 +176,13 @@ export default function Header() {
               onClick={() => setOpen(false)}
             >
               Neon Siege
+            </Link>
+            <Link
+              href={jellyChainRushHref}
+              className="text-sm text-slate-200 hover:text-white py-2 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              Jelly Chain Rush
             </Link>
           </nav>
           <div className="flex items-center gap-1 mt-3 pt-3 border-t border-violet-500/10">

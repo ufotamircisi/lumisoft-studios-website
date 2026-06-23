@@ -32,6 +32,20 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
         { href: "/neon-siege/privacy-policy", label: "Privacy Policy" },
         { href: "/neon-siege/terms-of-use", label: "Terms of Use" },
       ];
+  const jellyLinks = isTR
+    ? [
+        { href: "/tr/contact", label: "Destek" },
+        { href: "/tr/jelly-chain-rush/gizlilik", label: "Gizlilik Politikası" },
+        {
+          href: "/tr/jelly-chain-rush/kullanim-kosullari",
+          label: "Kullanım Koşulları",
+        },
+      ]
+    : [
+        { href: "/contact", label: "Support" },
+        { href: "/jelly-chain-rush/privacy", label: "Privacy Policy" },
+        { href: "/jelly-chain-rush/terms", label: "Terms of Use" },
+      ];
 
   return (
     <footer className="border-t border-violet-500/10 bg-[#060915] mt-auto">
@@ -54,7 +68,7 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-3">
             <div>
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">
                 LumiBaby
@@ -78,6 +92,23 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
               </p>
               <div className="flex flex-wrap gap-5">
                 {neonLinks.map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="text-sm text-slate-300 hover:text-violet-300 transition-colors"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">
+                Jelly Chain Rush
+              </p>
+              <div className="flex flex-wrap gap-5">
+                {jellyLinks.map(({ href, label }) => (
                   <Link
                     key={href}
                     href={href}

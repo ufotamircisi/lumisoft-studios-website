@@ -39,6 +39,15 @@ const apps = [
     href: "/neon-siege",
     badge: "Available Now",
   },
+  {
+    icon: "🍬",
+    name: "Jelly Chain Rush",
+    tagline: "Candy puzzle adventure",
+    description:
+      "Match candies, create chain reactions, unlock levels, and rebuild your Candy Island.",
+    href: "/jelly-chain-rush",
+    badge: "In Development",
+  },
 ];
 
 export default function HomePage() {
@@ -157,7 +166,7 @@ export default function HomePage() {
                 What we have built &mdash; and what&apos;s coming next.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {apps.map((app) => (
                 <AppCard
                   key={app.name}
