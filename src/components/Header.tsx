@@ -20,6 +20,10 @@ const routeMap: Record<string, string> = {
   "/jelly-chain-rush": "/tr/jelly-chain-rush",
   "/jelly-chain-rush/privacy": "/tr/jelly-chain-rush/gizlilik",
   "/jelly-chain-rush/terms": "/tr/jelly-chain-rush/kullanim-kosullari",
+  "/roto-blocks": "/tr/roto-blocks",
+  "/roto-blocks/privacy": "/tr/roto-blocks/gizlilik",
+  "/roto-blocks/terms": "/tr/roto-blocks/kullanim-kosullari",
+  "/roto-blocks/support": "/tr/roto-blocks/destek",
   "/contact": "/tr/contact",
   "/tr": "/",
   "/tr/lumibaby": "/lumibaby",
@@ -33,24 +37,34 @@ const routeMap: Record<string, string> = {
   "/tr/jelly-chain-rush": "/jelly-chain-rush",
   "/tr/jelly-chain-rush/gizlilik": "/jelly-chain-rush/privacy",
   "/tr/jelly-chain-rush/kullanim-kosullari": "/jelly-chain-rush/terms",
+  "/tr/roto-blocks": "/roto-blocks",
+  "/tr/roto-blocks/gizlilik": "/roto-blocks/privacy",
+  "/tr/roto-blocks/kullanim-kosullari": "/roto-blocks/terms",
+  "/tr/roto-blocks/destek": "/roto-blocks/support",
   "/tr/contact": "/contact",
 };
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const isTR = pathname.startsWith("/tr");
+  const normalizedPathname =
+    pathname !== "/" ? pathname.replace(/\/+$/, "") : pathname;
+  const isTR = normalizedPathname.startsWith("/tr");
 
   const counterpart =
-    routeMap[pathname] ?? (isTR ? pathname.slice(3) || "/" : `/tr${pathname}`);
-  const enHref = isTR ? counterpart : pathname;
-  const trHref = isTR ? pathname : counterpart;
+    routeMap[normalizedPathname] ??
+    (isTR
+      ? normalizedPathname.slice(3) || "/"
+      : `/tr${normalizedPathname}`);
+  const enHref = isTR ? counterpart : normalizedPathname;
+  const trHref = isTR ? normalizedPathname : counterpart;
   const homeHref = isTR ? "/tr" : "/";
   const lumiBabyHref = isTR ? "/tr/lumibaby" : "/lumibaby";
   const neonSiegeHref = isTR ? "/tr/neon-siege" : "/neon-siege";
   const jellyChainRushHref = isTR
     ? "/tr/jelly-chain-rush"
     : "/jelly-chain-rush";
+  const rotoBlocksHref = isTR ? "/tr/roto-blocks" : "/roto-blocks";
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-violet-500/10 bg-[#080b1a]/85 backdrop-blur-md">
@@ -71,8 +85,8 @@ export default function Header() {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden sm:flex items-center gap-6">
-          <nav className="flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4 lg:gap-6">
+          <nav className="flex items-center gap-4 lg:gap-6">
             <Link
               href={homeHref}
               className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
@@ -96,6 +110,12 @@ export default function Header() {
               className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
             >
               Jelly Chain Rush
+            </Link>
+            <Link
+              href={rotoBlocksHref}
+              className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
+            >
+              Roto Blocks
             </Link>
           </nav>
 
@@ -122,7 +142,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden p-2 text-slate-300 hover:text-white transition-colors"
+          className="md:hidden p-2 text-slate-300 hover:text-white transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation menu"
           aria-expanded={open}
@@ -154,7 +174,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="sm:hidden border-t border-violet-500/10 bg-[#080b1a]/95 px-4 py-4">
+        <div className="md:hidden border-t border-violet-500/10 bg-[#080b1a]/95 px-4 py-4">
           <nav className="flex flex-col gap-1">
             <Link
               href={homeHref}
@@ -183,6 +203,13 @@ export default function Header() {
               onClick={() => setOpen(false)}
             >
               Jelly Chain Rush
+            </Link>
+            <Link
+              href={rotoBlocksHref}
+              className="text-sm text-slate-200 hover:text-white py-2 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              Roto Blocks
             </Link>
           </nav>
           <div className="flex items-center gap-1 mt-3 pt-3 border-t border-violet-500/10">

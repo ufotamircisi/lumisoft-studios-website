@@ -48,6 +48,16 @@ const apps = [
     href: "/tr/jelly-chain-rush",
     badge: "Geliştiriliyor",
   },
+  {
+    iconImage: "/images/roto-blocks-icon.png",
+    name: "Roto Blocks",
+    tagline: "Bulmaca Oyunu",
+    description:
+      "Her üç hamlede dönen tahtasıyla yeni kombo fırsatları oluşturan rahatlatıcı bir blok bulmaca oyunu.",
+    href: "/tr/roto-blocks",
+    badge: "Yakında",
+    learnMoreLabel: "Detayları Gör",
+  },
 ];
 
 export default function HomePageTR() {
@@ -162,15 +172,16 @@ export default function HomePageTR() {
                 Yaptıklarımız ve sırada ne olduğu.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {apps.map((app) => (
                 <AppCard
                   key={app.name}
                   {...app}
                   learnMoreLabel={
-                    app.name === "Jelly Chain Rush"
-                      ? "Detayları gör →"
-                      : "Daha fazla →"
+                    app.learnMoreLabel ??
+                    (app.name === "Jelly Chain Rush"
+                      ? "Detayları gör"
+                      : "Daha fazla")
                   }
                   badges={
                     app.name === "LumiBaby" ? (

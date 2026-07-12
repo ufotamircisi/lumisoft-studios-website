@@ -48,6 +48,16 @@ const apps = [
     href: "/jelly-chain-rush",
     badge: "In Development",
   },
+  {
+    iconImage: "/images/roto-blocks-icon.png",
+    name: "Roto Blocks",
+    tagline: "Puzzle Game",
+    description:
+      "A relaxing block puzzle game where every three moves rotate the board and create new combo chances.",
+    href: "/roto-blocks",
+    badge: "Coming Soon",
+    learnMoreLabel: "Learn More",
+  },
 ];
 
 export default function HomePage() {
@@ -166,7 +176,7 @@ export default function HomePage() {
                 What we have built &mdash; and what&apos;s coming next.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {apps.map((app) => (
                 <AppCard
                   key={app.name}
