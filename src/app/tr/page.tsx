@@ -152,10 +152,17 @@ export default function HomePageTR() {
         </section>
 
         {/* ── Apps ─────────────────────────────────────────────── */}
-        <section className="py-16 px-4">
+        <section
+          className="py-16 px-4 scroll-mt-20"
+          id="uygulamalar"
+          aria-labelledby="uygulamalar-heading"
+        >
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+              <h2
+                id="uygulamalar-heading"
+                className="text-2xl sm:text-3xl font-bold text-white mb-2"
+              >
                 Uygulamalarımız
               </h2>
               <p className="text-slate-300 text-sm">
