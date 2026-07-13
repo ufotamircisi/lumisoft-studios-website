@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -118,6 +119,19 @@ export default function JellyChainRushPage({
 
           <div className="relative max-w-5xl mx-auto grid items-center gap-10 lg:grid-cols-[1fr_0.92fr]">
             <div className="text-center lg:text-left">
+              <div className="mb-7 flex justify-center lg:justify-start">
+                <div className="relative">
+                  <div className="absolute inset-0 scale-110 rounded-3xl bg-pink-400/25 blur-2xl" />
+                  <Image
+                    src="/images/icon.png"
+                    alt="Jelly Chain Rush"
+                    width={88}
+                    height={88}
+                    className="relative h-[88px] w-[88px] rounded-[22px] object-cover shadow-[0_8px_40px_rgba(244,114,182,0.4)]"
+                    priority
+                  />
+                </div>
+              </div>
               <p className="text-pink-200 text-sm font-bold uppercase tracking-widest mb-4">
                 {t.eyebrow}
               </p>

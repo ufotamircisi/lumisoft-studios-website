@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -62,9 +63,14 @@ export default function NeonSiegeDownloadPage() {
           />
 
           <div className="relative mx-auto flex max-w-xl flex-col items-center text-center">
-            <div className="mb-7 flex h-24 w-24 items-center justify-center rounded-[24px] border border-cyan-300/35 bg-[#071324] text-5xl shadow-[0_0_44px_rgba(34,211,238,0.34)]">
-              <span aria-hidden="true">⚡</span>
-            </div>
+            <Image
+              src="/images/neon-siege-app-icon.png"
+              alt="Neon Siege"
+              width={96}
+              height={96}
+              className="mb-7 h-24 w-24 rounded-[24px] border border-cyan-300/35 object-cover shadow-[0_0_44px_rgba(34,211,238,0.34)]"
+              priority
+            />
 
             <h1 className="mb-3 text-3xl font-bold tracking-tight text-white sm:text-5xl">
               Redirecting to Neon Siege...
