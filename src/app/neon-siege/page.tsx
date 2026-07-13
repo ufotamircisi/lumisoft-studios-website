@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedProducts from "@/components/RelatedProducts";
 
 const GOOGLE_PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.erolozcitak.neonsiege";
@@ -163,6 +164,7 @@ export default function NeonSiegePage() {
             </div>
           </div>
         </section>
+        <RelatedProducts currentSlug="neon-siege" lang="en" />
       </main>
       <Footer />
     </>

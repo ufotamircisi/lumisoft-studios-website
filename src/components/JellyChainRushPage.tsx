@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedProducts from "@/components/RelatedProducts";
 
 type JellyChainRushPageProps = {
   lang?: "en" | "tr";
@@ -274,6 +275,7 @@ export default function JellyChainRushPage({
             </div>
           </div>
         </section>
+        <RelatedProducts currentSlug="jelly-chain-rush" lang={lang} />
       </main>
       <Footer lang={lang} />
     </>

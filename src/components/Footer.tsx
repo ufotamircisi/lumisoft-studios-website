@@ -1,137 +1,161 @@
 import Image from "next/image";
 import Link from "next/link";
+import { games, apps, STORE_URLS } from "@/lib/products";
 
 export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
   const isTR = lang === "tr";
+  const l = isTR ? "tr" : "en";
 
-  const links = isTR
+  const companyLinks = isTR
     ? [
-        { href: "/tr/lumibaby/destek", label: "Destek" },
-        { href: "/tr/lumibaby/gizlilik", label: "Gizlilik Politikası" },
-        {
-          href: "/tr/lumibaby/kullanim-kosullari",
-          label: "Kullanım Koşulları",
-        },
+        { href: "/tr/about", label: "Hakkımızda" },
+        { href: "/tr/support", label: "Destek" },
+        { href: "/tr/contact", label: "İletişim" },
       ]
     : [
-        { href: "/lumibaby/support", label: "Support" },
-        { href: "/lumibaby/privacy", label: "Privacy Policy" },
-        { href: "/lumibaby/terms", label: "Terms of Use" },
+        { href: "/about", label: "About" },
+        { href: "/support", label: "Support" },
+        { href: "/contact", label: "Contact" },
       ];
-  const neonLinks = isTR
+
+  const legalLinks = isTR
     ? [
-        { href: "/tr/neon-siege/destek", label: "Destek" },
-        { href: "/tr/neon-siege/gizlilik", label: "Gizlilik Politikası" },
-        {
-          href: "/tr/neon-siege/kullanim-kosullari",
-          label: "Kullanım Koşulları",
-        },
+        { href: "/tr/privacy", label: "Gizlilik Politikası" },
+        { href: "/tr/terms", label: "Kullanım Koşulları" },
       ]
     : [
-        { href: "/neon-siege/support", label: "Support" },
-        { href: "/neon-siege/privacy-policy", label: "Privacy Policy" },
-        { href: "/neon-siege/terms-of-use", label: "Terms of Use" },
+        { href: "/privacy", label: "Privacy Policy" },
+        { href: "/terms", label: "Terms of Use" },
       ];
-  const jellyLinks = isTR
-    ? [
-        { href: "/tr/contact", label: "Destek" },
-        { href: "/tr/jelly-chain-rush/gizlilik", label: "Gizlilik Politikası" },
-        {
-          href: "/tr/jelly-chain-rush/kullanim-kosullari",
-          label: "Kullanım Koşulları",
-        },
-      ]
-    : [
-        { href: "/contact", label: "Support" },
-        { href: "/jelly-chain-rush/privacy", label: "Privacy Policy" },
-        { href: "/jelly-chain-rush/terms", label: "Terms of Use" },
-      ];
+
+  const columns = [
+    {
+      title: isTR ? "Oyunlar" : "Games",
+      links: games.map((g) => ({
+        href: g.href?.[l],
+        label: g.name,
+        soon: !g.href,
+      })),
+    },
+    {
+      title: isTR ? "Uygulamalar" : "Apps",
+      links: apps.map((a) => ({
+        href: a.href?.[l],
+        label: a.name,
+        soon: !a.href,
+      })),
+    },
+    {
+      title: isTR ? "Stüdyo" : "Company",
+      links: companyLinks.map((c) => ({ ...c, soon: false })),
+    },
+    {
+      title: isTR ? "Yasal" : "Legal",
+      links: legalLinks.map((c) => ({ ...c, soon: false })),
+    },
+  ];
 
   return (
-    <footer className="border-t border-violet-500/10 bg-[#060915] mt-auto">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+    <footer className="mt-auto border-t border-white/[0.07] bg-[#060915]">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(4,1fr)]">
+          {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 text-white font-semibold text-base mb-2">
+            <Link
+              href={isTR ? "/tr" : "/"}
+              className="mb-3 inline-flex items-center gap-2.5 text-base font-semibold text-white"
+            >
               <Image
-                src="/images/lumisoft-studio-emblem.png"
+                src="/images/brand/lumisoft-logo-mark.png"
                 alt=""
-                width={24}
-                height={24}
-                className="h-6 w-6 object-contain"
+                width={26}
+                height={30}
+                className="h-8 w-auto object-contain"
               />
-              Lumisoft Studio
-            </div>
-            <p className="text-xs text-slate-500">
-              &copy; {new Date().getFullYear()} Lumisoft Studio.{" "}
-              {isTR ? "Tüm hakları saklıdır." : "All rights reserved."}
+              Lumisoft Studios
+            </Link>
+            <p className="mb-5 max-w-xs text-sm leading-relaxed text-slate-400">
+              {isTR
+                ? "iOS ve Android için özenle geliştirilmiş oyunlar ve uygulamalar üreten bağımsız stüdyo."
+                : "An independent studio crafting polished games and apps for iOS and Android."}
             </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-3">
-            <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">
-                LumiBaby
-              </p>
-              <div className="flex flex-wrap gap-5">
-                {links.map(({ href, label }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="text-sm text-slate-300 hover:text-violet-300 transition-colors"
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">
-                Neon Siege
-              </p>
-              <div className="flex flex-wrap gap-5">
-                {neonLinks.map(({ href, label }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="text-sm text-slate-300 hover:text-violet-300 transition-colors"
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">
-                Jelly Chain Rush
-              </p>
-              <div className="flex flex-wrap gap-5">
-                {jellyLinks.map(({ href, label }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="text-sm text-slate-300 hover:text-violet-300 transition-colors"
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 pt-6 border-t border-violet-500/10">
-          <p className="text-xs text-slate-500 text-center">
-            {isTR ? "Sorularınız mı var?" : "Questions?"}{" "}
             <a
               href="mailto:support@lumisoftstudios.com"
-              className="text-slate-400 hover:text-violet-300 transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-violet-300"
             >
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.8}
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                />
+              </svg>
               support@lumisoftstudios.com
             </a>
+          </div>
+
+          {/* Link columns */}
+          {columns.map((col) => (
+            <nav key={col.title} aria-label={col.title}>
+              <p className="eyebrow mb-4 text-slate-500">{col.title}</p>
+              <ul className="space-y-2.5">
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    {link.href ? (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-slate-300 transition-colors hover:text-violet-300"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <span className="text-sm text-slate-500">
+                        {link.label}
+                        <span className="ml-1.5 text-[10px] uppercase tracking-wider text-slate-600">
+                          {isTR ? "Yakında" : "Soon"}
+                        </span>
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/[0.07] pt-6 sm:flex-row">
+          <p className="text-xs text-slate-500">
+            &copy; {new Date().getFullYear()} Lumisoft Studios.{" "}
+            {isTR ? "Tüm hakları saklıdır." : "All rights reserved."}
           </p>
+          <div className="flex items-center gap-4">
+            <a
+              href={STORE_URLS.lumibaby.appStore}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+            >
+              App Store
+            </a>
+            <span className="text-slate-700" aria-hidden="true">
+              ·
+            </span>
+            <a
+              href={STORE_URLS.lumibaby.googlePlay}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+            >
+              Google Play
+            </a>
+          </div>
         </div>
       </div>
     </footer>

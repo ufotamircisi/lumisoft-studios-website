@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedProducts from "@/components/RelatedProducts";
 import StoreBadges from "@/components/StoreBadges";
 
 export const metadata: Metadata = {
@@ -351,6 +352,7 @@ export default function LumiBabyPage() {
           </div>
         </section>
 
+        <RelatedProducts currentSlug="lumibaby" lang="en" />
       </main>
       <Footer />
     </>

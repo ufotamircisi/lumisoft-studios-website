@@ -20,6 +20,10 @@ const routeMap: Record<string, string> = {
   "/jelly-chain-rush": "/tr/jelly-chain-rush",
   "/jelly-chain-rush/privacy": "/tr/jelly-chain-rush/gizlilik",
   "/jelly-chain-rush/terms": "/tr/jelly-chain-rush/kullanim-kosullari",
+  "/roto-blocks": "/tr/roto-blocks",
+  "/roto-blocks/support": "/tr/roto-blocks/destek",
+  "/roto-blocks/privacy": "/tr/roto-blocks/gizlilik",
+  "/roto-blocks/terms": "/tr/roto-blocks/kullanim-kosullari",
   "/contact": "/tr/contact",
   "/tr": "/",
   "/tr/lumibaby": "/lumibaby",
@@ -33,85 +37,85 @@ const routeMap: Record<string, string> = {
   "/tr/jelly-chain-rush": "/jelly-chain-rush",
   "/tr/jelly-chain-rush/gizlilik": "/jelly-chain-rush/privacy",
   "/tr/jelly-chain-rush/kullanim-kosullari": "/jelly-chain-rush/terms",
+  "/tr/roto-blocks": "/roto-blocks",
+  "/tr/roto-blocks/destek": "/roto-blocks/support",
+  "/tr/roto-blocks/gizlilik": "/roto-blocks/privacy",
+  "/tr/roto-blocks/kullanim-kosullari": "/roto-blocks/terms",
   "/tr/contact": "/contact",
 };
 
+function normalize(path: string) {
+  return path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-  const isTR = pathname.startsWith("/tr");
+  const rawPathname = usePathname();
+  const pathname = normalize(rawPathname);
+  const isTR = pathname === "/tr" || pathname.startsWith("/tr/");
 
   const counterpart =
     routeMap[pathname] ?? (isTR ? pathname.slice(3) || "/" : `/tr${pathname}`);
   const enHref = isTR ? counterpart : pathname;
   const trHref = isTR ? pathname : counterpart;
   const homeHref = isTR ? "/tr" : "/";
-  const lumiBabyHref = isTR ? "/tr/lumibaby" : "/lumibaby";
-  const neonSiegeHref = isTR ? "/tr/neon-siege" : "/neon-siege";
-  const jellyChainRushHref = isTR
-    ? "/tr/jelly-chain-rush"
-    : "/jelly-chain-rush";
+
+  const anchorBase = isTR ? "/tr/" : "/";
+  const navItems = [
+    { href: homeHref, label: isTR ? "Ana Sayfa" : "Home" },
+    { href: `${anchorBase}#games`, label: isTR ? "Oyunlar" : "Games" },
+    { href: `${anchorBase}#apps`, label: isTR ? "Uygulamalar" : "Apps" },
+    { href: isTR ? "/tr/about" : "/about", label: isTR ? "Hakkımızda" : "About" },
+    { href: isTR ? "/tr/support" : "/support", label: isTR ? "Destek" : "Support" },
+  ];
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 border-b border-violet-500/10 bg-[#080b1a]/85 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-white/[0.07] bg-[#080b1a]/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
           href={homeHref}
-          className="flex items-center gap-3 font-semibold text-white text-base tracking-tight"
+          className="flex items-center gap-3 text-base font-semibold tracking-tight text-white"
         >
           <Image
-            src="/images/lumisoft-studio-emblem.png"
+            src="/images/brand/lumisoft-logo-mark.png"
             alt=""
-            width={32}
-            height={32}
-            className="h-8 w-8 object-contain"
+            width={31}
+            height={36}
+            className="h-9 w-auto object-contain drop-shadow-[0_0_12px_rgba(139,92,246,0.45)]"
             priority
           />
-          <span className="text-[#eef0ff]">Lumisoft Studio</span>
+          <span className="text-[#f2f4ff]">Lumisoft Studios</span>
         </Link>
 
         {/* Desktop */}
-        <div className="hidden sm:flex items-center gap-6">
-          <nav className="flex items-center gap-6">
-            <Link
-              href={homeHref}
-              className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
-            >
-              {isTR ? "Ana Sayfa" : "Home"}
-            </Link>
-            <Link
-              href={lumiBabyHref}
-              className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
-            >
-              LumiBaby
-            </Link>
-            <Link
-              href={neonSiegeHref}
-              className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
-            >
-              Neon Siege
-            </Link>
-            <Link
-              href={jellyChainRushHref}
-              className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
-            >
-              Jelly Chain Rush
-            </Link>
+        <div className="hidden items-center gap-6 md:flex">
+          <nav className="flex items-center gap-6" aria-label="Primary">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-sm text-slate-300 transition-colors duration-200 hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
-          <div className="flex items-center gap-0.5 border-l border-violet-500/20 pl-4 ml-1">
+          <div className="ml-1 flex items-center gap-0.5 border-l border-white/10 pl-4">
             <Link
               href={enHref}
-              className={`text-xs font-bold px-2 py-1 rounded transition-colors ${
+              aria-label="English"
+              className={`rounded px-2 py-1 text-xs font-bold transition-colors ${
                 !isTR ? "text-white" : "text-slate-500 hover:text-slate-300"
               }`}
             >
               EN
             </Link>
-            <span className="text-violet-700 text-xs select-none">|</span>
+            <span className="select-none text-xs text-slate-700">|</span>
             <Link
               href={trHref}
-              className={`text-xs font-bold px-2 py-1 rounded transition-colors ${
+              aria-label="Türkçe"
+              className={`rounded px-2 py-1 text-xs font-bold transition-colors ${
                 isTR ? "text-white" : "text-slate-500 hover:text-slate-300"
               }`}
             >
@@ -122,16 +126,25 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden p-2 text-slate-300 hover:text-white transition-colors"
+          className="p-2 text-slate-300 transition-colors hover:text-white md:hidden"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle navigation menu"
+          aria-label={
+            open
+              ? isTR
+                ? "Menüyü kapat"
+                : "Close navigation menu"
+              : isTR
+                ? "Menüyü aç"
+                : "Open navigation menu"
+          }
           aria-expanded={open}
         >
           <svg
-            className="w-5 h-5"
+            className="h-5 w-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             {open ? (
               <path
@@ -154,51 +167,33 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="sm:hidden border-t border-violet-500/10 bg-[#080b1a]/95 px-4 py-4">
-          <nav className="flex flex-col gap-1">
-            <Link
-              href={homeHref}
-              className="text-sm text-slate-200 hover:text-white py-2 transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              {isTR ? "Ana Sayfa" : "Home"}
-            </Link>
-            <Link
-              href={lumiBabyHref}
-              className="text-sm text-slate-200 hover:text-white py-2 transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              LumiBaby
-            </Link>
-            <Link
-              href={neonSiegeHref}
-              className="text-sm text-slate-200 hover:text-white py-2 transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              Neon Siege
-            </Link>
-            <Link
-              href={jellyChainRushHref}
-              className="text-sm text-slate-200 hover:text-white py-2 transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              Jelly Chain Rush
-            </Link>
+        <div className="border-t border-white/[0.07] bg-[#080b1a]/95 px-4 py-4 backdrop-blur-xl md:hidden">
+          <nav className="flex flex-col gap-1" aria-label="Primary mobile">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="rounded-lg px-2 py-2.5 text-sm text-slate-200 transition-colors hover:bg-white/[0.05] hover:text-white"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
-          <div className="flex items-center gap-1 mt-3 pt-3 border-t border-violet-500/10">
+          <div className="mt-3 flex items-center gap-1 border-t border-white/[0.07] pt-3">
             <Link
               href={enHref}
-              className={`text-xs font-bold px-2 py-1 transition-colors ${
+              className={`px-2 py-1 text-xs font-bold transition-colors ${
                 !isTR ? "text-white" : "text-slate-500 hover:text-slate-300"
               }`}
               onClick={() => setOpen(false)}
             >
               EN
             </Link>
-            <span className="text-violet-700 text-xs select-none">|</span>
+            <span className="select-none text-xs text-slate-700">|</span>
             <Link
               href={trHref}
-              className={`text-xs font-bold px-2 py-1 transition-colors ${
+              className={`px-2 py-1 text-xs font-bold transition-colors ${
                 isTR ? "text-white" : "text-slate-500 hover:text-slate-300"
               }`}
               onClick={() => setOpen(false)}
