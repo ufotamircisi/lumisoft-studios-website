@@ -16,20 +16,49 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  "Neon Block Shapes",
-  "Skills & Boosters",
-  "Bombs & Multipliers",
-  "Level Progression",
-  "Offline Arcade Gameplay",
-  "Performance Mode",
+  {
+    title: "Neon Block Shapes",
+    text: "Glowing formations arrive in geometric waves that keep every level fresh.",
+  },
+  {
+    title: "Skills & Boosters",
+    text: "Unlock power-ups and upgrades that change how each run plays out.",
+  },
+  {
+    title: "Bombs & Multipliers",
+    text: "Chain explosive clears together and watch your score multiply.",
+  },
+  {
+    title: "Level Progression",
+    text: "Intense levels ramp up the challenge as you push deeper into the siege.",
+  },
+  {
+    title: "Offline Arcade Gameplay",
+    text: "No connection needed. Break bricks on the plane, the train, anywhere.",
+  },
+  {
+    title: "Performance Mode",
+    text: "Runs smooth on modest phones and goes easy on the battery.",
+  },
 ];
 
-const notes = [
-  "Neon Siege is a game, not a gambling app.",
-  "In-game diamonds are virtual items for gameplay use only.",
-  "Rewarded ads are optional.",
-  "Remove Forced Ads removes forced ads between levels; rewarded ads remain optional.",
-  "Purchases are managed through Google Play / App Store.",
+const faqs = [
+  {
+    q: "Is Neon Siege free to play?",
+    a: "Yes. Neon Siege is free to download and play. Rewarded ads are always optional, and a Remove Forced Ads purchase removes the forced ads between levels.",
+  },
+  {
+    q: "Can I play offline?",
+    a: "Yes. Neon Siege is built for offline arcade play, so no connection is needed.",
+  },
+  {
+    q: "Are in-game diamonds gambling?",
+    a: "No. Neon Siege is a game, not a gambling app. Diamonds are virtual items for gameplay use only.",
+  },
+  {
+    q: "How do purchases work?",
+    a: "All purchases are managed through Google Play or the App Store, under the store's own terms and refund rules.",
+  },
 ];
 
 export default function NeonSiegePage() {
@@ -112,35 +141,62 @@ export default function NeonSiegePage() {
           </div>
         </section>
 
-        <section className="px-4 pb-16">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {features.map((feature) => (
-              <div
-                key={feature}
-                className="rounded-2xl border border-cyan-400/15 bg-[#091629]/80 p-5 shadow-[0_0_24px_rgba(34,211,238,0.06)]"
-              >
-                <div className="h-10 w-10 rounded-xl bg-fuchsia-500/15 border border-fuchsia-300/20 flex items-center justify-center text-cyan-200 mb-4">
-                  ✦
+        <section className="px-4 pb-20 pt-4">
+          <div className="mx-auto max-w-5xl">
+            <p className="eyebrow mb-2 text-cyan-400">Gameplay</p>
+            <h2 className="mb-8 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Built for fast hands
+            </h2>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="relative overflow-hidden rounded-2xl border border-cyan-400/15 bg-[#091629]/80 p-6 transition-colors duration-300 hover:border-cyan-300/40"
+                >
+                  <div
+                    className="absolute inset-x-0 top-0 h-px"
+                    aria-hidden="true"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, transparent, rgba(34,211,238,0.45), transparent)",
+                    }}
+                  />
+                  <h3 className="mb-2 text-base font-bold text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-400">
+                    {feature.text}
+                  </p>
                 </div>
-                <h2 className="text-base font-bold text-white">{feature}</h2>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="py-14 px-4 border-t border-cyan-400/10">
-          <div className="max-w-3xl mx-auto rounded-2xl border border-cyan-400/20 bg-[#0b1228]/90 p-7 sm:p-8">
-            <h2 className="text-2xl font-bold text-white mb-5">
-              Game & purchase notes
+        <section className="border-t border-cyan-400/10 px-4 py-16">
+          <div className="mx-auto max-w-3xl">
+            <p className="eyebrow mb-2 text-cyan-400">FAQ</p>
+            <h2 className="mb-8 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Common questions
             </h2>
-            <ul className="space-y-3">
-              {notes.map((note) => (
-                <li key={note} className="flex gap-3 text-slate-200 leading-relaxed">
-                  <span className="text-cyan-300 mt-0.5">›</span>
-                  <span>{note}</span>
-                </li>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <details key={faq.q} className="card-glass group p-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left text-base font-semibold text-white [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <span
+                      className="text-cyan-400 transition-transform duration-300 group-open:rotate-45"
+                      aria-hidden="true"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="px-5 pb-5 text-sm leading-relaxed text-slate-300">
+                    {faq.a}
+                  </p>
+                </details>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 

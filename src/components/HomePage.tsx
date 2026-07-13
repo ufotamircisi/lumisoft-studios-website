@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
@@ -102,6 +103,7 @@ export default function HomePage({ lang = "en" }: HomePageProps) {
         {/* ── Hero ────────────────────────────────────────────── */}
         <section className="relative overflow-hidden px-4 pb-24 pt-20 sm:pb-32 sm:pt-28">
           <div className="bg-grid absolute inset-0" aria-hidden="true" />
+          {/* layered lighting */}
           <div
             className="pointer-events-none absolute inset-0"
             aria-hidden="true"
@@ -111,29 +113,49 @@ export default function HomePage({ lang = "en" }: HomePageProps) {
             }}
           />
           <div
+            className="pointer-events-none absolute inset-0"
+            aria-hidden="true"
+            style={{
+              background:
+                "radial-gradient(ellipse 40% 45% at 18% 25%, rgba(99,102,241,0.14), transparent 70%), radial-gradient(ellipse 40% 45% at 82% 30%, rgba(168,85,247,0.1), transparent 70%)",
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-x-0 top-0 h-px"
+            aria-hidden="true"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, rgba(167,139,250,0.5), transparent)",
+            }}
+          />
+          <div
             className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
             aria-hidden="true"
             style={{
               background: "linear-gradient(to bottom, transparent, #080b1a)",
             }}
           />
+          {/* soft floating particles */}
+          <div className="particles" aria-hidden="true">
+            {Array.from({ length: 9 }).map((_, i) => (
+              <span key={i} />
+            ))}
+          </div>
           <HeroGlow />
 
           <div className="relative mx-auto max-w-4xl text-center">
             <div className="hero-enter hero-enter-1 mb-10 flex justify-center">
               <div className="animate-float relative">
                 <div
-                  className="absolute inset-0 scale-125 rounded-full blur-3xl"
+                  className="absolute inset-0 scale-150 rounded-full blur-3xl"
                   aria-hidden="true"
-                  style={{ background: "rgba(139,92,246,0.28)" }}
+                  style={{ background: "rgba(139,92,246,0.22)" }}
                 />
-                <Image
-                  src="/images/brand/lumisoft-logo-mark.png"
-                  alt="Lumisoft Studios"
-                  width={248}
-                  height={288}
-                  className="relative h-44 w-auto object-contain drop-shadow-[0_0_36px_rgba(129,140,248,0.45)] sm:h-52"
+                <BrandLogo
+                  size={200}
                   priority
+                  alt="Lumisoft Studios"
+                  className="relative drop-shadow-[0_0_40px_rgba(129,140,248,0.4)] sm:scale-110"
                 />
               </div>
             </div>

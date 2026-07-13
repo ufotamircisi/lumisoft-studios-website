@@ -5,9 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import StoreBadges from "@/components/StoreBadges";
+import PhoneMockup from "@/components/PhoneMockup";
 
 export const metadata: Metadata = {
-  title: "LumiBaby – Baby Sleep Support",
+  title: "LumiBaby | Baby Sleep Support",
   description:
     "LumiBaby helps parents support baby sleep with cry detection, lullabies, sleep tracking, white noise, and sleep stories.",
 };
@@ -28,7 +29,7 @@ const gridFeatures: Feature[] = [
       "Parents can track baby sleep sessions.",
       "Helps follow sleep duration, naps, night sleep, and routines.",
     ],
-    note: "A supportive tracking tool — not a medical sleep diagnosis system.",
+    note: "A supportive tracking tool, not a medical sleep diagnosis system.",
   },
   {
     icon: "🤔",
@@ -57,11 +58,11 @@ const gridFeatures: Feature[] = [
     title: "Parent Connection & Alerts",
     bullets: [
       "Parents can connect another parent or caregiver device through the app.",
-      "When important baby moments are detected — such as crying or calming events — LumiBaby can send alerts to connected phones.",
+      "When important baby moments are detected, such as crying or calming events, LumiBaby can send alerts to connected phones.",
       "If the connected phone has smartwatch notifications enabled, alerts may also appear on the smartwatch, depending on device and notification settings.",
       "Helps both parents stay aware, especially during sleep routines, night care, or when one parent is in another room.",
     ],
-    note: "Alert delivery depends on phone settings, internet connection, permissions, battery settings, and smartwatch configuration. Alerts are a supportive awareness tool — not a replacement for direct parental supervision.",
+    note: "Alert delivery depends on phone settings, internet connection, permissions, battery settings, and smartwatch configuration. Alerts are a supportive awareness tool, not a replacement for direct parental supervision.",
   },
   {
     icon: "🎵",
@@ -103,64 +104,70 @@ export default function LumiBabyPage() {
             }}
           />
 
-          <div className="relative max-w-3xl mx-auto text-center">
-            {/* App icon */}
-            <div className="flex justify-center mb-7">
-              <div className="relative">
-                <div
-                  className="absolute inset-0 rounded-3xl blur-2xl scale-110"
-                  style={{ background: "rgba(109,40,217,0.3)" }}
-                />
-                <Image
-                  src="/images/lumibaby-icon.png"
-                  alt="LumiBaby"
-                  width={112}
-                  height={112}
-                  className="relative rounded-[26px] shadow-[0_8px_40px_rgba(109,40,217,0.4)]"
-                  priority
-                />
+          <div className="relative mx-auto grid max-w-5xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="text-center lg:text-left">
+              <div className="mb-7 flex justify-center lg:justify-start">
+                <div className="relative">
+                  <div
+                    className="absolute inset-0 rounded-3xl blur-2xl scale-110"
+                    style={{ background: "rgba(109,40,217,0.3)" }}
+                  />
+                  <Image
+                    src="/images/lumibaby-icon.png"
+                    alt="LumiBaby"
+                    width={88}
+                    height={88}
+                    className="relative rounded-[22px] shadow-[0_8px_40px_rgba(109,40,217,0.4)]"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <p className="eyebrow mb-4 text-violet-400">
+                Minik Uyku · Baby Sleep Support
+              </p>
+              <h1 className="mb-5 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                LumiBaby
+              </h1>
+              <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-slate-200 lg:mx-0">
+                A calm, supportive companion for the night shift. LumiBaby
+                helps parents listen, track, and soothe, so the whole family
+                can rest.
+              </p>
+
+              <div className="mb-8 flex justify-center lg:justify-start">
+                <StoreBadges />
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+                <Link
+                  href="/lumibaby/support"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-violet-400/40 text-violet-200 hover:text-white hover:border-violet-400/70 text-sm font-semibold transition-colors"
+                >
+                  Support
+                </Link>
+                <Link
+                  href="/lumibaby/privacy"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/lumibaby/terms"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
+                >
+                  Terms of Use
+                </Link>
               </div>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl font-bold text-white tracking-tight mb-3">
-              LumiBaby
-            </h1>
-            <p className="text-violet-300 text-lg font-semibold mb-5">
-              Minik Uyku — Baby Sleep Support
-            </p>
-            <p className="text-slate-200 text-lg leading-relaxed max-w-xl mx-auto mb-8">
-              A calm, supportive companion for the night shift. LumiBaby helps
-              parents listen, track, and soothe — so the whole family can rest.
-            </p>
-
-            <div className="mb-8">
-              <StoreBadges />
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/lumibaby/support"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-violet-400/40 text-violet-200 hover:text-white hover:border-violet-400/70 text-sm font-semibold transition-colors"
-              >
-                Support
-              </Link>
-              <Link
-                href="/lumibaby/privacy"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/lumibaby/terms"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
-              >
-                Terms of Use
-              </Link>
+            <div className="hidden lg:block">
+              <PhoneMockup lang="en" />
             </div>
           </div>
         </section>
 
-        {/* ── 1. Cry & Colic Detectors — featured ─────────────── */}
+        {/* ── 1. Cry & Colic Detectors, featured ─────────────── */}
         <section className="px-4 pb-4">
           <div className="max-w-5xl mx-auto">
             <div
@@ -241,7 +248,7 @@ export default function LumiBabyPage() {
           </div>
         </section>
 
-        {/* ── 2–9. Feature grid ────────────────────────────────── */}
+        {/* ── 2-9. Feature grid ────────────────────────────────── */}
         <section className="px-4 pt-4 pb-16">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -317,6 +324,51 @@ export default function LumiBabyPage() {
                 Subscriptions are managed through the App Store or Google Play.
                 A free tier with ads is also available.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ──────────────────────────────────────────────── */}
+        <section className="border-t border-white/[0.06] px-4 py-16">
+          <div className="mx-auto max-w-3xl">
+            <p className="eyebrow mb-2 text-violet-400">FAQ</p>
+            <h2 className="mb-8 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Common questions
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Is LumiBaby free?",
+                  a: "Yes. A free tier with ads is available. LumiBaby Premium unlocks the full library of lullabies, sleep stories, and colic sounds, and removes ads. Subscriptions are managed through the App Store or Google Play.",
+                },
+                {
+                  q: "Does the cry detector replace supervision?",
+                  a: "No. The detector is a supportive awareness tool. It does not replace parental supervision, medical advice, or dedicated emergency monitoring equipment.",
+                },
+                {
+                  q: "Where are my voice recordings stored?",
+                  a: "Voice recordings are intended to stay on your device unless you explicitly share or export them.",
+                },
+                {
+                  q: "Can both parents receive alerts?",
+                  a: "Yes. You can connect another parent or caregiver device through the app. Alert delivery depends on phone settings, internet connection, permissions, and battery settings.",
+                },
+              ].map((faq) => (
+                <details key={faq.q} className="card-glass group p-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left text-base font-semibold text-white [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <span
+                      className="text-violet-400 transition-transform duration-300 group-open:rotate-45"
+                      aria-hidden="true"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="px-5 pb-5 text-sm leading-relaxed text-slate-300">
+                    {faq.a}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </section>

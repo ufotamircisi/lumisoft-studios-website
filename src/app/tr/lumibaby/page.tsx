@@ -5,9 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import StoreBadges from "@/components/StoreBadges";
+import PhoneMockup from "@/components/PhoneMockup";
 
 export const metadata: Metadata = {
-  title: "LumiBaby – Bebek Uyku Desteği",
+  title: "LumiBaby | Bebek Uyku Desteği",
   description:
     "LumiBaby, ağlama algılama, ninniler, uyku takibi, beyaz gürültü ve uyku hikayeleriyle ebeveynlere bebek uykusunu desteklemelerine yardımcı olur.",
 };
@@ -28,7 +29,7 @@ const gridFeatures: Feature[] = [
       "Ebeveynler bebek uyku sürelerini takip edebilir.",
       "Uyku süresi, şekerleme, gece uykusu ve rutinleri takip etmeye yardımcı olur.",
     ],
-    note: "Destekleyici bir takip aracı — tıbbi bir uyku tanı sistemi değil.",
+    note: "Destekleyici bir takip aracı, tıbbi bir uyku tanı sistemi değil.",
   },
   {
     icon: "🤔",
@@ -59,9 +60,9 @@ const gridFeatures: Feature[] = [
       "Ebeveynler, uygulama aracılığıyla başka bir ebeveyn veya bakıcı cihazını bağlayabilir.",
       "Ağlama veya sakinleşme gibi önemli bebek anları algılandığında, LumiBaby bağlı telefonlara uyarı gönderebilir.",
       "Bağlı telefonda akıllı saat bildirimleri etkinse, cihaz ve bildirim ayarlarına bağlı olarak uyarılar akıllı saatte de görünebilir.",
-      "Her iki ebeveynin de bilgi sahibi olmasına yardımcı olur — özellikle uyku rutinleri, gece bakımı veya bir ebeveynin başka bir odada olduğu durumlarda.",
+      "Her iki ebeveynin de bilgi sahibi olmasına yardımcı olur, özellikle uyku rutinleri, gece bakımı veya bir ebeveynin başka bir odada olduğu durumlarda.",
     ],
-    note: "Uyarı iletimi telefon ayarlarına, internet bağlantısına, izinlere, pil ayarlarına ve akıllı saat yapılandırmasına bağlıdır. Uyarılar destekleyici bir farkındalık aracıdır — doğrudan ebeveyn gözetiminin yerini almaz.",
+    note: "Uyarı iletimi telefon ayarlarına, internet bağlantısına, izinlere, pil ayarlarına ve akıllı saat yapılandırmasına bağlıdır. Uyarılar destekleyici bir farkındalık aracıdır, doğrudan ebeveyn gözetiminin yerini almaz.",
   },
   {
     icon: "🎵",
@@ -103,64 +104,70 @@ export default function LumiBabyPageTR() {
             }}
           />
 
-          <div className="relative max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-7">
-              <div className="relative">
-                <div
-                  className="absolute inset-0 rounded-3xl blur-2xl scale-110"
-                  style={{ background: "rgba(109,40,217,0.3)" }}
-                />
-                <Image
-                  src="/images/lumibaby-icon.png"
-                  alt="LumiBaby"
-                  width={112}
-                  height={112}
-                  className="relative rounded-[26px] shadow-[0_8px_40px_rgba(109,40,217,0.4)]"
-                  priority
-                />
+          <div className="relative mx-auto grid max-w-5xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="text-center lg:text-left">
+              <div className="mb-7 flex justify-center lg:justify-start">
+                <div className="relative">
+                  <div
+                    className="absolute inset-0 rounded-3xl blur-2xl scale-110"
+                    style={{ background: "rgba(109,40,217,0.3)" }}
+                  />
+                  <Image
+                    src="/images/lumibaby-icon.png"
+                    alt="LumiBaby"
+                    width={88}
+                    height={88}
+                    className="relative rounded-[22px] shadow-[0_8px_40px_rgba(109,40,217,0.4)]"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <p className="eyebrow mb-4 text-violet-400">
+                Minik Uyku · Bebek Uyku Desteği
+              </p>
+              <h1 className="mb-5 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                LumiBaby
+              </h1>
+              <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-slate-200 lg:mx-0">
+                Gece nöbeti için sakin, destekleyici bir yardımcı. LumiBaby,
+                tüm aile dinlenebilsin diye ebeveynlerin dinlemesine, takip
+                etmesine ve sakinleştirmesine yardımcı olur.
+              </p>
+
+              <div className="mb-8 flex justify-center lg:justify-start">
+                <StoreBadges lang="tr" />
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+                <Link
+                  href="/tr/lumibaby/destek"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-violet-400/40 text-violet-200 hover:text-white hover:border-violet-400/70 text-sm font-semibold transition-colors"
+                >
+                  Destek
+                </Link>
+                <Link
+                  href="/tr/lumibaby/gizlilik"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
+                >
+                  Gizlilik Politikası
+                </Link>
+                <Link
+                  href="/tr/lumibaby/kullanim-kosullari"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
+                >
+                  Kullanım Koşulları
+                </Link>
               </div>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl font-bold text-white tracking-tight mb-3">
-              LumiBaby
-            </h1>
-            <p className="text-violet-300 text-lg font-semibold mb-5">
-              Minik Uyku — Bebek Uyku Desteği
-            </p>
-            <p className="text-slate-200 text-lg leading-relaxed max-w-xl mx-auto mb-8">
-              Gece nöbeti için sakin, destekleyici bir yardımcı. LumiBaby, tüm
-              aile dinlenebilsin diye ebeveynlerin dinlemesine, takip etmesine
-              ve sakinleştirmesine yardımcı olur.
-            </p>
-
-            <div className="mb-8">
-              <StoreBadges lang="tr" />
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/tr/lumibaby/destek"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-violet-400/40 text-violet-200 hover:text-white hover:border-violet-400/70 text-sm font-semibold transition-colors"
-              >
-                Destek
-              </Link>
-              <Link
-                href="/tr/lumibaby/gizlilik"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
-              >
-                Gizlilik Politikası
-              </Link>
-              <Link
-                href="/tr/lumibaby/kullanim-kosullari"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
-              >
-                Kullanım Koşulları
-              </Link>
+            <div className="hidden lg:block">
+              <PhoneMockup lang="tr" />
             </div>
           </div>
         </section>
 
-        {/* ── Ağlama ve Kolik Algılama — featured ─────────────── */}
+        {/* ── Ağlama ve Kolik Algılama, featured ─────────────── */}
         <section className="px-4 pb-4">
           <div className="max-w-5xl mx-auto">
             <div
@@ -311,6 +318,51 @@ export default function LumiBabyPageTR() {
                 Abonelikler App Store veya Google Play üzerinden yönetilir.
                 Reklamlı ücretsiz bir katman da mevcuttur.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── SSS ──────────────────────────────────────────────── */}
+        <section className="border-t border-white/[0.06] px-4 py-16">
+          <div className="mx-auto max-w-3xl">
+            <p className="eyebrow mb-2 text-violet-400">SSS</p>
+            <h2 className="mb-8 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Sık sorulan sorular
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "LumiBaby ücretsiz mi?",
+                  a: "Evet. Reklamlı ücretsiz bir sürüm mevcuttur. LumiBaby Premium; tüm ninni, uyku hikayesi ve kolik sesi kütüphanesini açar ve reklamları kaldırır. Abonelikler App Store veya Google Play üzerinden yönetilir.",
+                },
+                {
+                  q: "Ağlama algılama gözetimin yerini alır mı?",
+                  a: "Hayır. Algılama destekleyici bir farkındalık aracıdır. Ebeveyn gözetiminin, tıbbi tavsiyenin veya özel acil durum izleme ekipmanlarının yerini almaz.",
+                },
+                {
+                  q: "Ses kayıtlarım nerede saklanıyor?",
+                  a: "Ses kayıtlarının, siz açıkça paylaşmadığınız veya dışa aktarmadığınız sürece cihazınızda kalması amaçlanmaktadır.",
+                },
+                {
+                  q: "Her iki ebeveyn de uyarı alabilir mi?",
+                  a: "Evet. Uygulama üzerinden başka bir ebeveyn veya bakıcı cihazı bağlayabilirsiniz. Uyarı iletimi telefon ayarlarına, internet bağlantısına, izinlere ve pil ayarlarına bağlıdır.",
+                },
+              ].map((faq) => (
+                <details key={faq.q} className="card-glass group p-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left text-base font-semibold text-white [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <span
+                      className="text-violet-400 transition-transform duration-300 group-open:rotate-45"
+                      aria-hidden="true"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="px-5 pb-5 text-sm leading-relaxed text-slate-300">
+                    {faq.a}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </section>

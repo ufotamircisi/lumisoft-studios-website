@@ -46,7 +46,7 @@ export default function GizlilikPage() {
         {/* Mikrofon */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Mikrofon İzni — Ağlama Algılama
+            Mikrofon İzni: Ağlama Algılama
           </h2>
           <p className="text-slate-200 leading-relaxed">
             Uygulama, ağlama algılama özelliğini etkinleştirmek için

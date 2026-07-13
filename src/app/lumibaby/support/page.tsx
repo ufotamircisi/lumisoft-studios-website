@@ -6,7 +6,7 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 export const metadata: Metadata = {
   title: "LumiBaby Support",
   description:
-    "Get help with LumiBaby — baby sleep app by Lumisoft Studio. Contact us at support@lumisoftstudios.com.",
+    "Get help with LumiBaby, the baby sleep app by Lumisoft Studio. Contact us at support@lumisoftstudios.com.",
 };
 
 export default function SupportPage() {
@@ -49,7 +49,7 @@ export default function SupportPage() {
         {/* Turkish support */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Destek — Support (TR)
+            Destek / Support (TR)
           </h2>
           <div className="text-slate-200 leading-relaxed space-y-4">
             <p>

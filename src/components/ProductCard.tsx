@@ -43,10 +43,13 @@ export default function ProductCard({ product, lang = "en" }: ProductCardProps) 
   );
 
   const body = (
-    <article className="card-glass card-lift flex h-full flex-col p-6 sm:p-7">
+    <article
+      className="card-glass card-lift card-accent flex h-full flex-col p-6 sm:p-7"
+      style={{ "--accent": product.accent } as React.CSSProperties}
+    >
       <div className="mb-5 flex items-start justify-between gap-3">
         <div
-          className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border"
+          className="icon-tile relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border"
           style={{
             borderColor: `color-mix(in srgb, ${product.accent} 30%, transparent)`,
             background: product.accentSoft,

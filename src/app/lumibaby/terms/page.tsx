@@ -50,7 +50,7 @@ export default function TermsPage() {
         {/* User responsibilities */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Kullanıcı Sorumluluğu — User Responsibilities
+            Kullanıcı Sorumluluğu / User Responsibilities
           </h2>
           <div className="text-slate-200 leading-relaxed space-y-3">
             <p>You are responsible for:</p>
@@ -72,7 +72,7 @@ export default function TermsPage() {
         {/* Subscription */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Abonelik — Premium Subscription
+            Abonelik / Premium Subscription
           </h2>
           <div className="text-slate-200 leading-relaxed space-y-4">
             <p>
@@ -101,7 +101,7 @@ export default function TermsPage() {
         {/* Cancellation */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            İptal — Cancellation
+            İptal / Cancellation
           </h2>
           <p className="text-slate-200 leading-relaxed">
             You may cancel your subscription at any time through your App Store
@@ -130,8 +130,8 @@ export default function TermsPage() {
             Intellectual Property
           </h2>
           <p className="text-slate-200 leading-relaxed">
-            All content within LumiBaby &mdash; including lullabies, sounds,
-            stories, and the App itself &mdash; is the property of Lumisoft
+            All content within LumiBaby, including lullabies, sounds,
+            stories, and the App itself, is the property of Lumisoft
             Studio or its licensors and is protected by applicable intellectual
             property laws. You may not reproduce, distribute, or create
             derivative works from any content in the App.
@@ -165,7 +165,7 @@ export default function TermsPage() {
         {/* Contact */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            İletişim — Contact
+            İletişim / Contact
           </h2>
           <p className="text-slate-200 leading-relaxed mb-4">
             For questions about these Terms, contact us at:

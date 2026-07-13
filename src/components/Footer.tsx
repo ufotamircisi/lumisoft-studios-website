@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { games, apps, STORE_URLS } from "@/lib/products";
 
 export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
@@ -65,13 +65,7 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
               href={isTR ? "/tr" : "/"}
               className="mb-3 inline-flex items-center gap-2.5 text-base font-semibold text-white"
             >
-              <Image
-                src="/images/brand/lumisoft-logo-mark.png"
-                alt=""
-                width={26}
-                height={30}
-                className="h-8 w-auto object-contain"
-              />
+              <BrandLogo size={30} />
               Lumisoft Studios
             </Link>
             <p className="mb-5 max-w-xs text-sm leading-relaxed text-slate-400">

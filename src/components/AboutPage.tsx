@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -110,13 +110,11 @@ export default function AboutPage({ lang = "en" }: AboutPageProps) {
           />
           <div className="relative mx-auto max-w-3xl text-center">
             <div className="hero-enter hero-enter-1 mb-8 flex justify-center">
-              <Image
-                src="/images/brand/lumisoft-logo-mark.png"
-                alt="Lumisoft Studios"
-                width={165}
-                height={192}
-                className="h-32 w-auto object-contain drop-shadow-[0_0_28px_rgba(129,140,248,0.4)]"
+              <BrandLogo
+                size={130}
                 priority
+                alt="Lumisoft Studios"
+                className="drop-shadow-[0_0_28px_rgba(129,140,248,0.4)]"
               />
             </div>
             <p className="hero-enter hero-enter-2 eyebrow mb-4 text-violet-400">

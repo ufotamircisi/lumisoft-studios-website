@@ -135,8 +135,8 @@ export default function KullanimKosullariPage() {
             Fikri Mülkiyet
           </h2>
           <p className="text-slate-200 leading-relaxed">
-            LumiBaby içindeki tüm içerikler &mdash; ninniler, sesler, hikayeler
-            ve Uygulamanın kendisi dahil olmak üzere &mdash; Lumisoft
+            LumiBaby içindeki tüm içerikler, ninniler, sesler, hikayeler
+            ve Uygulamanın kendisi dahil olmak üzere, Lumisoft
             Studio&apos;nun veya lisans verenlerinin mülkiyetindedir ve geçerli
             fikri mülkiyet yasalarıyla korunmaktadır. Uygulamadaki içerikleri
             çoğaltamaz, dağıtamaz veya türev eserler oluşturamazsınız.

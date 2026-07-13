@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { usePathname } from "next/navigation";
 
 const routeMap: Record<string, string> = {
@@ -76,14 +76,7 @@ export default function Header() {
           href={homeHref}
           className="flex items-center gap-3 text-base font-semibold tracking-tight text-white"
         >
-          <Image
-            src="/images/brand/lumisoft-logo-mark.png"
-            alt=""
-            width={31}
-            height={36}
-            className="h-9 w-auto object-contain drop-shadow-[0_0_12px_rgba(139,92,246,0.45)]"
-            priority
-          />
+          <BrandLogo size={34} priority />
           <span className="text-[#f2f4ff]">Lumisoft Studios</span>
         </Link>
 
