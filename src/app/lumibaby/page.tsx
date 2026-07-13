@@ -113,7 +113,7 @@ export default function LumiBabyPage() {
                     style={{ background: "rgba(109,40,217,0.3)" }}
                   />
                   <Image
-                    src="/images/lumibaby-icon.png"
+                    src="/images/web/lumibaby-icon.webp"
                     alt="LumiBaby"
                     width={88}
                     height={88}

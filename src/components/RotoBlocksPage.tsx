@@ -146,7 +146,7 @@ export default function RotoBlocksPage({ lang = "en" }: RotoBlocksPageProps) {
             <div className="text-center lg:text-left">
               <div className="flex justify-center lg:justify-start mb-6">
                 <Image
-                  src="/images/roto-blocks-icon.png"
+                  src="/images/web/roto-blocks-icon.webp"
                   alt="Roto Blocks"
                   width={96}
                   height={96}

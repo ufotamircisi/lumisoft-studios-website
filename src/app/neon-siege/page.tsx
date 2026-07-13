@@ -85,7 +85,7 @@ export default function NeonSiegePage() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-[28px] blur-2xl scale-125 bg-cyan-400/25" />
                 <Image
-                  src="/images/neon-siege-app-icon.png"
+                  src="/images/web/neon-siege-icon.webp"
                   alt="Neon Siege"
                   width={112}
                   height={112}

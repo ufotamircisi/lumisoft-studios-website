@@ -62,7 +62,7 @@ export default function PhoneMockup({ lang = "en" }: PhoneMockupProps) {
           {/* content */}
           <div className="relative flex h-full flex-col items-center justify-center gap-5 px-6 text-center">
             <Image
-              src="/images/lumibaby-icon.png"
+              src="/images/web/lumibaby-icon.webp"
               alt=""
               width={96}
               height={96}

@@ -9,9 +9,10 @@ interface BrandLogoProps {
 }
 
 /**
- * Renders the official Lumisoft logo (public/brand/lumisoft-logo.png).
- * The source file keeps a large transparent margin around the mark, so the
- * image is scaled up with CSS only; the file itself is never modified.
+ * Renders the official Lumisoft logo via its optimized web copy
+ * (generated from public/brand/lumisoft-logo.png by scripts/optimize-images.mjs;
+ * the original is never modified). The canvas keeps a large transparent margin
+ * around the mark, so the image is scaled up with CSS only.
  */
 export default function BrandLogo({
   size,
@@ -26,10 +27,10 @@ export default function BrandLogo({
       aria-hidden={alt === "" ? true : undefined}
     >
       <Image
-        src="/brand/lumisoft-logo.png"
+        src="/images/web/lumisoft-logo.webp"
         alt={alt}
-        width={1024}
-        height={1536}
+        width={683}
+        height={1024}
         priority={priority}
         className="pointer-events-none absolute inset-0 h-full w-full select-none object-contain"
         style={{ transform: "scale(4.15) translateY(3.6%)" }}

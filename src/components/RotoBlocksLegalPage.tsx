@@ -260,7 +260,7 @@ export default function RotoBlocksLegalPage({ lang = "en", kind }: { lang?: Lang
           lastUpdatedLabel={t.updated}
           backHref={base}
           backLinkText={`← ${t.back}`}
-          appIcon="/images/roto-blocks-icon.png"
+          appIcon="/images/web/roto-blocks-icon.webp"
         >
           {kind === "support" ? (
             <>

@@ -20,7 +20,7 @@ export default function GizlilikPage() {
         lastUpdatedLabel="Son güncelleme:"
         backHref="/tr/lumibaby"
         backLinkText="← LumiBaby'ye Geri Dön"
-        appIcon="/images/lumibaby-icon.png"
+        appIcon="/images/web/lumibaby-icon.webp"
       >
         <section>
           <p className="text-slate-200 leading-relaxed">

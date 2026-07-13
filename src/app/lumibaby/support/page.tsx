@@ -17,7 +17,7 @@ export default function SupportPage() {
         title="LumiBaby Support"
         subtitle="We are here to help. Reach out anytime."
         lastUpdated="May 2026"
-        appIcon="/images/lumibaby-icon.png"
+        appIcon="/images/web/lumibaby-icon.webp"
       >
         {/* Contact */}
         <section>

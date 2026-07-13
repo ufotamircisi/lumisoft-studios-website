@@ -20,7 +20,7 @@ export default function DestekPage() {
         lastUpdatedLabel="Son güncelleme:"
         backHref="/tr/lumibaby"
         backLinkText="← LumiBaby'ye Geri Dön"
-        appIcon="/images/lumibaby-icon.png"
+        appIcon="/images/web/lumibaby-icon.webp"
       >
         {/* İletişim */}
         <section>

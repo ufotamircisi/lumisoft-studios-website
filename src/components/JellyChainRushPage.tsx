@@ -123,7 +123,7 @@ export default function JellyChainRushPage({
                 <div className="relative">
                   <div className="absolute inset-0 scale-110 rounded-3xl bg-pink-400/25 blur-2xl" />
                   <Image
-                    src="/images/icon.png"
+                    src="/images/web/jelly-chain-rush-icon.webp"
                     alt="Jelly Chain Rush"
                     width={88}
                     height={88}

@@ -64,7 +64,7 @@ export default function NeonSiegeDownloadPage() {
 
           <div className="relative mx-auto flex max-w-xl flex-col items-center text-center">
             <Image
-              src="/images/neon-siege-app-icon.png"
+              src="/images/web/neon-siege-icon.webp"
               alt="Neon Siege"
               width={96}
               height={96}

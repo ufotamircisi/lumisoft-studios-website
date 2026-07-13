@@ -61,7 +61,7 @@ export default function LumiBabyDownloadPage() {
 
           <div className="relative mx-auto flex max-w-xl flex-col items-center text-center">
             <Image
-              src="/images/lumibaby-icon.png"
+              src="/images/web/lumibaby-icon.webp"
               alt="LumiBaby"
               width={96}
               height={96}

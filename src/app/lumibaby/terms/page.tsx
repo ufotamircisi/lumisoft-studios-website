@@ -16,7 +16,7 @@ export default function TermsPage() {
         title="Terms of Use"
         subtitle="LumiBaby by Lumisoft Studio"
         lastUpdated="May 16, 2026"
-        appIcon="/images/lumibaby-icon.png"
+        appIcon="/images/web/lumibaby-icon.webp"
       >
         <section>
           <p className="text-slate-200 leading-relaxed">
