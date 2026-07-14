@@ -6,25 +6,29 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Gizlilik Politikası",
   description:
-    "Lumisoft Studio tarafından geliştirilen Jelly Chain Rush için gizlilik politikası yer tutucu sayfası.",
+    "Lumisoft Studio'nun yayın öncesi Jelly Chain Rush ürün sayfası için gizlilik bilgileri.",
+  alternates: {
+    canonical: "/tr/jelly-chain-rush/gizlilik",
+    languages: { "tr-TR": "/tr/jelly-chain-rush/gizlilik", "en-US": "/jelly-chain-rush/privacy" },
+  },
 };
 
 const sections = [
   [
     "Genel",
-    "Jelly Chain Rush, Lumisoft Studio tarafından geliştirilen bir mobil bulmaca oyunudur. Bu sayfa, yayın öncesi web sitesi için hazırlanmış sade bir gizlilik politikası yer tutucusudur.",
+    "Jelly Chain Rush, Lumisoft Studio tarafından geliştirilmekte olan bir mobil bulmaca oyunudur. Oyun şu anda herkese açık uygulama mağazalarında dağıtılmamaktadır.",
   ],
   [
-    "Mevcut Durum",
-    "Oyun henüz herkese açık olarak yayınlanmamıştır. Gerekirse tam politika ayrıntıları mağaza yayını öncesinde netleştirilecektir.",
+    "Bu Ürün Sayfası",
+    "Bu statik ürün sayfasında hesap sistemi, form, oynanış hizmeti, reklam veya izleme çerezi bulunmaz. Sayfa, oynanış ya da hesap verisi toplamaz.",
   ],
   [
-    "Oyun Verileri",
-    "Yayınlanan oyun; oynanış ilerlemesi, ayarlar, bölüm ilerlemesi ve benzer bulmaca oyunu verilerini cihazınızda veya uygulamanın kullandığı platform hizmetlerinde saklayabilir.",
+    "Herkese Açık Kullanım",
+    "Oyun henüz herkese açık olmadığı için açıklanacak bir üretim uygulaması veri işleme süreci yoktur. Oyunun veri uygulamaları ek bilgi gerektirirse bu politika yayın öncesinde güncellenecektir.",
   ],
   [
     "Hesaplar",
-    "Bu web sitesinde Jelly Chain Rush için herkese açık bir hesap sistemi bulunmamaktadır.",
+    "Bu web sitesi üzerinden Jelly Chain Rush hesabı veya oturum açma özelliği sunulmaz.",
   ],
   [
     "İletişim",

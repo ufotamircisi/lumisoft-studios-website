@@ -70,8 +70,8 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
             </Link>
             <p className="mb-5 max-w-xs text-sm leading-relaxed text-slate-400">
               {isTR
-                ? "iOS ve Android için özenle geliştirilmiş oyunlar ve uygulamalar üreten bağımsız stüdyo."
-                : "An independent studio crafting polished games and apps for iOS and Android."}
+                ? "iOS ve Android için mobil oyunlar ve pratik uygulamalar geliştiren bağımsız stüdyo."
+                : "An independent studio developing mobile games and practical apps for iOS and Android."}
             </p>
             <a
               href="mailto:support@lumisoftstudios.com"

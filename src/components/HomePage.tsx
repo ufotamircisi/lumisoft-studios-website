@@ -15,35 +15,35 @@ type HomePageProps = {
 
 const copy = {
   en: {
-    heroEyebrow: "Independent game & app studio",
-    heroTitleA: "Small studio.",
-    heroTitleB: "Serious craft.",
+    heroEyebrow: "Independent mobile software studio",
+    heroTitleA: "Games people enjoy.",
+    heroTitleB: "Apps people rely on.",
     heroText:
-      "Lumisoft Studios builds mobile games and apps with care. Fast, polished, and respectful of your time and privacy.",
+      "Lumisoft Studios develops focused mobile products for iOS and Android—from arcade games to practical tools for families.",
     ctaGames: "Explore our games",
     ctaApps: "See our apps",
     gamesEyebrow: "Games",
-    gamesTitle: "Built to be played, not just downloaded",
+    gamesTitle: "Distinct games with clear mechanics",
     gamesText:
-      "Arcade action, calm puzzles, and worlds in the making. Every game ships when it feels right.",
+      "Arcade challenges and puzzle systems designed to be easy to understand and rewarding to revisit.",
     appsEyebrow: "Apps",
-    appsTitle: "Tools for real life",
-    appsText: "Calm, focused apps designed around everyday moments.",
+    appsTitle: "Practical support for daily life",
+    appsText: "Focused tools for real routines, designed to stay clear when the moment is busy.",
     appFeatured: "Featured app",
     valuesEyebrow: "The studio",
     valuesTitle: "How we work",
     values: [
       {
-        title: "Craft first",
-        text: "We ship small and polish hard. Every screen, sound, and animation earns its place.",
+        title: "Clear product thinking",
+        text: "Each product starts with a specific need, a defined audience, and an experience that stays focused.",
       },
       {
-        title: "Privacy by default",
-        text: "We collect as little as possible. Your data belongs to you, not to us.",
+        title: "Responsible by design",
+        text: "Privacy, accessibility, and honest communication are product requirements, not footnotes.",
       },
       {
-        title: "Performance matters",
-        text: "Smooth on modest phones, not just flagships. Battery and bandwidth are respected.",
+        title: "Reliable delivery",
+        text: "We engineer for stable performance across modern iOS and Android devices and support what we ship.",
       },
     ],
     aboutLink: "More about the studio",
@@ -53,35 +53,35 @@ const copy = {
     aboutHref: "/about",
   },
   tr: {
-    heroEyebrow: "Bağımsız oyun ve uygulama stüdyosu",
-    heroTitleA: "Küçük stüdyo.",
-    heroTitleB: "Ciddi işçilik.",
+    heroEyebrow: "Bağımsız mobil yazılım stüdyosu",
+    heroTitleA: "Keyifle oynanan oyunlar.",
+    heroTitleB: "Güvenilen uygulamalar.",
     heroText:
-      "Lumisoft Studios mobil oyunları ve uygulamaları özenle geliştirir. Hızlı, cilalı ve zamanınıza olduğu kadar gizliliğinize de saygılı.",
+      "Lumisoft Studios, arcade oyunlarından ailelere yönelik pratik araçlara kadar iOS ve Android için odaklı mobil ürünler geliştirir.",
     ctaGames: "Oyunları keşfet",
     ctaApps: "Uygulamalara bak",
     gamesEyebrow: "Oyunlar",
-    gamesTitle: "Sadece indirilmek için değil, oynanmak için",
+    gamesTitle: "Net mekaniklere sahip özgün oyunlar",
     gamesText:
-      "Arcade aksiyon, sakin bulmacalar ve yapım aşamasındaki dünyalar. Her oyun hazır hissettirdiğinde yayınlanır.",
+      "Kolay anlaşılan ve yeniden oynamaya değer arcade mücadeleleri ile bulmaca sistemleri.",
     appsEyebrow: "Uygulamalar",
-    appsTitle: "Gerçek hayat için araçlar",
-    appsText: "Günlük anlar etrafında tasarlanmış sakin ve odaklı uygulamalar.",
+    appsTitle: "Günlük yaşam için pratik destek",
+    appsText: "Gerçek rutinlere odaklanan, yoğun anlarda bile anlaşılır kalan araçlar.",
     appFeatured: "Öne çıkan uygulama",
     valuesEyebrow: "Stüdyo",
     valuesTitle: "Nasıl çalışıyoruz",
     values: [
       {
-        title: "Önce işçilik",
-        text: "Küçük yayınlar yapar, çok cilalarız. Her ekran, ses ve animasyon yerini hak eder.",
+        title: "Net ürün yaklaşımı",
+        text: "Her ürün belirli bir ihtiyaç, tanımlı bir kullanıcı ve odağını koruyan bir deneyimle başlar.",
       },
       {
-        title: "Varsayılan olarak gizlilik",
-        text: "Mümkün olduğunca az veri toplarız. Verileriniz bize değil, size aittir.",
+        title: "Sorumlu tasarım",
+        text: "Gizlilik, erişilebilirlik ve açık iletişim bizim için dipnot değil, ürün gereksinimidir.",
       },
       {
-        title: "Performans önemlidir",
-        text: "Sadece amiral gemilerinde değil, mütevazı telefonlarda da akıcı. Pil ve veri kullanımına saygılıyız.",
+        title: "Güvenilir teslimat",
+        text: "Modern iOS ve Android cihazlarda kararlı performans hedefler, yayınladığımız ürünleri destekleriz.",
       },
     ],
     aboutLink: "Stüdyo hakkında daha fazlası",
@@ -99,7 +99,7 @@ export default function HomePage({ lang = "en" }: HomePageProps) {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         {/* ── Hero ────────────────────────────────────────────── */}
         <section className="relative overflow-hidden px-4 pb-24 pt-20 sm:pb-32 sm:pt-28">
           <div className="bg-grid absolute inset-0" aria-hidden="true" />
@@ -164,9 +164,9 @@ export default function HomePage({ lang = "en" }: HomePageProps) {
               {t.heroEyebrow}
             </p>
 
-            <h1 className="hero-enter hero-enter-3 mb-6 text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-              <span className="text-white">{t.heroTitleA}</span>{" "}
-              <span className="text-gradient whitespace-nowrap">
+            <h1 className="hero-enter hero-enter-3 mb-6 text-4xl font-bold leading-[1.08] tracking-tight sm:text-7xl sm:leading-[1.05]">
+              <span className="block text-white">{t.heroTitleA}</span>
+              <span className="text-gradient mt-2 block sm:mt-1">
                 {t.heroTitleB}
               </span>
             </h1>
@@ -206,7 +206,7 @@ export default function HomePage({ lang = "en" }: HomePageProps) {
               </div>
             </Reveal>
 
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {games.map((game, i) => (
                 <Reveal key={game.slug} delay={(i % 2) * 90}>
                   <ProductCard product={game} lang={lang} />

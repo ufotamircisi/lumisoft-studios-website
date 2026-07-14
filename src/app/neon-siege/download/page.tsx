@@ -44,7 +44,7 @@ export default function NeonSiegeDownloadPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         <script dangerouslySetInnerHTML={{ __html: redirectScript }} />
 
         <section className="relative min-h-[calc(100vh-8rem)] overflow-hidden px-4 py-20 sm:py-28">

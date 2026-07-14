@@ -4,8 +4,12 @@ import Footer from "@/components/Footer";
 import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
-  title: "Contact | Lumisoft Studio",
+  title: "Contact",
   description: "Contact Lumisoft Studio for product support and questions.",
+  alternates: {
+    canonical: "/contact",
+    languages: { "en-US": "/contact", "tr-TR": "/tr/contact" },
+  },
 };
 
 export default function ContactPage() {

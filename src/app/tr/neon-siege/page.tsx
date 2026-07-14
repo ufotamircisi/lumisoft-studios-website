@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   title: "Neon Siege - Neon arcade brick breaker",
   description:
     "Şekiller, yetenekler, güçlendiriciler, bombalar, çarpanlar, yükseltmeler ve yoğun seviyeler içeren hızlı tempolu neon brick breaker.",
+  alternates: {
+    canonical: "/tr/neon-siege",
+    languages: { "tr-TR": "/tr/neon-siege", "en-US": "/neon-siege" },
+  },
+  openGraph: {
+    title: "Neon Siege | Neon arcade brick breaker",
+    description: "Yetenekler, güçlendiriciler, bombalar, çarpanlar ve bölüm ilerlemesiyle hızlı neon brick-breaker aksiyonu.",
+    url: "/tr/neon-siege",
+    locale: "tr_TR",
+    images: [{ url: "/images/neon-siege-app-icon.png", width: 1024, height: 1024, alt: "Neon Siege" }],
+  },
 };
 
 const features = [
@@ -34,12 +45,12 @@ const features = [
     text: "Kuşatmanın derinlerine indikçe zorluk artan yoğun seviyeler.",
   },
   {
-    title: "Çevrimdışı Arcade Oynanış",
-    text: "Bağlantı gerekmez. Uçakta, trende, her yerde blok kır.",
+    title: "Kısa Arcade Oturumları",
+    text: "Basit nişan al ve fırlat kontrolleri, odaklı bir oyuna hızlıca başlamayı kolaylaştırır.",
   },
   {
     title: "Performans Modu",
-    text: "Mütevazı telefonlarda akıcı çalışır, pili yormaz.",
+    text: "Android performans seçeneği, yoğun oynanış sahnelerinde görsel yükü azaltır.",
   },
 ];
 
@@ -49,12 +60,8 @@ const faqs = [
     a: "Evet. Neon Siege ücretsiz indirilir ve oynanır. Ödüllü reklamlar her zaman isteğe bağlıdır; Zorunlu Reklamları Kaldır satın alımı seviyeler arasındaki zorunlu reklamları kaldırır.",
   },
   {
-    q: "Çevrimdışı oynayabilir miyim?",
-    a: "Evet. Neon Siege çevrimdışı arcade oynanış için tasarlandı, bağlantı gerekmez.",
-  },
-  {
-    q: "Oyun içi elmaslar kumar mı?",
-    a: "Hayır. Neon Siege bir oyundur, kumar uygulaması değildir. Elmaslar yalnızca oynanışta kullanılan sanal öğelerdir.",
+    q: "Performans Modu ne yapar?",
+    a: "Performans Modu, yoğun sahnelerde daha akıcı oynanışı desteklemek için Android cihazlardaki görsel yükü azaltır.",
   },
   {
     q: "Satın alımlar nasıl çalışır?",
@@ -66,7 +73,7 @@ export default function NeonSiegeTRPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         <section className="relative overflow-hidden px-4 py-24 sm:py-32">
           <div
             className="absolute inset-0 pointer-events-none"

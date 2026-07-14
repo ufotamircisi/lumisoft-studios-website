@@ -5,12 +5,24 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import StoreBadges from "@/components/StoreBadges";
-import PhoneMockup from "@/components/PhoneMockup";
+import ProductArtwork from "@/components/ProductArtwork";
 
 export const metadata: Metadata = {
-  title: "LumiBaby | Bebek Uyku Desteği",
+  title: "LumiBaby Sürüm 2 | Bebek Uyku Desteği",
   description:
     "LumiBaby, ağlama algılama, ninniler, uyku takibi, beyaz gürültü ve uyku hikayeleriyle ebeveynlere bebek uykusunu desteklemelerine yardımcı olur.",
+  alternates: {
+    canonical: "/tr/lumibaby",
+    languages: { "tr-TR": "/tr/lumibaby", "en-US": "/lumibaby" },
+  },
+  openGraph: {
+    title: "LumiBaby Sürüm 2 | Bebek Uyku Desteği",
+    description:
+      "Ağlama algılama, uyku takibi, sakinleştirici sesler, ebeveyn bildirimleri ve uyku rutini desteği.",
+    url: "/tr/lumibaby",
+    locale: "tr_TR",
+    images: [{ url: "/images/lumibaby-icon.png", width: 1024, height: 1024, alt: "LumiBaby" }],
+  },
 };
 
 interface Feature {
@@ -50,7 +62,7 @@ const gridFeatures: Feature[] = [
   {
     icon: "📊",
     title: "Ayrıntılı Uyku Raporları",
-    desc: "LumiBaby uyku özetleri ve basit içgörüler sunabilir. Raporlar uyku süresi, ağlama sayısı, uyku kalitesi ve rutin gözlemlerini içerebilir.",
+    desc: "LumiBaby; uyku oturumlarını, uyanmaları, ağlama olaylarını ve algılama geçmişini pratik özetler halinde düzenler.",
     note: "Raporlar bilgilendirme amaçlıdır ve tıbbi tavsiye niteliği taşımaz.",
   },
   {
@@ -58,11 +70,10 @@ const gridFeatures: Feature[] = [
     title: "Ebeveyn Bağlantısı ve Uyarılar",
     bullets: [
       "Ebeveynler, uygulama aracılığıyla başka bir ebeveyn veya bakıcı cihazını bağlayabilir.",
-      "Ağlama veya sakinleşme gibi önemli bebek anları algılandığında, LumiBaby bağlı telefonlara uyarı gönderebilir.",
-      "Bağlı telefonda akıllı saat bildirimleri etkinse, cihaz ve bildirim ayarlarına bağlı olarak uyarılar akıllı saatte de görünebilir.",
-      "Her iki ebeveynin de bilgi sahibi olmasına yardımcı olur, özellikle uyku rutinleri, gece bakımı veya bir ebeveynin başka bir odada olduğu durumlarda.",
+      "QR eşleştirme ile bebeğin yanındaki cihazdan bağlı ebeveyn cihazına ağlama uyarıları gönderilebilir.",
+      "Bu özellik, ebeveyn veya bakım verenin uyku rutinleri ve gece bakımı sırasında bilgi sahibi olmasına yardımcı olur.",
     ],
-    note: "Uyarı iletimi telefon ayarlarına, internet bağlantısına, izinlere, pil ayarlarına ve akıllı saat yapılandırmasına bağlıdır. Uyarılar destekleyici bir farkındalık aracıdır, doğrudan ebeveyn gözetiminin yerini almaz.",
+    note: "Uyarı iletimi telefon ayarlarına, internet bağlantısına, izinlere ve pil ayarlarına bağlıdır. Uyarılar farkındalığı destekler ancak doğrudan ebeveyn gözetiminin yerini almaz.",
   },
   {
     icon: "🎵",
@@ -72,7 +83,7 @@ const gridFeatures: Feature[] = [
   {
     icon: "🌊",
     title: "Kolik Sesleri",
-    desc: "Ebeveynler susturma, vantilatör, yağmur, dalga, kalp atışı veya benzeri sakinleştirici sesler gibi beyaz gürültü ve kolik sesleri kullanabilir. Bu sesler daha rahatlatıcı bir ses ortamı oluşturmaya yardımcı olabilir.",
+    desc: "Ebeveynler daha sakin bir rutini desteklemek için susturma, beyaz gürültü, vantilatör, elektrik süpürgesi, saç kurutma makinesi ve diğer kolik seslerini kullanabilir.",
     note: "Bu, kolik için tıbbi bir tedavi değildir.",
   },
   {
@@ -86,7 +97,7 @@ export default function LumiBabyPageTR() {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
 
         {/* ── Hero ─────────────────────────────────────────────── */}
         <section className="relative overflow-hidden px-4 py-24 sm:py-32">
@@ -124,7 +135,7 @@ export default function LumiBabyPageTR() {
               </div>
 
               <p className="eyebrow mb-4 text-violet-400">
-                Minik Uyku · Bebek Uyku Desteği
+                LumiBaby · Sürüm 2
               </p>
               <h1 className="mb-5 text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 LumiBaby
@@ -162,7 +173,14 @@ export default function LumiBabyPageTR() {
             </div>
 
             <div className="hidden lg:block">
-              <PhoneMockup lang="tr" />
+              <ProductArtwork
+                src="/images/web/lumibaby-icon.webp"
+                name="LumiBaby"
+                alt="LumiBaby resmi uygulama ikonu"
+                label="Resmi ürün görseli"
+                accent="rgba(139, 92, 246, 0.3)"
+                priority
+              />
             </div>
           </div>
         </section>

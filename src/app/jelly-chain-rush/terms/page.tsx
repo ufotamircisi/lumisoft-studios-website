@@ -5,21 +5,25 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Terms of Use",
-  description: "Terms of Use placeholder for Jelly Chain Rush by Lumisoft Studio.",
+  description: "Terms governing the pre-release Jelly Chain Rush product page by Lumisoft Studio.",
+  alternates: {
+    canonical: "/jelly-chain-rush/terms",
+    languages: { "en-US": "/jelly-chain-rush/terms", "tr-TR": "/tr/jelly-chain-rush/kullanim-kosullari" },
+  },
 };
 
 const sections = [
   [
-    "Overview",
-    "These Terms of Use are a simple pre-release placeholder for Jelly Chain Rush, a mobile puzzle game in development by Lumisoft Studio.",
+    "Product Status",
+    "Jelly Chain Rush is a mobile puzzle game in development by Lumisoft Studio. No public download, purchase, or game license is offered through this website.",
   ],
   [
-    "Pre-release Information",
-    "Website descriptions, feature names, and release timing may change while the game is being developed.",
+    "Product Information",
+    "The product page describes the current direction of the game. Features and release timing may change during development, and no release date is promised.",
   ],
   [
-    "No Store Availability Yet",
-    "Jelly Chain Rush is currently in development. Store links will be added when the game is ready.",
+    "No Store Availability",
+    "Lumisoft Studio will publish official store links on the product page if and when the game becomes publicly available.",
   ],
   [
     "Intellectual Property",

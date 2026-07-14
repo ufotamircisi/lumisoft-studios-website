@@ -252,7 +252,7 @@ export default function RotoBlocksLegalPage({ lang = "en", kind }: { lang?: Lang
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         <LegalPageLayout
           title={t[kind]}
           subtitle={t.subtitle}

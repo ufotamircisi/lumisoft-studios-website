@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
+import ProductArtwork from "@/components/ProductArtwork";
 
 type RotoBlocksPageProps = {
   lang?: "en" | "tr";
@@ -45,15 +46,7 @@ const copy = {
         text: "Roto Blocks is designed as a free ad supported game.",
         icon: "◇",
       },
-      {
-        title: "Remove Ads Option",
-        text: "A one time Remove Ads option is planned to remove banner and forced full screen ads.",
-        icon: "✓",
-      },
     ],
-    boardLabel: "Board rotation preview",
-    moveLabel: "Three moves",
-    rotateLabel: "Rotate",
     releaseTitle: "Thoughtful puzzle play is on the way",
     releaseText:
       "Roto Blocks is being prepared for release. Official store links will appear here when they are available.",
@@ -100,15 +93,7 @@ const copy = {
         text: "Roto Blocks ücretsiz ve reklam destekli bir oyun olarak tasarlanmıştır.",
         icon: "◇",
       },
-      {
-        title: "Reklamları Kaldır Seçeneği",
-        text: "Tek seferlik Reklamları Kaldır seçeneği ile banner ve zorunlu tam ekran reklamların kaldırılması planlanmaktadır.",
-        icon: "✓",
-      },
     ],
-    boardLabel: "Tahta dönüşü ön izlemesi",
-    moveLabel: "Üç hamle",
-    rotateLabel: "Dönüş",
     releaseTitle: "Özenli bir bulmaca deneyimi yakında",
     releaseText:
       "Roto Blocks yayın için hazırlanıyor. Resmi mağaza bağlantıları hazır olduğunda burada yer alacak.",
@@ -120,24 +105,13 @@ const copy = {
   },
 };
 
-const blocks = [
-  "bg-cyan-300", "bg-cyan-300", "bg-transparent", "bg-violet-400", "bg-violet-400", "bg-transparent", "bg-amber-300", "bg-amber-300",
-  "bg-transparent", "bg-cyan-300", "bg-transparent", "bg-violet-400", "bg-transparent", "bg-transparent", "bg-amber-300", "bg-transparent",
-  "bg-rose-400", "bg-cyan-300", "bg-cyan-300", "bg-transparent", "bg-emerald-300", "bg-emerald-300", "bg-amber-300", "bg-transparent",
-  "bg-rose-400", "bg-transparent", "bg-indigo-400", "bg-indigo-400", "bg-emerald-300", "bg-transparent", "bg-transparent", "bg-fuchsia-400",
-  "bg-rose-400", "bg-transparent", "bg-indigo-400", "bg-transparent", "bg-emerald-300", "bg-emerald-300", "bg-fuchsia-400", "bg-fuchsia-400",
-  "bg-transparent", "bg-sky-300", "bg-indigo-400", "bg-transparent", "bg-transparent", "bg-lime-300", "bg-lime-300", "bg-fuchsia-400",
-  "bg-orange-300", "bg-sky-300", "bg-sky-300", "bg-sky-300", "bg-transparent", "bg-lime-300", "bg-transparent", "bg-transparent",
-  "bg-orange-300", "bg-orange-300", "bg-transparent", "bg-transparent", "bg-pink-400", "bg-pink-400", "bg-pink-400", "bg-transparent",
-];
-
 export default function RotoBlocksPage({ lang = "en" }: RotoBlocksPageProps) {
   const t = copy[lang];
 
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         <section className="relative overflow-hidden px-4 py-20 sm:py-28">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_75%_60%_at_50%_0%,rgba(34,211,238,0.2),rgba(99,102,241,0.14)_45%,transparent_80%)]" />
           <div className="absolute bottom-0 inset-x-0 h-24 pointer-events-none bg-gradient-to-b from-transparent to-[#080b1a]" />
@@ -182,32 +156,14 @@ export default function RotoBlocksPage({ lang = "en" }: RotoBlocksPageProps) {
               </div>
             </div>
 
-            <div className="relative mx-auto w-full max-w-sm" aria-label={t.boardLabel}>
-              <div className="absolute inset-5 rounded-full bg-cyan-300/20 blur-3xl" />
-              <div className="relative rounded-[32px] border border-cyan-200/20 bg-[#0b1228]/95 p-5 shadow-[0_24px_70px_rgba(8,145,178,0.18)] sm:p-6">
-                <div className="mb-5 flex items-center justify-between">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-cyan-200">Roto Blocks</p>
-                    <p className="mt-1 text-sm text-slate-400">8 × 8</p>
-                  </div>
-                  <div className="flex items-center gap-2 rounded-full border border-indigo-300/25 bg-indigo-400/10 px-3 py-1.5">
-                    <span className="text-xs font-semibold text-indigo-100">{t.moveLabel}</span>
-                    <span className="text-lg leading-none text-cyan-200" aria-hidden="true">↻</span>
-                  </div>
-                </div>
-                <div className="grid grid-cols-8 gap-1.5 rounded-2xl border border-white/8 bg-[#070c1b] p-3 sm:gap-2">
-                  {blocks.map((color, index) => (
-                    <div
-                      key={index}
-                      className={`aspect-square rounded-[7px] border ${color === "bg-transparent" ? "border-white/[0.05]" : `border-white/20 ${color} shadow-[inset_0_2px_4px_rgba(255,255,255,0.38)]`}`}
-                    />
-                  ))}
-                </div>
-                <div className="mt-5 flex items-center justify-center gap-3 text-sm font-semibold text-slate-300">
-                  <span>1</span><span className="h-1.5 w-1.5 rounded-full bg-cyan-300" /><span>2</span><span className="h-1.5 w-1.5 rounded-full bg-cyan-300" /><span>3</span><span className="text-cyan-200">↻ {t.rotateLabel}</span>
-                </div>
-              </div>
-            </div>
+            <ProductArtwork
+              src="/images/web/roto-blocks-icon.webp"
+              name="Roto Blocks"
+              alt={lang === "tr" ? "Roto Blocks resmi uygulama ikonu" : "Roto Blocks official app icon"}
+              label={lang === "tr" ? "Resmi ürün görseli" : "Official product artwork"}
+              accent="rgba(34, 211, 238, 0.26)"
+              priority
+            />
           </div>
         </section>
 

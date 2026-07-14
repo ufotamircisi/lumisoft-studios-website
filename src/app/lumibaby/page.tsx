@@ -5,12 +5,23 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import StoreBadges from "@/components/StoreBadges";
-import PhoneMockup from "@/components/PhoneMockup";
+import ProductArtwork from "@/components/ProductArtwork";
 
 export const metadata: Metadata = {
-  title: "LumiBaby | Baby Sleep Support",
+  title: "LumiBaby Version 2 | Baby Sleep Support",
   description:
     "LumiBaby helps parents support baby sleep with cry detection, lullabies, sleep tracking, white noise, and sleep stories.",
+  alternates: {
+    canonical: "/lumibaby",
+    languages: { "en-US": "/lumibaby", "tr-TR": "/tr/lumibaby" },
+  },
+  openGraph: {
+    title: "LumiBaby Version 2 | Baby Sleep Support",
+    description:
+      "Cry detection, sleep tracking, calming audio, parent alerts, and practical bedtime support for families.",
+    url: "/lumibaby",
+    images: [{ url: "/images/lumibaby-icon.png", width: 1024, height: 1024, alt: "LumiBaby" }],
+  },
 };
 
 interface Feature {
@@ -50,7 +61,7 @@ const gridFeatures: Feature[] = [
   {
     icon: "📊",
     title: "Detailed Sleep Reports",
-    desc: "LumiBaby can provide sleep summaries and simple insights. Reports may include sleep duration, crying count, sleep quality, and routine-related observations.",
+    desc: "LumiBaby organizes sleep sessions, wake-ups, crying events, and detector history into practical summaries.",
     note: "Reports are informational and not medical advice.",
   },
   {
@@ -58,11 +69,10 @@ const gridFeatures: Feature[] = [
     title: "Parent Connection & Alerts",
     bullets: [
       "Parents can connect another parent or caregiver device through the app.",
-      "When important baby moments are detected, such as crying or calming events, LumiBaby can send alerts to connected phones.",
-      "If the connected phone has smartwatch notifications enabled, alerts may also appear on the smartwatch, depending on device and notification settings.",
-      "Helps both parents stay aware, especially during sleep routines, night care, or when one parent is in another room.",
+      "With QR pairing, crying alerts can be sent from the device near the baby to the connected parent device.",
+      "This helps a parent or caregiver stay informed during sleep routines and night care.",
     ],
-    note: "Alert delivery depends on phone settings, internet connection, permissions, battery settings, and smartwatch configuration. Alerts are a supportive awareness tool, not a replacement for direct parental supervision.",
+    note: "Alert delivery depends on phone settings, internet connection, permissions, and battery settings. Alerts support awareness but do not replace direct parental supervision.",
   },
   {
     icon: "🎵",
@@ -72,7 +82,7 @@ const gridFeatures: Feature[] = [
   {
     icon: "🌊",
     title: "Colic Sounds",
-    desc: "Parents can use soothing white noise and colic sounds such as shushing, fan, rain, waves, heartbeat, or similar calming sounds. These sounds may help create a more comforting sound environment.",
+    desc: "Parents can use soothing sounds such as shushing, white noise, fan, vacuum, hair dryer, and other colic sounds to support a calmer routine.",
     note: "This is not medical treatment for colic.",
   },
   {
@@ -86,7 +96,7 @@ export default function LumiBabyPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
 
         {/* ── Hero ─────────────────────────────────────────────── */}
         <section className="relative overflow-hidden px-4 py-24 sm:py-32">
@@ -124,7 +134,7 @@ export default function LumiBabyPage() {
               </div>
 
               <p className="eyebrow mb-4 text-violet-400">
-                Minik Uyku · Baby Sleep Support
+                LumiBaby · Version 2
               </p>
               <h1 className="mb-5 text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 LumiBaby
@@ -162,7 +172,14 @@ export default function LumiBabyPage() {
             </div>
 
             <div className="hidden lg:block">
-              <PhoneMockup lang="en" />
+              <ProductArtwork
+                src="/images/web/lumibaby-icon.webp"
+                name="LumiBaby"
+                alt="LumiBaby official app icon"
+                label="Official product artwork"
+                accent="rgba(139, 92, 246, 0.3)"
+                priority
+              />
             </div>
           </div>
         </section>

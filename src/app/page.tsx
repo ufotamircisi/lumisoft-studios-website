@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HomePage from "@/components/HomePage";
 
 export const metadata: Metadata = {
-  title: "Lumisoft Studios | Games & Apps",
+  title: "Games & Apps",
   description:
-    "Lumisoft Studios is an independent studio crafting polished mobile games and apps for iOS and Android.",
+    "Lumisoft Studios develops focused mobile games and practical apps for iOS and Android.",
   alternates: {
     canonical: "/",
     languages: { en: "/", tr: "/tr" },
@@ -19,7 +19,7 @@ const organizationJsonLd = {
   logo: "https://www.lumisoftstudios.com/images/lumisoft-studio-emblem.png",
   email: "support@lumisoftstudios.com",
   description:
-    "Independent studio crafting polished mobile games and apps for iOS and Android.",
+    "Independent studio developing focused mobile games and practical apps for iOS and Android.",
 };
 
 export default function Page() {

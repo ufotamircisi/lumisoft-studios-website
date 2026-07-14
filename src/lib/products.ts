@@ -90,24 +90,6 @@ export const games: Product[] = [
     },
     platforms: ["iOS", "Android"],
   },
-  {
-    slug: "ada-kralliklari",
-    kind: "game",
-    name: "Ada Krallıkları",
-    status: "coming-soon",
-    glyph: "🏝️",
-    accent: "#34d399",
-    accentSoft: "rgba(52,211,153,0.16)",
-    tagline: {
-      en: "Island kingdom strategy",
-      tr: "Ada krallığı stratejisi",
-    },
-    description: {
-      en: "Build your island, grow your kingdom, and lead it to prosperity. In the works at Lumisoft.",
-      tr: "Adanı kur, krallığını büyüt ve refaha taşı. Lumisoft'ta geliştiriliyor.",
-    },
-    platforms: ["iOS", "Android"],
-  },
 ];
 
 export const apps: Product[] = [

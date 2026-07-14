@@ -5,25 +5,29 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Privacy Policy",
-  description: "Privacy Policy placeholder for Jelly Chain Rush by Lumisoft Studio.",
+  description: "Privacy information for the pre-release Jelly Chain Rush product page by Lumisoft Studio.",
+  alternates: {
+    canonical: "/jelly-chain-rush/privacy",
+    languages: { "en-US": "/jelly-chain-rush/privacy", "tr-TR": "/tr/jelly-chain-rush/gizlilik" },
+  },
 };
 
 const sections = [
   [
     "Overview",
-    "Jelly Chain Rush is a mobile puzzle game in development by Lumisoft Studio. This page is a simple placeholder policy for the pre-release website.",
+    "Jelly Chain Rush is a mobile puzzle game in development by Lumisoft Studio. It is not currently distributed through public app stores.",
   ],
   [
-    "Current Status",
-    "The game is not publicly released yet. Full policy details will be finalized before public store release if needed.",
+    "This Product Page",
+    "This static product page has no account system, forms, gameplay services, advertising, or tracking cookies. It does not collect gameplay or account data.",
   ],
   [
-    "Game Data",
-    "The released game may store gameplay progress, settings, level progress, and similar puzzle-game data on your device or through platform services used by the app.",
+    "Public Availability",
+    "Because the game is not publicly released, there is no production app data processing to describe. This policy will be updated before release if the game's data practices require additional information.",
   ],
   [
     "Accounts",
-    "No public account system is available for Jelly Chain Rush on this website.",
+    "No Jelly Chain Rush account or sign-in is offered through this website.",
   ],
   [
     "Contact",

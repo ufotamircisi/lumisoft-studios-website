@@ -34,11 +34,11 @@ const copy = {
       },
       {
         q: "How do I remove ads in your games?",
-        a: "Games that show ads offer a one time Remove Ads purchase inside the game. Rewarded ads always stay optional.",
+        a: "Options vary by product. Where a game offers a Remove Ads purchase, the product page or in-game purchase screen explains exactly which ad formats it removes.",
       },
       {
         q: "How do you handle my data?",
-        a: "Each product has its own privacy policy linked from its page. As a rule we collect the minimum needed and keep personal data on your device.",
+        a: "Each product has its own privacy policy linked from its page. Review that policy for current details about local data, permissions, advertising, purchases, and any platform services used.",
       },
       {
         q: "I found a bug. Where do I report it?",
@@ -64,11 +64,11 @@ const copy = {
       },
       {
         q: "Oyunlarınızdaki reklamları nasıl kaldırırım?",
-        a: "Reklam gösteren oyunlar, oyun içinde tek seferlik Reklamları Kaldır satın alması sunar. Ödüllü reklamlar her zaman isteğe bağlıdır.",
+        a: "Seçenekler ürüne göre değişir. Bir oyun Reklamları Kaldır satın alması sunuyorsa hangi reklam türlerinin kaldırıldığı ürün sayfasında veya oyun içi satın alma ekranında açıkça belirtilir.",
       },
       {
         q: "Verilerimi nasıl işliyorsunuz?",
-        a: "Her ürünün kendi sayfasından bağlantı verilen ayrı bir gizlilik politikası vardır. Kural olarak gereken en az veriyi toplar ve kişisel verileri cihazınızda tutarız.",
+        a: "Her ürünün kendi sayfasından bağlantı verilen ayrı bir gizlilik politikası vardır. Yerel veriler, izinler, reklamlar, satın almalar ve kullanılan platform hizmetleriyle ilgili güncel ayrıntılar için ilgili politikayı inceleyin.",
       },
       {
         q: "Bir hata buldum. Nereye bildirebilirim?",
@@ -86,7 +86,7 @@ export default function SupportPage({ lang = "en" }: SupportPageProps) {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         {/* Hero */}
         <section className="relative overflow-hidden px-4 py-20 sm:py-24">
           <div

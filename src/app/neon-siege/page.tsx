@@ -14,6 +14,16 @@ export const metadata: Metadata = {
   title: "Neon Siege - Neon arcade brick breaker",
   description:
     "Fast-paced neon brick breaker with shapes, skills, boosters, bombs, multipliers, upgrades, and intense levels.",
+  alternates: {
+    canonical: "/neon-siege",
+    languages: { "en-US": "/neon-siege", "tr-TR": "/tr/neon-siege" },
+  },
+  openGraph: {
+    title: "Neon Siege | Neon arcade brick breaker",
+    description: "Fast neon brick-breaker action with skills, boosters, bombs, multipliers, and level progression.",
+    url: "/neon-siege",
+    images: [{ url: "/images/neon-siege-app-icon.png", width: 1024, height: 1024, alt: "Neon Siege" }],
+  },
 };
 
 const features = [
@@ -34,12 +44,12 @@ const features = [
     text: "Intense levels ramp up the challenge as you push deeper into the siege.",
   },
   {
-    title: "Offline Arcade Gameplay",
-    text: "No connection needed. Break bricks on the plane, the train, anywhere.",
+    title: "Short Arcade Sessions",
+    text: "Simple aim-and-shoot controls make it easy to start a focused run.",
   },
   {
     title: "Performance Mode",
-    text: "Runs smooth on modest phones and goes easy on the battery.",
+    text: "An Android performance option reduces visual load during dense gameplay scenes.",
   },
 ];
 
@@ -49,12 +59,8 @@ const faqs = [
     a: "Yes. Neon Siege is free to download and play. Rewarded ads are always optional, and a Remove Forced Ads purchase removes the forced ads between levels.",
   },
   {
-    q: "Can I play offline?",
-    a: "Yes. Neon Siege is built for offline arcade play, so no connection is needed.",
-  },
-  {
-    q: "Are in-game diamonds gambling?",
-    a: "No. Neon Siege is a game, not a gambling app. Diamonds are virtual items for gameplay use only.",
+    q: "What does Performance Mode do?",
+    a: "Performance Mode reduces visual load on Android devices to support smoother play in dense scenes.",
   },
   {
     q: "How do purchases work?",
@@ -66,7 +72,7 @@ export default function NeonSiegePage() {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         <section className="relative overflow-hidden px-4 py-24 sm:py-32">
           <div
             className="absolute inset-0 pointer-events-none"

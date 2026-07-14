@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
+import ProductArtwork from "@/components/ProductArtwork";
 
 type JellyChainRushPageProps = {
   lang?: "en" | "tr";
@@ -81,18 +82,6 @@ const copy = {
   },
 };
 
-const candies = [
-  "bg-pink-300",
-  "bg-amber-200",
-  "bg-sky-300",
-  "bg-emerald-300",
-  "bg-fuchsia-300",
-  "bg-orange-300",
-  "bg-lime-300",
-  "bg-rose-300",
-  "bg-cyan-300",
-];
-
 export default function JellyChainRushPage({
   lang = "en",
 }: JellyChainRushPageProps) {
@@ -101,7 +90,7 @@ export default function JellyChainRushPage({
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         <section className="relative overflow-hidden px-4 py-24 sm:py-32">
           <div
             className="absolute inset-0 pointer-events-none"
@@ -171,43 +160,14 @@ export default function JellyChainRushPage({
               </div>
             </div>
 
-            <div className="relative mx-auto w-full max-w-sm">
-              <div className="absolute inset-0 rounded-[36px] blur-3xl scale-105 bg-pink-300/20" />
-              <div className="relative rounded-[32px] border border-white/12 bg-[#10172f]/90 p-5 shadow-[0_22px_70px_rgba(244,114,182,0.18)]">
-                <div className="mb-5 flex items-center justify-between">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-pink-200">
-                      Jelly Chain
-                    </p>
-                    <p className="text-sm text-slate-300">7x7</p>
-                  </div>
-                  <span className="rounded-full border border-amber-200/30 bg-amber-200/10 px-3 py-1 text-xs font-bold text-amber-100">
-                    SHAKE
-                  </span>
-                </div>
-                <div className="grid grid-cols-7 gap-2">
-                  {Array.from({ length: 49 }).map((_, index) => (
-                    <div
-                      key={index}
-                      className={`aspect-square rounded-xl border border-white/20 shadow-inner ${
-                        candies[index % candies.length]
-                      }`}
-                    />
-                  ))}
-                </div>
-                <div className="mt-5 rounded-2xl border border-emerald-200/20 bg-emerald-300/10 px-4 py-3">
-                  <p className="text-sm font-semibold text-emerald-100">
-                    Candy Island
-                  </p>
-                  <div className="mt-2 grid grid-cols-4 gap-2">
-                    <div className="h-10 rounded-xl bg-pink-300/70" />
-                    <div className="h-10 rounded-xl bg-amber-200/70" />
-                    <div className="h-10 rounded-xl bg-sky-300/70" />
-                    <div className="h-10 rounded-xl bg-emerald-300/70" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProductArtwork
+              src="/images/web/jelly-chain-rush-icon.webp"
+              name="Jelly Chain Rush"
+              alt={lang === "tr" ? "Jelly Chain Rush resmi uygulama ikonu" : "Jelly Chain Rush official app icon"}
+              label={lang === "tr" ? "Resmi ürün görseli" : "Official product artwork"}
+              accent="rgba(244, 114, 182, 0.28)"
+              priority
+            />
           </div>
         </section>
 
@@ -222,11 +182,9 @@ export default function JellyChainRushPage({
                   key={feature}
                   className="rounded-2xl border border-pink-200/15 bg-[#10172f]/80 p-5 shadow-[0_0_24px_rgba(244,114,182,0.06)]"
                 >
-                  <div
-                    className={`h-10 w-10 rounded-xl border border-white/20 ${
-                      candies[index % candies.length]
-                    } mb-4`}
-                  />
+                  <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-pink-200/20 bg-pink-300/10 text-sm font-bold text-pink-100">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                   <h3 className="text-base font-bold text-white">{feature}</h3>
                 </div>
               ))}

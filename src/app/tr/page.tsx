@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HomePage from "@/components/HomePage";
 
 export const metadata: Metadata = {
-  title: "Lumisoft Studios | Oyunlar ve Uygulamalar",
+  title: "Oyunlar ve Uygulamalar",
   description:
-    "Lumisoft Studios, iOS ve Android için özenle geliştirilmiş mobil oyunlar ve uygulamalar üreten bağımsız bir stüdyodur.",
+    "Lumisoft Studios, iOS ve Android için odaklı mobil oyunlar ve günlük yaşama yönelik pratik uygulamalar geliştirir.",
   alternates: {
     canonical: "/tr",
     languages: { en: "/", tr: "/tr" },
@@ -19,7 +19,7 @@ const organizationJsonLd = {
   logo: "https://www.lumisoftstudios.com/images/lumisoft-studio-emblem.png",
   email: "support@lumisoftstudios.com",
   description:
-    "iOS ve Android için özenle geliştirilmiş mobil oyunlar ve uygulamalar üreten bağımsız stüdyo.",
+    "iOS ve Android için odaklı mobil oyunlar ve günlük yaşama yönelik pratik uygulamalar geliştiren bağımsız stüdyo.",
 };
 
 export default function Page() {

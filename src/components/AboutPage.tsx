@@ -11,79 +11,79 @@ type AboutPageProps = {
 const copy = {
   en: {
     eyebrow: "About Lumisoft Studios",
-    title: "A small studio with high standards",
+    title: "Independent and product-focused",
     intro:
-      "Lumisoft Studios is an independent studio building mobile games and apps. We stay small on purpose. It keeps us fast, honest, and close to the products we ship.",
+      "Lumisoft Studios develops mobile games and apps for iOS and Android, covering product design, engineering, release, and ongoing support.",
     storyTitle: "The story",
     story:
-      "Lumisoft started with a simple belief: small teams can ship software that feels better than what large ones produce, because every detail passes through hands that care. We began with LumiBaby, an app built for tired parents, and grew into games that respect the player as much as the app respects the family.",
+      "Our catalog began with LumiBaby, a practical sleep-support app for parents and caregivers. It now includes released arcade games and puzzle projects in active development.",
     missionTitle: "Mission",
     mission:
-      "Build games and apps that people keep on their phones because they genuinely like using them.",
+      "Create mobile products with a clear purpose, understandable interactions, and reliable day-to-day performance.",
     visionTitle: "Vision",
     vision:
-      "A catalog of products, each one small in scope and high in quality, that together stand for reliable, honest mobile software.",
+      "Build a focused catalog of games and apps that can be explained clearly, supported responsibly, and improved over time.",
     pillarsTitle: "What we hold ourselves to",
     pillars: [
       {
         title: "Technology",
-        text: "Modern, lean stacks. Native performance targets on both iOS and Android. Nothing shipped that we would not run on our own phones.",
+        text: "Choose technology to fit the product, keep dependencies deliberate, and treat iOS and Android behavior as first-class concerns.",
       },
       {
         title: "Quality",
-        text: "Every release is played, tapped, and tested on real devices, including older Android phones. Polish is part of the definition of done.",
+        text: "Review interaction, copy, accessibility, performance, and platform behavior as part of every release.",
       },
       {
         title: "Honesty",
-        text: "Clear pricing, optional ads where they exist, and no dark patterns. What a product says it does is what it does.",
+        text: "Describe products as they work today, separate released features from development plans, and keep pricing and ads understandable.",
       },
       {
         title: "Privacy",
-        text: "We collect the minimum needed to run our products. Recordings and personal data stay on your device unless you choose otherwise.",
+        text: "Document data practices product by product and explain permissions, advertising, and store services in plain language.",
       },
     ],
     ctaTitle: "Want to know more?",
-    ctaText: "We answer questions about our products, our roadmap, and partnerships.",
+    ctaText: "We welcome product questions, publishing conversations, and partnership inquiries.",
     ctaButton: "Contact the studio",
     supportHref: "/support",
     supportLabel: "Visit support",
   },
   tr: {
     eyebrow: "Lumisoft Studios Hakkında",
-    title: "Yüksek standartlara sahip küçük bir stüdyo",
+    title: "Bağımsız ve ürün odaklı",
     intro:
-      "Lumisoft Studios, mobil oyunlar ve uygulamalar geliştiren bağımsız bir stüdyodur. Bilerek küçük kalıyoruz. Bu bizi hızlı, dürüst ve ürettiğimiz ürünlere yakın tutuyor.",
+      "Lumisoft Studios; ürün tasarımı, mühendislik, yayın ve sürekli desteği kapsayarak iOS ve Android için mobil oyunlar ve uygulamalar geliştirir.",
     storyTitle: "Hikaye",
     story:
-      "Lumisoft basit bir inançla başladı: Küçük ekipler, her ayrıntı özen gösteren ellerden geçtiği için büyük ekiplerden daha iyi hissettiren yazılımlar üretebilir. Yorgun ebeveynler için geliştirilen LumiBaby ile başladık; uygulamanın aileye gösterdiği saygıyı oyuncuya gösteren oyunlarla büyüdük.",
+      "Ürün kataloğumuz, ebeveynler ve bakım verenler için pratik bir uyku destek uygulaması olan LumiBaby ile başladı. Bugün yayındaki arcade oyunlarını ve aktif olarak geliştirilen bulmaca projelerini de içeriyor.",
     missionTitle: "Misyon",
     mission:
-      "İnsanların gerçekten kullanmaktan keyif aldığı için telefonlarında tuttuğu oyunlar ve uygulamalar geliştirmek.",
+      "Net bir amacı, anlaşılır etkileşimleri ve günlük kullanımda güvenilir performansı olan mobil ürünler geliştirmek.",
     visionTitle: "Vizyon",
     vision:
-      "Her biri kapsamı küçük, kalitesi yüksek ürünlerden oluşan; birlikte güvenilir ve dürüst mobil yazılımı temsil eden bir katalog.",
+      "Açıkça anlatılabilen, sorumlu biçimde desteklenen ve zaman içinde geliştirilen odaklı bir oyun ve uygulama kataloğu oluşturmak.",
     pillarsTitle: "Kendimizi bağlı tuttuğumuz standartlar",
     pillars: [
       {
         title: "Teknoloji",
-        text: "Modern ve yalın teknolojiler. Hem iOS hem Android'de yerel performans hedefleri. Kendi telefonumuzda çalıştırmayacağımız hiçbir şeyi yayınlamayız.",
+        text: "Teknolojiyi ürüne göre seçer, bağımlılıkları bilinçli tutar ve iOS ile Android davranışlarını temel ürün gereksinimi olarak ele alırız.",
       },
       {
         title: "Kalite",
-        text: "Her sürüm gerçek cihazlarda, eski Android telefonlar dahil, oynanır ve test edilir. Cila, 'tamamlandı' tanımının bir parçasıdır.",
+        text: "Her yayında etkileşim, metin, erişilebilirlik, performans ve platform davranışını birlikte değerlendiririz.",
       },
       {
         title: "Dürüstlük",
-        text: "Net fiyatlandırma, varsa isteğe bağlı reklamlar ve karanlık desen yok. Bir ürün ne söylüyorsa onu yapar.",
+        text: "Ürünleri bugünkü işleyişleriyle anlatır, yayındaki özellikleri geliştirme planlarından ayırır; fiyatlandırma ve reklamları anlaşılır tutarız.",
       },
       {
         title: "Gizlilik",
-        text: "Ürünlerimizi çalıştırmak için gereken en az veriyi toplarız. Kayıtlar ve kişisel veriler siz aksini seçmedikçe cihazınızda kalır.",
+        text: "Veri uygulamalarını ürün bazında belgeler; izinleri, reklamları ve mağaza hizmetlerini sade bir dille açıklarız.",
       },
     ],
     ctaTitle: "Daha fazlasını merak mı ediyorsunuz?",
     ctaText:
-      "Ürünlerimiz, yol haritamız ve iş birlikleri hakkındaki soruları yanıtlıyoruz.",
+      "Ürün sorularına, yayıncılık görüşmelerine ve iş birliği taleplerine açığız.",
     ctaButton: "Stüdyoyla iletişime geç",
     supportHref: "/tr/support",
     supportLabel: "Destek sayfası",
@@ -96,7 +96,7 @@ export default function AboutPage({ lang = "en" }: AboutPageProps) {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-16">
         {/* Hero */}
         <section className="relative overflow-hidden px-4 py-20 sm:py-28">
           <div className="bg-grid absolute inset-0" aria-hidden="true" />

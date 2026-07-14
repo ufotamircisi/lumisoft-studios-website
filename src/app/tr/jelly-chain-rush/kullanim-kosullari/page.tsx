@@ -6,21 +6,25 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Kullanım Koşulları",
   description:
-    "Lumisoft Studio tarafından geliştirilen Jelly Chain Rush için kullanım koşulları yer tutucu sayfası.",
+    "Lumisoft Studio'nun yayın öncesi Jelly Chain Rush ürün sayfası için kullanım koşulları.",
+  alternates: {
+    canonical: "/tr/jelly-chain-rush/kullanim-kosullari",
+    languages: { "tr-TR": "/tr/jelly-chain-rush/kullanim-kosullari", "en-US": "/jelly-chain-rush/terms" },
+  },
 };
 
 const sections = [
   [
-    "Genel",
-    "Bu Kullanım Koşulları, Lumisoft Studio tarafından geliştirilmekte olan Jelly Chain Rush için sade bir yayın öncesi yer tutucu metindir.",
+    "Ürün Durumu",
+    "Jelly Chain Rush, Lumisoft Studio tarafından geliştirilmekte olan bir mobil bulmaca oyunudur. Bu web sitesi üzerinden herkese açık indirme, satın alma veya oyun lisansı sunulmaz.",
   ],
   [
-    "Yayın Öncesi Bilgiler",
-    "Web sitesindeki açıklamalar, özellik adları ve yayın takvimi oyun geliştirilirken değişebilir.",
+    "Ürün Bilgileri",
+    "Ürün sayfası oyunun mevcut yönünü açıklar. Özellikler ve yayın takvimi geliştirme sırasında değişebilir; herhangi bir yayın tarihi taahhüt edilmez.",
   ],
   [
-    "Mağaza Yayını Henüz Yok",
-    "Jelly Chain Rush şu anda geliştirme aşamasında. Oyun hazır olduğunda mağaza bağlantıları eklenecek.",
+    "Mağaza Erişimi Yok",
+    "Oyun herkese açık hale gelirse Lumisoft Studio resmi mağaza bağlantılarını ürün sayfasında yayınlayacaktır.",
   ],
   [
     "Fikri Mülkiyet",
