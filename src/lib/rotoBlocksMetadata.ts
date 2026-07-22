@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 const descriptions = {
   en: {
     product: "Discover Roto Blocks, a calm rotating block puzzle game from Lumisoft Studio.",
-    privacy: "Privacy Policy for Roto Blocks by Lumisoft Studio, including local game data, advertising, consent, and support information.",
-    terms: "Terms of Use for Roto Blocks, a free ad supported puzzle game from Lumisoft Studio.",
+    privacy: "Privacy Policy for Roto Blocks by Lumisoft Studio, including local game data and support request information.",
+    terms: "Terms of Use for Roto Blocks, a free casual puzzle game from Lumisoft Studio.",
     support: "Get help with Roto Blocks and contact Lumisoft Studio support.",
   },
   tr: {
     product: "Lumisoft Studio tarafından geliştirilen sakin ve dönen tahta mekanikli Roto Blocks bulmaca oyununu keşfedin.",
-    privacy: "Roto Blocks için yerel oyun verileri, reklamlar, onay ve destek bilgilerini açıklayan Gizlilik Politikası.",
-    terms: "Lumisoft Studio tarafından geliştirilen ücretsiz ve reklam destekli Roto Blocks için Kullanım Koşulları.",
+    privacy: "Roto Blocks için yerel oyun verilerini ve destek taleplerinde bilgilerin nasıl kullanıldığını açıklayan Gizlilik Politikası.",
+    terms: "Lumisoft Studio tarafından geliştirilen ücretsiz Roto Blocks bulmaca oyunu için Kullanım Koşulları.",
     support: "Roto Blocks için yardım alın ve Lumisoft Studio destek ekibine ulaşın.",
   },
 };
