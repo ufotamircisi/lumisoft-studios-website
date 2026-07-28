@@ -24,6 +24,7 @@ const routes = [
   "/jelly-chain-rush",
   "/jelly-chain-rush/privacy",
   "/jelly-chain-rush/terms",
+  "/jellychainrush/download",
   "/roto-blocks",
   "/roto-blocks/support",
   "/roto-blocks/privacy",
