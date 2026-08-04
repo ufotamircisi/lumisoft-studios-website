@@ -6,7 +6,7 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Gizlilik Politikası",
   description:
-    "Lumisoft Studio'nun yayın öncesi Jelly Chain Rush ürün sayfası için gizlilik bilgileri.",
+    "Lumisoft Studio'nun App Store ve Google Play'de yayında olan Jelly Chain Rush: Match 3 oyunu için gizlilik politikası.",
   alternates: {
     canonical: "/tr/jelly-chain-rush/gizlilik",
     languages: { "tr-TR": "/tr/jelly-chain-rush/gizlilik", "en-US": "/jelly-chain-rush/privacy" },
@@ -16,23 +16,35 @@ export const metadata: Metadata = {
 const sections = [
   [
     "Genel",
-    "Jelly Chain Rush, Lumisoft Studio tarafından geliştirilmekte olan bir mobil bulmaca oyunudur. Oyun şu anda herkese açık uygulama mağazalarında dağıtılmamaktadır.",
+    "Jelly Chain Rush: Match 3 (\"Uygulama\"), Lumisoft Studio tarafından geliştirilen ve App Store ile Google Play'de yayında olan bir mobil bulmaca oyunudur.",
   ],
   [
-    "Bu Ürün Sayfası",
-    "Bu statik ürün sayfasında hesap sistemi, form, oynanış hizmeti, reklam veya izleme çerezi bulunmaz. Sayfa, oynanış ya da hesap verisi toplamaz.",
+    "Yerel Oyun İlerlemesi",
+    "Oyun ilerlemesi, ayarlar ve benzeri oynanış verileri cihazınızda yerel olarak saklanabilir. Oynamak için hesap veya oturum açma gerekmez.",
   ],
   [
-    "Herkese Açık Kullanım",
-    "Oyun henüz herkese açık olmadığı için açıklanacak bir üretim uygulaması veri işleme süreci yoktur. Oyunun veri uygulamaları ek bilgi gerektirirse bu politika yayın öncesinde güncellenecektir.",
+    "Reklamlar",
+    "Uygulama, reklam göstermek için Google AdMob kullanabilir. Reklam biçimleri ödüllü reklamları, geçiş reklamlarını ve banner reklamları içerebilir. Ödüllü reklamlar isteğe bağlıdır.",
   ],
   [
-    "Hesaplar",
-    "Bu web sitesi üzerinden Jelly Chain Rush hesabı veya oturum açma özelliği sunulmaz.",
+    "Satın Almalar",
+    "Uygulama, Google Play Billing veya Apple'ın Uygulama İçi Satın Alma sistemi üzerinden işlenen uygulama içi satın almalar sunabilir. Lumisoft Studio ödeme kartı bilgilerinizi toplamaz veya saklamaz.",
+  ],
+  [
+    "Hassas Veriler",
+    "Uygulama, sağlık, finansal, resmi kimlik veya benzeri hassas kişisel verileri bilerek toplamaz.",
+  ],
+  [
+    "Çocuklar ve Aileler",
+    "Jelly Chain Rush bir eğlence oyunudur. Cihazınızda ve mağaza hesabınızda bulunan yaş derecelendirmesi, mağaza listesi, ebeveyn denetimleri ve aile ayarlarına uygun şekilde kullanılmalıdır.",
   ],
   [
     "İletişim",
     "Jelly Chain Rush gizlilik soruları için support@lumisoftstudios.com adresinden bize ulaşabilirsiniz.",
+  ],
+  [
+    "Değişiklikler",
+    "Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. En güncel sürüm bu sayfada yayınlanacaktır.",
   ],
 ];
 
@@ -43,7 +55,7 @@ export default function JellyChainRushGizlilikPage() {
       <LegalPageLayout
         title="Gizlilik Politikası"
         subtitle="Lumisoft Studio tarafından Jelly Chain Rush"
-        lastUpdated="23 Haziran 2026"
+        lastUpdated="5 Ağustos 2026"
         lastUpdatedLabel="Son güncelleme:"
         backHref="/tr/jelly-chain-rush"
         backLinkText="← Jelly Chain Rush'a dön"

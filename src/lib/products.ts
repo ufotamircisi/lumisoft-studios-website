@@ -29,6 +29,12 @@ export const STORE_URLS = {
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.erolozcitak.neonsiege",
   },
+  jellyChainRush: {
+    appStore:
+      "https://apps.apple.com/ng/app/jelly-chain-rush-match-3/id6790545058",
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.lumisoft.jellychainrush",
+  },
 };
 
 export const games: Product[] = [
@@ -56,7 +62,7 @@ export const games: Product[] = [
     slug: "jelly-chain-rush",
     kind: "game",
     name: "Jelly Chain Rush",
-    status: "in-development",
+    status: "live",
     iconImage: "/images/web/jelly-chain-rush-icon.webp",
     accent: "#f472b6",
     accentSoft: "rgba(244,114,182,0.16)",
@@ -70,6 +76,7 @@ export const games: Product[] = [
       tr: "Şekerleri eşleştir, zincirleme patlamalar oluştur ve Şeker Adanı bölüm bölüm yenile.",
     },
     platforms: ["iOS", "Android"],
+    stores: STORE_URLS.jellyChainRush,
   },
   {
     slug: "roto-blocks",

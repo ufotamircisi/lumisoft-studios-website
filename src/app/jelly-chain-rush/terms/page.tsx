@@ -5,7 +5,7 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Terms of Use",
-  description: "Terms governing the pre-release Jelly Chain Rush product page by Lumisoft Studio.",
+  description: "Terms of Use for Jelly Chain Rush: Match 3 by Lumisoft Studio.",
   alternates: {
     canonical: "/jelly-chain-rush/terms",
     languages: { "en-US": "/jelly-chain-rush/terms", "tr-TR": "/tr/jelly-chain-rush/kullanim-kosullari" },
@@ -14,20 +14,32 @@ export const metadata: Metadata = {
 
 const sections = [
   [
-    "Product Status",
-    "Jelly Chain Rush is a mobile puzzle game in development by Lumisoft Studio. No public download, purchase, or game license is offered through this website.",
+    "Entertainment Game",
+    "Jelly Chain Rush: Match 3 is provided by Lumisoft Studio as an entertainment game, available on the App Store and Google Play. By downloading or using the App, you agree to these Terms of Use.",
   ],
   [
-    "Product Information",
-    "The product page describes the current direction of the game. Features and release timing may change during development, and no release date is promised.",
+    "Virtual Items",
+    "Virtual boosters, items, and similar in-game content have no real-world monetary value and cannot be exchanged for cash or real-world goods outside the App.",
   ],
   [
-    "No Store Availability",
-    "Lumisoft Studio will publish official store links on the product page if and when the game becomes publicly available.",
+    "Purchases",
+    "In-app purchases, where offered, are processed by Google Play or the App Store. Refunds and billing issues are handled according to the applicable store's rules.",
+  ],
+  [
+    "Ads",
+    "The App may show rewarded, interstitial, or banner ads. Rewarded ads are optional.",
+  ],
+  [
+    "Platform Rules",
+    "You must follow the rules, terms, and policies of Google Play, the App Store, and your device platform when using the App.",
   ],
   [
     "Intellectual Property",
     "Jelly Chain Rush, related artwork, names, and game content are owned by Lumisoft Studio or its licensors.",
+  ],
+  [
+    "Service Availability",
+    "We do not guarantee uninterrupted, error-free, or permanently available service. Features may change over time.",
   ],
   [
     "Contact",
@@ -42,7 +54,7 @@ export default function JellyChainRushTermsPage() {
       <LegalPageLayout
         title="Terms of Use"
         subtitle="Jelly Chain Rush by Lumisoft Studio"
-        lastUpdated="June 23, 2026"
+        lastUpdated="August 5, 2026"
         backHref="/jelly-chain-rush"
         backLabel="Jelly Chain Rush"
       >

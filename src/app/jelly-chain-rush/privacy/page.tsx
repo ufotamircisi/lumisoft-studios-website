@@ -5,7 +5,7 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Privacy Policy",
-  description: "Privacy information for the pre-release Jelly Chain Rush product page by Lumisoft Studio.",
+  description: "Privacy Policy for Jelly Chain Rush: Match 3 by Lumisoft Studio.",
   alternates: {
     canonical: "/jelly-chain-rush/privacy",
     languages: { "en-US": "/jelly-chain-rush/privacy", "tr-TR": "/tr/jelly-chain-rush/gizlilik" },
@@ -15,23 +15,35 @@ export const metadata: Metadata = {
 const sections = [
   [
     "Overview",
-    "Jelly Chain Rush is a mobile puzzle game in development by Lumisoft Studio. It is not currently distributed through public app stores.",
+    "Jelly Chain Rush: Match 3 (\"the App\") is a mobile puzzle game developed and published by Lumisoft Studio, available on the App Store and Google Play.",
   ],
   [
-    "This Product Page",
-    "This static product page has no account system, forms, gameplay services, advertising, or tracking cookies. It does not collect gameplay or account data.",
+    "Local Game Progress",
+    "Game progress, settings, and similar gameplay data may be stored locally on your device. No account or sign-in is required to play.",
   ],
   [
-    "Public Availability",
-    "Because the game is not publicly released, there is no production app data processing to describe. This policy will be updated before release if the game's data practices require additional information.",
+    "Advertising",
+    "The App may use Google AdMob to show ads. Ad formats may include rewarded ads, interstitial ads, and banner ads. Rewarded ads are optional.",
   ],
   [
-    "Accounts",
-    "No Jelly Chain Rush account or sign-in is offered through this website.",
+    "Purchases",
+    "The App may offer in-app purchases processed by Google Play Billing or Apple's In-App Purchase system. Lumisoft Studio does not collect or store your payment card details.",
+  ],
+  [
+    "Sensitive Data",
+    "The App does not intentionally collect health, financial, government, or other sensitive personal data.",
+  ],
+  [
+    "Children and Families",
+    "Jelly Chain Rush is an entertainment game. It should be used according to the age rating, store listing, parental controls, and family settings available on your device and app store account.",
   ],
   [
     "Contact",
     "For privacy questions about Jelly Chain Rush, contact support@lumisoftstudios.com.",
+  ],
+  [
+    "Changes",
+    "We may update this Privacy Policy from time to time. The latest version will be posted on this page.",
   ],
 ];
 
@@ -42,7 +54,7 @@ export default function JellyChainRushPrivacyPage() {
       <LegalPageLayout
         title="Privacy Policy"
         subtitle="Jelly Chain Rush by Lumisoft Studio"
-        lastUpdated="June 23, 2026"
+        lastUpdated="August 5, 2026"
         backHref="/jelly-chain-rush"
         backLabel="Jelly Chain Rush"
       >

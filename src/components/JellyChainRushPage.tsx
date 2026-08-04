@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import ProductArtwork from "@/components/ProductArtwork";
+import { STORE_URLS } from "@/lib/products";
 
 type JellyChainRushPageProps = {
   lang?: "en" | "tr";
@@ -13,10 +14,12 @@ const copy = {
   en: {
     eyebrow: "Candy puzzle adventure",
     title: "Jelly Chain Rush",
-    subtitle: "A colorful candy puzzle adventure",
-    status: "In development",
+    subtitle: "Available on the App Store and Google Play",
+    status: "Available now",
     description:
-      "Jelly Chain Rush is a cheerful mobile puzzle game where players connect matching candies, trigger satisfying chain reactions, unlock new levels, and rebuild a sweet candy island step by step.",
+      "Jelly Chain Rush: Match 3 is a colorful mobile match-3 puzzle game available on the App Store and Google Play. Match candies, trigger chain reactions, use helpful boosters, and progress through fun puzzle levels.",
+    appStoreButton: "Download on the App Store",
+    googlePlayButton: "Get it on Google Play",
     support: "Support",
     privacy: "Privacy Policy",
     terms: "Terms of Use",
@@ -35,9 +38,6 @@ const copy = {
     islandTitle: "Candy Island",
     island:
       "As you progress, you restore and upgrade a sweet island filled with candy buildings.",
-    statusTitle: "Release status",
-    statusText:
-      "Jelly Chain Rush is currently in development. Store links will be added when the game is ready.",
     legalTitle: "Legal & Support",
     homeHref: "/",
     productHref: "/jelly-chain-rush",
@@ -48,10 +48,12 @@ const copy = {
   tr: {
     eyebrow: "Şeker bulmaca macerası",
     title: "Jelly Chain Rush",
-    subtitle: "Renkli bir şeker bulmaca macerası",
-    status: "Geliştirme aşamasında",
+    subtitle: "App Store ve Google Play'de yayında",
+    status: "Yayında",
     description:
-      "Jelly Chain Rush, oyuncuların aynı şekerleri eşleştirip zincirleme patlamalar yaptığı, yeni bölümler açtığı ve tatlı bir şeker adasını adım adım yenilediği eğlenceli bir mobil bulmaca oyunudur.",
+      "Jelly Chain Rush: Match 3, App Store ve Google Play'de yayında olan renkli bir mobil match-3 bulmaca oyunudur. Şekerleri eşleştir, zincirleme reaksiyonlar oluştur, özel güçlendiricileri kullan ve eğlenceli bölümlerde ilerle.",
+    appStoreButton: "App Store'dan indir",
+    googlePlayButton: "Google Play'den indir",
     support: "Destek",
     privacy: "Gizlilik Politikası",
     terms: "Kullanım Koşulları",
@@ -70,9 +72,6 @@ const copy = {
     islandTitle: "Şeker Adası",
     island:
       "İlerledikçe şeker yapılarıyla dolu tatlı bir adayı yeniler ve geliştirirsin.",
-    statusTitle: "Yayın durumu",
-    statusText:
-      "Jelly Chain Rush şu anda geliştirme aşamasında. Oyun hazır olduğunda mağaza bağlantıları eklenecek.",
     legalTitle: "Yasal Bilgiler ve Destek",
     homeHref: "/tr",
     productHref: "/tr/jelly-chain-rush",
@@ -133,10 +132,32 @@ export default function JellyChainRushPage({
               <p className="text-slate-200 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-7">
                 {t.description}
               </p>
-              <div className="mb-8">
-                <span className="inline-flex items-center rounded-full border border-pink-200/35 bg-pink-300/10 px-4 py-2 text-sm font-semibold text-pink-100">
+              <div className="mb-6">
+                <span className="inline-flex items-center gap-2 rounded-full border border-pink-200/35 bg-pink-300/10 px-4 py-2 text-sm font-semibold text-pink-100">
+                  <span
+                    className="h-1.5 w-1.5 rounded-full bg-pink-300"
+                    aria-hidden="true"
+                  />
                   {t.status}
                 </span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start mb-6">
+                <a
+                  href={STORE_URLS.jellyChainRush.appStore}
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/15 bg-white/[0.03] text-slate-200 text-sm font-semibold transition-colors hover:border-white/30 hover:bg-white/[0.07]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.appStoreButton}
+                </a>
+                <a
+                  href={STORE_URLS.jellyChainRush.googlePlay}
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-pink-200/35 bg-pink-400/10 text-pink-100 text-sm font-semibold transition-colors hover:border-pink-200/70 hover:bg-pink-400/15"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.googlePlayButton}
+                </a>
               </div>
               <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
                 <Link
@@ -206,15 +227,6 @@ export default function JellyChainRushPage({
               </h2>
               <p className="text-slate-200 leading-relaxed">{t.island}</p>
             </article>
-          </div>
-        </section>
-
-        <section className="py-14 px-4 border-t border-pink-200/10">
-          <div className="max-w-3xl mx-auto rounded-2xl border border-pink-200/25 bg-pink-300/[0.07] p-7 sm:p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              {t.statusTitle}
-            </h2>
-            <p className="text-slate-200 leading-relaxed">{t.statusText}</p>
           </div>
         </section>
 

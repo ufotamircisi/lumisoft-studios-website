@@ -6,7 +6,7 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 export const metadata: Metadata = {
   title: "Jelly Chain Rush Kullanım Koşulları",
   description:
-    "Lumisoft Studio'nun yayın öncesi Jelly Chain Rush ürün sayfası için kullanım koşulları.",
+    "Lumisoft Studio'nun App Store ve Google Play'de yayında olan Jelly Chain Rush: Match 3 oyunu için kullanım koşulları.",
   alternates: {
     canonical: "/tr/jelly-chain-rush/kullanim-kosullari",
     languages: { "tr-TR": "/tr/jelly-chain-rush/kullanim-kosullari", "en-US": "/jelly-chain-rush/terms" },
@@ -15,20 +15,32 @@ export const metadata: Metadata = {
 
 const sections = [
   [
-    "Ürün Durumu",
-    "Jelly Chain Rush, Lumisoft Studio tarafından geliştirilmekte olan bir mobil bulmaca oyunudur. Bu web sitesi üzerinden herkese açık indirme, satın alma veya oyun lisansı sunulmaz.",
+    "Eğlence Oyunu",
+    "Jelly Chain Rush: Match 3, Lumisoft Studio tarafından sunulan ve App Store ile Google Play'de yayında olan bir eğlence oyunudur. Uygulamayı indirerek veya kullanarak bu Kullanım Koşullarını kabul etmiş olursunuz.",
   ],
   [
-    "Ürün Bilgileri",
-    "Ürün sayfası oyunun mevcut yönünü açıklar. Özellikler ve yayın takvimi geliştirme sırasında değişebilir; herhangi bir yayın tarihi taahhüt edilmez.",
+    "Sanal Öğeler",
+    "Sanal güçlendiriciler, öğeler ve benzeri oyun içi içeriklerin gerçek dünyada parasal değeri yoktur ve Uygulama dışında nakde veya gerçek dünya mal/hizmetlerine dönüştürülemez.",
   ],
   [
-    "Mağaza Erişimi Yok",
-    "Oyun herkese açık hale gelirse Lumisoft Studio resmi mağaza bağlantılarını ürün sayfasında yayınlayacaktır.",
+    "Satın Almalar",
+    "Sunulduğunda, uygulama içi satın almalar Google Play veya App Store üzerinden işlenir. İade ve faturalandırma konuları ilgili mağazanın kurallarına tabidir.",
+  ],
+  [
+    "Reklamlar",
+    "Uygulama ödüllü, geçiş veya banner reklamlar gösterebilir. Ödüllü reklamlar isteğe bağlıdır.",
+  ],
+  [
+    "Platform Kuralları",
+    "Uygulamayı kullanırken Google Play, App Store ve cihaz platformunuzun kural, koşul ve politikalarına uymanız gerekir.",
   ],
   [
     "Fikri Mülkiyet",
     "Jelly Chain Rush, ilgili görseller, adlar ve oyun içeriği Lumisoft Studio'ya veya lisans verenlerine aittir.",
+  ],
+  [
+    "Hizmetin Kullanılabilirliği",
+    "Kesintisiz, hatasız veya sürekli kullanılabilir bir hizmet garanti etmiyoruz. Özellikler zaman içinde değişebilir.",
   ],
   [
     "İletişim",
@@ -43,7 +55,7 @@ export default function JellyChainRushKullanimKosullariPage() {
       <LegalPageLayout
         title="Kullanım Koşulları"
         subtitle="Lumisoft Studio tarafından Jelly Chain Rush"
-        lastUpdated="23 Haziran 2026"
+        lastUpdated="5 Ağustos 2026"
         lastUpdatedLabel="Son güncelleme:"
         backHref="/tr/jelly-chain-rush"
         backLinkText="← Jelly Chain Rush'a dön"
