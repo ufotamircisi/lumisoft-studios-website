@@ -22,12 +22,27 @@ function routeTarget(route) {
   return path.join(root, clean, "index.html");
 }
 
-const htmlFiles = walk(root).filter((file) => file.endsWith(".html"));
+// Google Search Console drops a one-line token file at the site root. It is not a
+// page, so it has no landmarks, headings, or links to verify — but it must ship
+// byte-for-byte as Google generated it.
+function isGoogleSiteVerification(displayName, html) {
+  return (
+    !displayName.includes(path.sep) &&
+    /^google[0-9a-f]+\.html$/i.test(displayName) &&
+    html.trim().startsWith("google-site-verification:")
+  );
+}
+
+const allHtmlFiles = walk(root).filter((file) => file.endsWith(".html"));
+const htmlFiles = [];
 const failures = new Set();
 
-for (const file of htmlFiles) {
+for (const file of allHtmlFiles) {
   const html = fs.readFileSync(file, "utf8");
   const displayName = path.relative(root, file);
+
+  if (isGoogleSiteVerification(displayName, html)) continue;
+  htmlFiles.push(file);
 
   if (!html.includes('id="main-content"')) {
     failures.add(`${displayName}: missing #main-content`);
