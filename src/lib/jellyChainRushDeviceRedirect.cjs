@@ -4,14 +4,34 @@
 // scripts/verify-download-route.js during the Cloudflare build, which runs
 // plain Node and cannot parse TypeScript type annotations.
 
-const APP_STORE_URL =
-  "https://apps.apple.com/tr/app/jelly-chain-rush-match-3/id6790545058";
+const APP_STORE_URL = "https://apps.apple.com/app/id6790545058";
 const GOOGLE_PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.lumisoft.jellychainrush";
 
-// Set by the pre-hydration inline script once it has started a store redirect,
-// so the React effect never fires a second navigation for the same visit.
+// Set by the pre-hydration inline script once it has started (or intentionally
+// skipped) a store redirect, so the React effect never fires a second
+// navigation for the same visit.
 const REDIRECT_FLAG = "__jcrStoreRedirect";
+
+// Ad traffic must land on a page it can actually see and tap, so the
+// redirect is a delayed convenience, not the only path: this is how long the
+// fallback UI (title, buttons, helper text) is guaranteed to be visible
+// before a normal mobile browser is auto-navigated away.
+const REDIRECT_DELAY_MS = 1200;
+
+// Instagram, WhatsApp, TikTok, Facebook/Messenger, Twitter/X and Line all run
+// their own in-app WebViews that are unreliable at completing a JS
+// `location.href` redirect to a store deep link (blank screen, a redirect
+// that silently no-ops, or one that fires but the store sheet never opens).
+// These are exactly the browsers the ad traffic in this bug report is
+// arriving from, so they keep the visible landing page instead of racing a
+// timer against a navigation that may not work.
+const IN_APP_BROWSER_PATTERN =
+  /Instagram|WhatsApp|TikTok|musical_ly|Bytedance|FBAN|FBIOS|FB_IAB|FBAV|Messenger|Twitter|Line\//i;
+
+function isInAppBrowser(userAgent) {
+  return IN_APP_BROWSER_PATTERN.test(userAgent);
+}
 
 function getStoreDestination(userAgent, maxTouchPoints = 0) {
   const isAndroid = /Android/i.test(userAgent);
@@ -40,22 +60,43 @@ function getStoreDestination(userAgent, maxTouchPoints = 0) {
   return null;
 }
 
-// Runs while the HTML is still parsing, so the redirect does not depend on the
-// React bundle downloading and hydrating — in-app browsers (Instagram, TikTok)
-// drop that bundle often enough to matter. Kept in sync with
-// getStoreDestination by construction: both read from the constants above.
+// Given a device destination, decides whether this visit should also get an
+// automatic, delayed redirect. In-app browsers never do — see
+// IN_APP_BROWSER_PATTERN above.
+function getAutoRedirectDestination(userAgent, maxTouchPoints = 0) {
+  if (isInAppBrowser(userAgent)) {
+    return null;
+  }
+
+  return getStoreDestination(userAgent, maxTouchPoints);
+}
+
+// Runs while the HTML is still parsing, so scheduling the redirect does not
+// depend on the React bundle downloading and hydrating — in-app browsers
+// (Instagram, TikTok) drop that bundle often enough to matter. The actual
+// navigation is deferred behind window.setTimeout so the fallback UI (title,
+// buttons, helper text) always has time to paint first, and normal browsers
+// get the same REDIRECT_DELAY_MS grace period as the React fallback effect.
+// Kept in sync with getStoreDestination/isInAppBrowser by construction: all
+// three read from the constants and pattern above.
 const REDIRECT_INLINE_SCRIPT = `(function(){try{
 var n=navigator,u=n.userAgent||n.vendor||"",t=n.maxTouchPoints||0,d=null;
 var a=/Android/i.test(u);
 if(!a&&(/iPhone|iPad|iPod/i.test(u)||/CriOS|FxiOS|EdgiOS|OPiOS/i.test(u)||((/Macintosh|Mac OS X/i.test(u))&&t>1))){d=${JSON.stringify(APP_STORE_URL)};}
 else if(a&&/Mobile/i.test(u)){d=${JSON.stringify(GOOGLE_PLAY_URL)};}
-if(d){window[${JSON.stringify(REDIRECT_FLAG)}]=1;window.location.href=d;}
+if(!d)return;
+if(/${IN_APP_BROWSER_PATTERN.source}/i.test(u))return;
+window.setTimeout(function(){window[${JSON.stringify(REDIRECT_FLAG)}]=1;window.location.href=d;},${REDIRECT_DELAY_MS});
 }catch(e){}})();`;
 
 module.exports = {
   APP_STORE_URL,
   GOOGLE_PLAY_URL,
   REDIRECT_FLAG,
+  REDIRECT_DELAY_MS,
+  IN_APP_BROWSER_PATTERN,
+  isInAppBrowser,
   getStoreDestination,
+  getAutoRedirectDestination,
   REDIRECT_INLINE_SCRIPT,
 };

@@ -142,12 +142,10 @@ export default function JellyChainRushDownloadPage() {
                 </a>
               </div>
 
-              <noscript>
-                <p className="mt-5 text-sm leading-relaxed text-pink-100">
-                  Automatic redirection needs JavaScript. Please choose your
-                  store above.
-                </p>
-              </noscript>
+              <p className="mt-5 text-sm leading-relaxed text-pink-100">
+                If the store does not open, tap the button below or open this
+                page in your browser.
+              </p>
 
               <Link
                 href="/jelly-chain-rush"
