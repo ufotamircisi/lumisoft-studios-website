@@ -7,6 +7,10 @@
 //      script must agree, for every user agent we care about.
 //   2. Rendered output — the exported HTML must carry both store URLs as real
 //      anchor hrefs, so the page still works with no JavaScript at all.
+//   3. Storefront — no Jelly Chain Rush App Store link anywhere in the source
+//      or the export may point at a storefront other than the published one.
+//      A wrong two-letter country code (this shipped as /ng/ once) silently
+//      breaks every Apple device while leaving Android perfectly healthy.
 
 const fs = require("node:fs");
 const path = require("node:path");
@@ -19,8 +23,20 @@ const {
   REDIRECT_INLINE_SCRIPT,
   getStoreDestination,
 } = require("../src/app/jellychainrush/download/deviceRedirect.ts");
+const { STORE_URLS } = require("../src/lib/products.ts");
 
 const FALLBACK = null;
+
+// The canonical storefront, written out literally so the check cannot drift
+// along with the constant it is guarding.
+const CANONICAL_APP_STORE_URL =
+  "https://apps.apple.com/tr/app/jelly-chain-rush-match-3/id6790545058";
+const CANONICAL_GOOGLE_PLAY_URL =
+  "https://play.google.com/store/apps/details?id=com.lumisoft.jellychainrush";
+
+// Any apps.apple.com link carrying the Jelly Chain Rush app id, whatever
+// storefront it claims.
+const JELLY_APP_STORE_LINK = /https:\/\/apps\.apple\.com\/\S*?id6790545058/g;
 
 const cases = [
   {
@@ -184,19 +200,67 @@ for (const testCase of cases) {
   }
 }
 
-// The App Store URL must stay on the storefront the app is actually published
-// on. A wrong two-letter country code silently breaks every Apple device.
-if (
-  APP_STORE_URL !==
-  "https://apps.apple.com/tr/app/jelly-chain-rush-match-3/id6790545058"
-) {
+if (APP_STORE_URL !== CANONICAL_APP_STORE_URL) {
   failures.push(`APP_STORE_URL changed unexpectedly: ${APP_STORE_URL}`);
 }
-if (
-  GOOGLE_PLAY_URL !==
-  "https://play.google.com/store/apps/details?id=com.lumisoft.jellychainrush"
-) {
+if (GOOGLE_PLAY_URL !== CANONICAL_GOOGLE_PLAY_URL) {
   failures.push(`GOOGLE_PLAY_URL changed unexpectedly: ${GOOGLE_PLAY_URL}`);
+}
+
+// The download route and the shared product catalogue hold the same two URLs
+// in two places; they drifted apart once and only the catalogue kept /ng/.
+if (STORE_URLS.jellyChainRush.appStore !== CANONICAL_APP_STORE_URL) {
+  failures.push(
+    `src/lib/products.ts: jellyChainRush.appStore is ${STORE_URLS.jellyChainRush.appStore}`,
+  );
+}
+if (STORE_URLS.jellyChainRush.googlePlay !== CANONICAL_GOOGLE_PLAY_URL) {
+  failures.push(
+    `src/lib/products.ts: jellyChainRush.googlePlay is ${STORE_URLS.jellyChainRush.googlePlay}`,
+  );
+}
+
+function walk(directory) {
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const absolute = path.join(directory, entry.name);
+    return entry.isDirectory() ? walk(absolute) : [absolute];
+  });
+}
+
+// Sweep every authored source file and every exported artifact. Catching this
+// by grep-equivalent rather than by known filename means a new page that
+// hardcodes its own Jelly Chain Rush link is caught too.
+const scanRoots = ["src", "public", "out"].map((dir) => path.resolve(dir));
+const scannable = /\.(tsx?|jsx?|mjs|css|html|txt|json|xml|webmanifest)$/i;
+let scannedFiles = 0;
+
+for (const root of scanRoots) {
+  for (const file of walk(root)) {
+    if (!scannable.test(file)) continue;
+
+    const contents = fs.readFileSync(file, "utf8");
+    if (!contents.includes("id6790545058")) continue;
+
+    scannedFiles += 1;
+    const displayName = path.relative(process.cwd(), file);
+
+    for (const link of new Set(contents.match(JELLY_APP_STORE_LINK) ?? [])) {
+      // Trim the trailing punctuation the greedy scan can pick up in JS bundles.
+      const cleaned = link.replace(/[\\"'`,;)\]}]+$/, "");
+      if (cleaned !== CANONICAL_APP_STORE_URL) {
+        failures.push(
+          `${displayName}: non-canonical Jelly Chain Rush App Store link ${cleaned}`,
+        );
+      }
+    }
+  }
+}
+
+if (scannedFiles === 0) {
+  failures.push(
+    "storefront scan matched no files — the scan is not actually checking anything",
+  );
 }
 
 const pagePath = path.resolve("out", "jellychainrush", "download", "index.html");
@@ -220,11 +284,6 @@ if (!fs.existsSync(pagePath)) {
   ) {
     failures.push(
       "fallback markup: Google Play link is not a plain anchor href in the exported HTML",
-    );
-  }
-  if (html.includes("apps.apple.com/ng/app/jelly-chain-rush")) {
-    failures.push(
-      "fallback markup: the old /ng/ App Store storefront is still present",
     );
   }
   if (html.includes("/jelly-chain-rush/download")) {
@@ -251,5 +310,5 @@ if (failures.length > 0) {
 }
 
 console.log(
-  `✓ Verified Jelly Chain Rush download route: ${cases.length} device-detection cases (module + inline script), store URLs, and fallback anchor markup.`,
+  `✓ Verified Jelly Chain Rush download route: ${cases.length} device-detection cases (module + inline script), fallback anchor markup, and ${scannedFiles} files carrying the App Store link — all on the canonical storefront.`,
 );
