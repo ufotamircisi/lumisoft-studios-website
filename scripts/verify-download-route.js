@@ -16,14 +16,16 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 
+// Required as plain CommonJS, not the .ts source, because this script runs
+// under plain Node on Cloudflare with no TypeScript loader. See that module
+// for why the detection logic lives there instead of inline here.
 const {
   APP_STORE_URL,
   GOOGLE_PLAY_URL,
   REDIRECT_FLAG,
   REDIRECT_INLINE_SCRIPT,
   getStoreDestination,
-} = require("../src/app/jellychainrush/download/deviceRedirect.ts");
-const { STORE_URLS } = require("../src/lib/products.ts");
+} = require("../src/lib/jellyChainRushDeviceRedirect.cjs");
 
 const FALLBACK = null;
 
@@ -209,15 +211,34 @@ if (GOOGLE_PLAY_URL !== CANONICAL_GOOGLE_PLAY_URL) {
 
 // The download route and the shared product catalogue hold the same two URLs
 // in two places; they drifted apart once and only the catalogue kept /ng/.
-if (STORE_URLS.jellyChainRush.appStore !== CANONICAL_APP_STORE_URL) {
+// Read as text rather than required as a module: products.ts is TypeScript
+// (it declares real interfaces/types, not just erasable annotations), and
+// this script must run under plain Node with no TypeScript loader.
+const productsSourcePath = path.resolve("src/lib/products.ts");
+const productsSource = fs.readFileSync(productsSourcePath, "utf8");
+const jellyChainRushBlockMatch = productsSource.match(
+  /jellyChainRush:\s*\{([\s\S]*?)\n\s*\},/,
+);
+
+if (!jellyChainRushBlockMatch) {
   failures.push(
-    `src/lib/products.ts: jellyChainRush.appStore is ${STORE_URLS.jellyChainRush.appStore}`,
+    `${productsSourcePath}: could not locate the jellyChainRush STORE_URLS entry`,
   );
-}
-if (STORE_URLS.jellyChainRush.googlePlay !== CANONICAL_GOOGLE_PLAY_URL) {
-  failures.push(
-    `src/lib/products.ts: jellyChainRush.googlePlay is ${STORE_URLS.jellyChainRush.googlePlay}`,
-  );
+} else {
+  const block = jellyChainRushBlockMatch[1];
+  const appStoreMatch = block.match(/appStore:\s*"([^"]+)"/);
+  const googlePlayMatch = block.match(/googlePlay:\s*"([^"]+)"/);
+
+  if (!appStoreMatch || appStoreMatch[1] !== CANONICAL_APP_STORE_URL) {
+    failures.push(
+      `src/lib/products.ts: jellyChainRush.appStore is ${appStoreMatch ? appStoreMatch[1] : "missing"}`,
+    );
+  }
+  if (!googlePlayMatch || googlePlayMatch[1] !== CANONICAL_GOOGLE_PLAY_URL) {
+    failures.push(
+      `src/lib/products.ts: jellyChainRush.googlePlay is ${googlePlayMatch ? googlePlayMatch[1] : "missing"}`,
+    );
+  }
 }
 
 function walk(directory) {
