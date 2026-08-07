@@ -4,7 +4,11 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import StoreRedirect from "./StoreRedirect";
-import { APP_STORE_URL, GOOGLE_PLAY_URL } from "./deviceRedirect";
+import {
+  APP_STORE_URL,
+  GOOGLE_PLAY_URL,
+  REDIRECT_INLINE_SCRIPT,
+} from "./deviceRedirect";
 
 export const metadata: Metadata = {
   title: {
@@ -60,6 +64,10 @@ function GooglePlayIcon() {
 export default function JellyChainRushDownloadPage() {
   return (
     <>
+      <script
+        id="jcr-store-redirect"
+        dangerouslySetInnerHTML={{ __html: REDIRECT_INLINE_SCRIPT }}
+      />
       <StoreRedirect />
       <Header />
       <main id="main-content" className="flex-1 pt-16">
