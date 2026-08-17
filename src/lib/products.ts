@@ -34,6 +34,11 @@ export const STORE_URLS = {
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.lumisoft.jellychainrush",
   },
+  rotoBlocks: {
+    appStore: "https://apps.apple.com/app/id6797314822",
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.lumisoft.rotoblocks",
+  },
 };
 
 export const games: Product[] = [
@@ -81,7 +86,7 @@ export const games: Product[] = [
     slug: "roto-blocks",
     kind: "game",
     name: "Roto Blocks",
-    status: "coming-soon",
+    status: "live",
     iconImage: "/images/web/roto-blocks-icon.webp",
     accent: "#38bdf8",
     accentSoft: "rgba(56,189,248,0.16)",
@@ -95,6 +100,7 @@ export const games: Product[] = [
       tr: "Üç parçayı yerleştir, satırları temizle, ardından tüm tahtanın dönüp yeni yollar açmasını izle.",
     },
     platforms: ["iOS", "Android"],
+    stores: STORE_URLS.rotoBlocks,
   },
 ];
 

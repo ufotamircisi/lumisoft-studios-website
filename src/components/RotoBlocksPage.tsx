@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
+import { STORE_URLS } from "@/lib/products";
 import ProductArtwork from "@/components/ProductArtwork";
 
 type RotoBlocksPageProps = {
@@ -15,7 +16,11 @@ const copy = {
     subtitle: "A calm rotating block puzzle from Lumisoft Studio",
     description:
       "Roto Blocks is a relaxing puzzle game built around a simple twist. Place three block pieces, clear full rows and columns, then watch the board rotate clockwise. Every rotation can open a new path, create a combo, or save a difficult board.",
-    status: "Coming Soon",
+    status: "Live",
+    downloadTitle: "Get Roto Blocks",
+    downloadButton: "Download Roto Blocks",
+    appStoreButton: "Download on the App Store",
+    googlePlayButton: "Get it on Google Play",
     support: "Support",
     privacy: "Privacy Policy",
     terms: "Terms of Use",
@@ -47,10 +52,11 @@ const copy = {
         icon: "◇",
       },
     ],
-    releaseTitle: "Thoughtful puzzle play is on the way",
+    releaseTitle: "Roto Blocks is out now",
     releaseText:
-      "Roto Blocks is being prepared for release. Official store links will appear here when they are available.",
+      "Roto Blocks is live. Place three pieces, clear lines, and adapt as the board rotates every 3 moves. Download it free on the App Store or Google Play.",
     legalTitle: "Legal and Support",
+    downloadHref: "/rotoblocks/download",
     productHref: "/roto-blocks",
     privacyHref: "/roto-blocks/privacy",
     termsHref: "/roto-blocks/terms",
@@ -62,7 +68,11 @@ const copy = {
       "Lumisoft Studio tarafından geliştirilen sakin ve dönen tahta mekanikli blok bulmaca",
     description:
       "Roto Blocks basit ama farklı bir fikir üzerine kurulu rahatlatıcı bir bulmaca oyunudur. Üç blok parçasını yerleştir, dolu satır ve sütunları temizle, ardından tahtanın saat yönünde dönmesini izle. Her dönüş yeni bir yol, yeni bir kombo veya sıkışan tahtayı kurtaracak yeni bir fırsat oluşturabilir.",
-    status: "Yakında",
+    status: "Yayında",
+    downloadTitle: "Roto Blocks'u indir",
+    downloadButton: "Roto Blocks indir",
+    appStoreButton: "App Store'dan indir",
+    googlePlayButton: "Google Play'den indir",
     support: "Destek",
     privacy: "Gizlilik Politikası",
     terms: "Kullanım Koşulları",
@@ -94,10 +104,11 @@ const copy = {
         icon: "◇",
       },
     ],
-    releaseTitle: "Özenli bir bulmaca deneyimi yakında",
+    releaseTitle: "Roto Blocks yayında",
     releaseText:
-      "Roto Blocks yayın için hazırlanıyor. Resmi mağaza bağlantıları hazır olduğunda burada yer alacak.",
+      "Roto Blocks yayında. Üç parçayı yerleştir, satırları temizle ve her 3 hamlede dönen tahtaya uyum sağla. App Store ve Google Play üzerinden ücretsiz indirebilirsin.",
     legalTitle: "Yasal Bilgiler ve Destek",
+    downloadHref: "/rotoblocks/download",
     productHref: "/tr/roto-blocks",
     privacyHref: "/tr/roto-blocks/gizlilik",
     termsHref: "/tr/roto-blocks/kullanim-kosullari",
@@ -140,9 +151,39 @@ export default function RotoBlocksPage({ lang = "en" }: RotoBlocksPageProps) {
               <p className="text-slate-200 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-7">
                 {t.description}
               </p>
-              <span className="inline-flex items-center rounded-full border border-cyan-200/35 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-100 mb-8">
-                {t.status}
-              </span>
+              <div className="mb-6">
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-200/35 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-100">
+                  <span
+                    className="h-1.5 w-1.5 rounded-full bg-cyan-300"
+                    aria-hidden="true"
+                  />
+                  {t.status}
+                </span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start mb-6">
+                <Link
+                  href={t.downloadHref}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-cyan-200/60 bg-cyan-400/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan-200 hover:bg-cyan-400/25"
+                >
+                  {t.downloadButton}
+                </Link>
+                <a
+                  href={STORE_URLS.rotoBlocks.appStore}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-white/30 hover:bg-white/[0.07]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.appStoreButton}
+                </a>
+                <a
+                  href={STORE_URLS.rotoBlocks.googlePlay}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-indigo-200/35 bg-indigo-400/10 px-6 py-3 text-sm font-semibold text-indigo-100 transition-colors hover:border-indigo-200/70 hover:bg-indigo-400/15"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.googlePlayButton}
+                </a>
+              </div>
               <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
                 <Link href={t.supportHref} className="inline-flex min-h-11 items-center justify-center rounded-full border border-cyan-200/40 px-6 py-2.5 text-sm font-semibold text-cyan-100 transition-colors hover:border-cyan-200/70 hover:text-white">
                   {t.support}
@@ -186,6 +227,12 @@ export default function RotoBlocksPage({ lang = "en" }: RotoBlocksPageProps) {
           <div className="max-w-3xl mx-auto rounded-2xl border border-indigo-300/20 bg-indigo-400/[0.07] p-7 text-center sm:p-9">
             <h2 className="text-2xl font-bold text-white mb-4">{t.releaseTitle}</h2>
             <p className="text-slate-200 leading-relaxed">{t.releaseText}</p>
+            <Link
+              href={t.downloadHref}
+              className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full border border-cyan-200/60 bg-cyan-400/15 px-7 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan-200 hover:bg-cyan-400/25"
+            >
+              {t.downloadTitle}
+            </Link>
           </div>
         </section>
 

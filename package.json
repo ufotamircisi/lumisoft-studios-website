@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "build:cloudflare": "next build && node scripts/verify-out.js && node scripts/verify-links.js && node scripts/verify-download-route.js",
+    "build:cloudflare": "next build && node scripts/verify-out.js && node scripts/verify-links.js && node scripts/verify-download-route.js && node scripts/verify-rotoblocks-download-route.js",
     "verify:links": "node scripts/verify-links.js",
     "verify:download": "node scripts/verify-download-route.js",
+    "verify:download:rotoblocks": "node scripts/verify-rotoblocks-download-route.js",
     "preview:static": "node scripts/serve-out.js",
     "optimize:images": "node scripts/optimize-images.mjs"
   },

@@ -22,6 +22,7 @@ const routeMap: Record<string, string> = {
   "/jelly-chain-rush/privacy": "/tr/jelly-chain-rush/gizlilik",
   "/jelly-chain-rush/terms": "/tr/jelly-chain-rush/kullanim-kosullari",
   "/jellychainrush/download": "/tr/jelly-chain-rush",
+  "/rotoblocks/download": "/tr/roto-blocks",
   "/roto-blocks": "/tr/roto-blocks",
   "/roto-blocks/support": "/tr/roto-blocks/destek",
   "/roto-blocks/privacy": "/tr/roto-blocks/gizlilik",
