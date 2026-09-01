@@ -16,7 +16,7 @@ export default function DestekPage() {
       <LegalPageLayout
         title="LumiBaby Desteği"
         subtitle="Yardım etmek için buradayız. İstediğiniz zaman ulaşın."
-        lastUpdated="Mayıs 2026"
+        lastUpdated="2 Eylül 2026"
         lastUpdatedLabel="Son güncelleme:"
         backHref="/tr/lumibaby"
         backLinkText="← LumiBaby'ye Geri Dön"
@@ -41,7 +41,7 @@ export default function DestekPage() {
               </a>
             </div>
             <p>
-              Genellikle 1&ndash;2 iş günü içinde yanıt veriyoruz. Bize
+              Genellikle 1 ila 2 iş günü içinde yanıt veriyoruz. Bize
               ulaşırken lütfen cihaz türünüzü ve sorunu kısaca açıklayın;
               böylece size mümkün olan en kısa sürede yardımcı olabiliriz.
             </p>
@@ -69,9 +69,21 @@ export default function DestekPage() {
                 LumiBaby mikrofonuma erişiyor mu?
               </p>
               <p className="text-slate-200 text-sm leading-relaxed">
-                LumiBaby, yalnızca ağlama algılama özelliği için mikrofon
-                erişimi ister. Bu izni istediğiniz zaman cihaz ayarlarınızdan
-                etkinleştirebilir veya devre dışı bırakabilirsiniz.
+                LumiBaby; bebek monitörü sesi, ağlama algılama, Basılı Tutarak
+                Konuş ve Anne Sesi veya Anne Ön Sesi kaydı için mikrofon erişimi
+                isteyebilir. Mikrofona ihtiyaç duyan özelliği kullandığınızda
+                izin ister ve izni cihaz ayarlarından kapatabilirsiniz.
+              </p>
+            </div>
+            <div>
+              <p className="text-white font-medium mb-1">
+                LumiBaby kamerama ne zaman erişiyor?
+              </p>
+              <p className="text-slate-200 text-sm leading-relaxed">
+                LumiBaby, cihazları eşleştirmek için QR kod taradığınızda veya
+                Görüntülü Bebek Monitörünü kullandığınızda kamera erişimi
+                isteyebilir. İlgili özellik kullanıldığında izin ister ve izni
+                cihaz ayarlarından kapatabilirsiniz.
               </p>
             </div>
             <div>

@@ -5,8 +5,90 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
   title: "LumiBaby Terms of Use",
-  description: "Terms of Use for LumiBaby by Lumisoft Studio.",
+  description:
+    "Terms of Use for LumiBaby baby monitoring, sleep support, and Premium subscriptions.",
 };
+
+const sections = [
+  {
+    title: "Baby Monitoring and Sleep Support",
+    paragraphs: [
+      "LumiBaby provides baby monitoring and sleep support features that may include Video Baby Monitor, Audio Baby Monitor, QR device pairing, Hold to Talk, cry detection, automatic soothing, Mom Voice and Mom Pre-Sound recordings, calming audio, routines, reports, and notifications.",
+      "You must grant the camera, microphone, and notification permissions needed for the features you choose. Live audio or video is available only during supported active monitoring conditions and may depend on the paired devices, internet access, operating system restrictions, permissions, and battery settings.",
+    ],
+  },
+  {
+    title: "Safety and Medical Disclaimer",
+    paragraphs: [
+      "LumiBaby is designed as a baby monitoring and sleep support tool. It is not a medical device, emergency monitoring service, or substitute for professional medical advice, diagnosis, treatment, or appropriate adult supervision.",
+      "Video monitoring, audio monitoring, cry detection, automatic soothing, and notifications may be delayed, interrupted, or inaccurate. They do not guarantee that every cry or event will be detected, that every alert will arrive, or that a baby will be safe. For urgent health or safety concerns, contact an appropriate healthcare professional or emergency service.",
+    ],
+  },
+  {
+    title: "Your Responsibilities",
+    paragraphs: [
+      "You are responsible for using LumiBaby lawfully and safely, maintaining direct adult supervision, keeping paired devices and QR pairing details secure, and preventing unauthorized access to monitoring sessions.",
+      "You may monitor or record only where you have the legal right and any required consent. You must not use LumiBaby to monitor another person without authorization, invade privacy, harass anyone, or interfere with the App or its services. You must be at least 18 years old or have permission from a parent or legal guardian to use the App.",
+    ],
+  },
+  {
+    title: "LumiBaby Premium",
+    paragraphs: [
+      "LumiBaby offers optional weekly and yearly Premium subscriptions. The features, current price, billing period, and any introductory offer presented to you are shown in the App before purchase.",
+      "Apple processes iOS subscriptions through the App Store, and Google processes Android subscriptions through Google Play. LumiBaby does not charge your credit card directly. RevenueCat may be used to manage purchase status and Premium entitlement.",
+    ],
+  },
+  {
+    title: "Automatic Renewal and Cancellation",
+    paragraphs: [
+      "Subscriptions are auto-renewing unless cancelled according to the applicable App Store or Google Play terms. Your store account may be charged for renewal within the period stated by that store.",
+      "You can manage or cancel your subscription through your Apple account or Google Play account. Cancellation normally takes effect at the end of the current paid period. Refund eligibility and billing disputes are handled under the applicable store's rules.",
+    ],
+  },
+  {
+    title: "Free Trials and Promotional Offers",
+    paragraphs: [
+      "A free trial may be available to eligible users where offered by the applicable app store. Availability, duration, eligibility, conversion to a paid subscription, and cancellation timing are governed by the offer shown by the App Store or Google Play. A trial is not promised to every user.",
+    ],
+  },
+  {
+    title: "Restore Purchases",
+    paragraphs: [
+      "Supported Apple or Google purchases can be restored or refreshed using LumiBaby's restore flow and the applicable store mechanisms. You must use the store account associated with the original purchase. Restoration may depend on the store confirming an active purchase or entitlement.",
+    ],
+  },
+  {
+    title: "Free Tier and Advertising",
+    paragraphs: [
+      "LumiBaby may provide a free tier supported by third-party advertising. Premium may remove ads and unlock additional content or features as described in the App. Available free and Premium features may change over time.",
+    ],
+  },
+  {
+    title: "Availability and Changes",
+    paragraphs: [
+      "We may maintain, update, change, suspend, or discontinue a feature where reasonably necessary. Monitoring and notifications can be affected by network outages, device settings, operating system behavior, third-party services, and other conditions outside our control.",
+      "LumiBaby does not promise camera or video operation while the App is closed or inactive. You should not rely on the App as your only means of observing or protecting a baby.",
+    ],
+  },
+  {
+    title: "Intellectual Property",
+    paragraphs: [
+      "LumiBaby, its software, design, branding, and provided content such as lullabies, sounds, and stories are owned by Lumisoft Studio or its licensors and are protected by applicable law. This does not transfer ownership of recordings or information that you create in the App. You may not copy, distribute, reverse engineer, or create derivative works from protected App content except where the law permits.",
+    ],
+  },
+  {
+    title: "Limitation of Liability",
+    paragraphs: [
+      "To the maximum extent permitted by law, LumiBaby is provided as available and without warranties that every feature will be uninterrupted or error-free. Lumisoft Studio is not liable for indirect, incidental, special, or consequential damages arising from use of or inability to use the App. Nothing in these Terms excludes rights or liability that cannot lawfully be excluded.",
+    ],
+  },
+  {
+    title: "Changes to These Terms",
+    paragraphs: [
+      "We may update these Terms from time to time. We will post the current version on this page and update the date above. If a change materially affects your use of LumiBaby, we may also provide notice in the App.",
+    ],
+  },
+];
 
 export default function TermsPage() {
   return (
@@ -15,7 +97,7 @@ export default function TermsPage() {
       <LegalPageLayout
         title="Terms of Use"
         subtitle="LumiBaby by Lumisoft Studio"
-        lastUpdated="May 16, 2026"
+        lastUpdated="September 2, 2026"
         appIcon="/images/web/lumibaby-icon.webp"
       >
         <section>
@@ -23,149 +105,27 @@ export default function TermsPage() {
             These Terms of Use govern your use of LumiBaby (&ldquo;the
             App&rdquo;), developed by Lumisoft Studio (&ldquo;we&rdquo;,
             &ldquo;us&rdquo;, or &ldquo;our&rdquo;). By downloading or using
-            the App, you agree to these Terms.
+            the App, you agree to these Terms. If you do not agree, do not use
+            the App.
           </p>
         </section>
 
-        {/* Not medical advice */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Not Medical Advice
-          </h2>
-          <div className="text-slate-200 leading-relaxed space-y-3">
-            <p>
-              LumiBaby is not a medical device and does not provide medical
-              advice. The App is intended for entertainment and informational
-              purposes only. It is not a substitute for professional medical
-              advice, diagnosis, or treatment.
-            </p>
-            <p>
-              Always consult a qualified healthcare provider regarding your
-              baby&apos;s health. For urgent medical concerns, contact a
-              healthcare professional or emergency services immediately.
-            </p>
-          </div>
-        </section>
-
-        {/* User responsibilities */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Kullanıcı Sorumluluğu / User Responsibilities
-          </h2>
-          <div className="text-slate-200 leading-relaxed space-y-3">
-            <p>You are responsible for:</p>
-            <ul className="list-disc pl-5 space-y-2 text-sm">
-              <li>
-                Ensuring the App is used appropriately and safely in your
-                household.
-              </li>
-              <li>Keeping your account and device secure.</li>
-              <li>Not sharing your account with unauthorized users.</li>
-            </ul>
-            <p>
-              You must be at least 18 years old, or have parental consent, to
-              use the App.
-            </p>
-          </div>
-        </section>
-
-        {/* Subscription */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Abonelik / Premium Subscription
-          </h2>
-          <div className="text-slate-200 leading-relaxed space-y-4">
-            <p>
-              LumiBaby offers an optional premium subscription that unlocks
-              additional content and removes advertising. Subscription pricing
-              and features are displayed within the App.
-            </p>
-            <div className="rounded-xl border border-violet-500/20 bg-violet-500/[0.05] p-4 space-y-3">
-              <p className="text-violet-200 text-sm leading-relaxed">
-                Subscription automatically renews unless canceled. You can
-                cancel anytime in your App Store or Google Play account
-                settings.
-              </p>
-              <p className="text-violet-200 text-sm leading-relaxed">
-                Abonelik otomatik yenilenir. İstediğiniz zaman App Store /
-                Google Play hesap ayarlarınızdan iptal edebilirsiniz.
-              </p>
+        {sections.map((section) => (
+          <section key={section.title}>
+            <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
+              {section.title}
+            </h2>
+            <div className="text-slate-200 leading-relaxed space-y-3">
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
-            <p>
-              By subscribing, you authorize the recurring charge to your payment
-              method until you cancel.
-            </p>
-          </div>
-        </section>
+          </section>
+        ))}
 
-        {/* Cancellation */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            İptal / Cancellation
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            You may cancel your subscription at any time through your App Store
-            (iPhone/iPad) or Google Play (Android) account settings.
-            Cancellation takes effect at the end of the current billing period.
-            Refunds are subject to Apple&apos;s and Google&apos;s respective
-            refund policies.
-          </p>
-        </section>
-
-        {/* Free tier */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Free Tier &amp; Advertising
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            A free tier is available. Free users may see third-party
-            advertisements within the App. Upgrading to premium removes all
-            ads.
-          </p>
-        </section>
-
-        {/* Intellectual property */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Intellectual Property
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            All content within LumiBaby, including lullabies, sounds,
-            stories, and the App itself, is the property of Lumisoft
-            Studio or its licensors and is protected by applicable intellectual
-            property laws. You may not reproduce, distribute, or create
-            derivative works from any content in the App.
-          </p>
-        </section>
-
-        {/* Limitation */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Limitation of Liability
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            To the maximum extent permitted by law, Lumisoft Studio shall not
-            be liable for any indirect, incidental, special, or consequential
-            damages arising from your use of the App. The App is provided
-            &ldquo;as is&rdquo; without warranties of any kind.
-          </p>
-        </section>
-
-        {/* Changes */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Changes to These Terms
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            We may update these Terms from time to time. Continued use of the
-            App after changes constitutes acceptance of the updated Terms.
-          </p>
-        </section>
-
-        {/* Contact */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            İletişim / Contact
+            Contact
           </h2>
           <p className="text-slate-200 leading-relaxed mb-4">
             For questions about these Terms, contact us at:

@@ -16,7 +16,7 @@ export default function SupportPage() {
       <LegalPageLayout
         title="LumiBaby Support"
         subtitle="We are here to help. Reach out anytime."
-        lastUpdated="May 2026"
+        lastUpdated="September 2026"
         appIcon="/images/web/lumibaby-icon.webp"
       >
         {/* Contact */}
@@ -38,7 +38,7 @@ export default function SupportPage() {
               </a>
             </div>
             <p>
-              We typically respond within 1&ndash;2 business days. When
+              We typically respond within 1 to 2 business days. When
               reaching out, please include your device type and a brief
               description of the issue so we can assist you as quickly as
               possible.
@@ -65,7 +65,7 @@ export default function SupportPage() {
                 support@lumisoftstudios.com
               </a>
             </div>
-            <p>Genellikle 1&ndash;2 iş günü içinde yanıt veriyoruz.</p>
+            <p>Genellikle 1 ila 2 iş günü içinde yanıt veriyoruz.</p>
           </div>
         </section>
 
@@ -90,9 +90,22 @@ export default function SupportPage() {
                 Does LumiBaby access my microphone?
               </p>
               <p className="text-slate-200 text-sm leading-relaxed">
-                LumiBaby requests microphone access only for the cry detection
-                feature. You can enable or disable this permission in your
-                device settings at any time.
+                LumiBaby may request microphone access for baby monitor audio,
+                cry detection, Hold to Talk, and Mom Voice or Mom Pre-Sound
+                recording. It asks when you use a feature that needs the
+                microphone, and you can disable the permission in device
+                settings.
+              </p>
+            </div>
+            <div>
+              <p className="text-white font-medium mb-1">
+                When does LumiBaby access my camera?
+              </p>
+              <p className="text-slate-200 text-sm leading-relaxed">
+                LumiBaby may request camera access when you scan a QR code to
+                pair devices or use the Video Baby Monitor. It asks when the
+                relevant feature is used, and you can disable the permission in
+                device settings.
               </p>
             </div>
             <div>

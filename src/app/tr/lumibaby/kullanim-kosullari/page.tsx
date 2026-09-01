@@ -6,8 +6,89 @@ import LegalPageLayout from "@/components/LegalPageLayout";
 export const metadata: Metadata = {
   title: "LumiBaby Kullanım Koşulları",
   description:
-    "Lumisoft Studio tarafından LumiBaby için Kullanım Koşulları.",
+    "LumiBaby bebek izleme, uyku desteği ve Premium abonelikleri için Kullanım Koşulları.",
 };
+
+const sections = [
+  {
+    title: "Bebek İzleme ve Uyku Desteği",
+    paragraphs: [
+      "LumiBaby; Görüntülü Bebek Monitörü, Sesli Bebek Monitörü, QR ile cihaz eşleştirme, Basılı Tutarak Konuş, ağlama algılama, otomatik sakinleştirme, Anne Sesi ve Anne Ön Sesi kayıtları, sakinleştirici sesler, rutinler, raporlar ve bildirimler gibi bebek izleme ve uyku desteği özellikleri sunabilir.",
+      "Seçtiğiniz özellikler için gereken kamera, mikrofon ve bildirim izinlerini vermeniz gerekir. Canlı ses veya görüntü yalnızca desteklenen etkin izleme koşullarında kullanılabilir ve eşleştirilmiş cihazlara, internet bağlantısına, işletim sistemi kısıtlamalarına, izinlere ve pil ayarlarına bağlı olabilir.",
+    ],
+  },
+  {
+    title: "Güvenlik ve Tıbbi Sorumluluk Reddi",
+    paragraphs: [
+      "LumiBaby bir bebek izleme ve uyku desteği aracı olarak tasarlanmıştır. Tıbbi cihaz, acil durum izleme hizmeti, profesyonel tıbbi tavsiye, teşhis veya tedavi ya da uygun yetişkin gözetiminin yerine geçen bir sistem değildir.",
+      "Görüntülü izleme, sesli izleme, ağlama algılama, otomatik sakinleştirme ve bildirimler gecikebilir, kesilebilir veya hatalı olabilir. Her ağlamanın veya olayın algılanacağını, her uyarının ulaşacağını ya da bebeğin güvenliğini garanti etmez. Acil sağlık veya güvenlik endişelerinde uygun bir sağlık uzmanına veya acil yardım hizmetine başvurun.",
+    ],
+  },
+  {
+    title: "Sorumluluklarınız",
+    paragraphs: [
+      "LumiBaby'yi hukuka uygun ve güvenli şekilde kullanmak, doğrudan yetişkin gözetimini sürdürmek, eşleştirilmiş cihazları ve QR eşleştirme bilgilerini korumak ve izleme oturumlarına yetkisiz erişimi önlemek sizin sorumluluğunuzdadır.",
+      "Yalnızca hukuken yetkili olduğunuz ve gereken onayları aldığınız yerlerde izleme veya kayıt yapabilirsiniz. LumiBaby'yi başka bir kişiyi izinsiz izlemek, özel hayatı ihlal etmek, birini rahatsız etmek ya da Uygulamaya veya hizmetlerine müdahale etmek için kullanamazsınız. Uygulamayı kullanmak için en az 18 yaşında olmanız veya ebeveyn ya da yasal vasinizin iznine sahip olmanız gerekir.",
+    ],
+  },
+  {
+    title: "LumiBaby Premium",
+    paragraphs: [
+      "LumiBaby isteğe bağlı haftalık ve yıllık Premium abonelikler sunar. Size sunulan özellikler, güncel fiyat, faturalandırma dönemi ve varsa tanıtım teklifi satın alma işleminden önce Uygulamada gösterilir.",
+      "iOS aboneliklerini App Store üzerinden Apple, Android aboneliklerini Google Play üzerinden Google işler. LumiBaby kredi kartınızdan doğrudan ücret çekmez. RevenueCat, satın alma durumunu ve Premium erişim hakkını yönetmek için kullanılabilir.",
+    ],
+  },
+  {
+    title: "Otomatik Yenileme ve İptal",
+    paragraphs: [
+      "Abonelikler, ilgili App Store veya Google Play koşullarına göre iptal edilmediği sürece otomatik olarak yenilenir. Mağaza hesabınız, ilgili mağazanın belirttiği süre içinde yenileme için ücretlendirilebilir.",
+      "Aboneliğinizi Apple hesabınızdan veya Google Play hesabınızdan yönetebilir ya da iptal edebilirsiniz. İptal normalde mevcut ücretli dönemin sonunda geçerli olur. İade uygunluğu ve faturalandırma itirazları ilgili mağazanın kurallarına göre ele alınır.",
+    ],
+  },
+  {
+    title: "Ücretsiz Denemeler ve Tanıtım Teklifleri",
+    paragraphs: [
+      "İlgili uygulama mağazası tarafından sunulduğunda uygun kullanıcılar için ücretsiz deneme bulunabilir. Denemenin sunulması, süresi, uygunluk şartları, ücretli aboneliğe dönüşmesi ve iptal zamanı App Store veya Google Play'de gösterilen teklif koşullarına tabidir. Her kullanıcıya ücretsiz deneme sözü verilmez.",
+    ],
+  },
+  {
+    title: "Satın Almaları Geri Yükleme",
+    paragraphs: [
+      "Desteklenen Apple veya Google satın almaları, LumiBaby'nin geri yükleme akışı ve ilgili mağaza mekanizmaları kullanılarak geri yüklenebilir veya yenilenebilir. İlk satın almayla ilişkili mağaza hesabını kullanmanız gerekir. Geri yükleme, mağazanın etkin satın alma veya erişim hakkını doğrulamasına bağlı olabilir.",
+    ],
+  },
+  {
+    title: "Ücretsiz Katman ve Reklamlar",
+    paragraphs: [
+      "LumiBaby üçüncü taraf reklamlarla desteklenen ücretsiz bir katman sunabilir. Premium, Uygulamada açıklandığı şekilde reklamları kaldırabilir ve ek içeriklerin veya özelliklerin kilidini açabilir. Ücretsiz ve Premium özellikler zaman içinde değişebilir.",
+    ],
+  },
+  {
+    title: "Kullanılabilirlik ve Değişiklikler",
+    paragraphs: [
+      "Makul ölçüde gerekli olduğunda bir özelliğin bakımını yapabilir, özelliği güncelleyebilir, değiştirebilir, askıya alabilir veya sonlandırabiliriz. İzleme ve bildirimler ağ kesintılarından, cihaz ayarlarından, işletim sistemi davranışından, üçüncü taraf hizmetlerden ve kontrolümüz dışındaki diğer koşullardan etkilenebilir.",
+      "LumiBaby, Uygulama kapalıyken sürekli arka plan kamera izlemesi veya görüntülü izleme sözü vermez. Bebeği gözlemlemek veya korumak için Uygulamaya tek araç olarak güvenmemelisiniz.",
+    ],
+  },
+  {
+    title: "Fikri Mülkiyet",
+    paragraphs: [
+      "LumiBaby, yazılımı, tasarımı, markası ve ninni, ses ve hikaye gibi sunduğu içerikler Lumisoft Studio'ya veya lisans verenlerine aittir ve ilgili hukukla korunur. Bu hüküm, Uygulamada oluşturduğunuz kayıtların veya bilgilerin mülkiyetini devretmez. Hukukun izin verdiği durumlar dışında korunan Uygulama içeriğini kopyalayamaz, dağıtamaz, tersine mühendislik yapamaz veya bunlardan türev eser oluşturamazsınız.",
+    ],
+  },
+  {
+    title: "Sorumluluk Sınırlaması",
+    paragraphs: [
+      "Hukukun izin verdiği azami ölçüde LumiBaby mevcut haliyle sunulur ve her özelliğin kesintisiz ya da hatasız olacağı garanti edilmez. Lumisoft Studio, Uygulamanın kullanımından veya kullanılamamasından doğan dolaylı, tesadüfi, özel ya da sonuç olarak ortaya çıkan zararlardan sorumlu değildir. Bu Koşullardaki hiçbir hüküm, hukuken hariç tutulamayacak hakları veya sorumlulukları ortadan kaldırmaz.",
+    ],
+  },
+  {
+    title: "Bu Koşullardaki Değişiklikler",
+    paragraphs: [
+      "Bu Koşulları zaman zaman güncelleyebiliriz. Güncel sürümü bu sayfada yayınlar ve yukarıdaki tarihi değiştiririz. Bir değişiklik LumiBaby kullanımınızı önemli ölçüde etkilerse Uygulama içinde de bildirim sunabiliriz.",
+    ],
+  },
+];
 
 export default function KullanimKosullariPage() {
   return (
@@ -16,7 +97,7 @@ export default function KullanimKosullariPage() {
       <LegalPageLayout
         title="Kullanım Koşulları"
         subtitle="Lumisoft Studio tarafından LumiBaby"
-        lastUpdated="16 Mayıs 2026"
+        lastUpdated="2 Eylül 2026"
         lastUpdatedLabel="Son güncelleme:"
         backHref="/tr/lumibaby"
         backLinkText="← LumiBaby'ye Geri Dön"
@@ -28,148 +109,24 @@ export default function KullanimKosullariPage() {
             &ldquo;bize&rdquo; veya &ldquo;bizim&rdquo;) tarafından
             geliştirilen LumiBaby&apos;nin (&ldquo;Uygulama&rdquo;)
             kullanımını düzenler. Uygulamayı indirerek veya kullanarak bu
-            Koşulları kabul etmiş olursunuz.
+            Koşulları kabul etmiş olursunuz. Kabul etmiyorsanız Uygulamayı
+            kullanmayın.
           </p>
         </section>
 
-        {/* Tıbbi Tavsiye Değil */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Tıbbi Tavsiye Değil
-          </h2>
-          <div className="text-slate-200 leading-relaxed space-y-3">
-            <p>
-              LumiBaby bir tıbbi cihaz değildir ve tıbbi tavsiye sunmaz.
-              Uygulama yalnızca eğlence ve bilgilendirme amaçlıdır. Profesyonel
-              tıbbi tavsiye, teşhis veya tedavinin yerini tutmaz.
-            </p>
-            <p>
-              Bebeğinizin sağlığı konusunda her zaman nitelikli bir sağlık
-              uzmanına danışın. Acil tıbbi endişeler için derhal bir sağlık
-              uzmanına veya acil servise başvurun.
-            </p>
-          </div>
-        </section>
-
-        {/* Kullanıcı Sorumluluğu */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Kullanıcı Sorumluluğu
-          </h2>
-          <div className="text-slate-200 leading-relaxed space-y-3">
-            <p>Şunlardan sorumlusunuz:</p>
-            <ul className="list-disc pl-5 space-y-2 text-sm">
-              <li>
-                Uygulamanın evinizde uygun ve güvenli şekilde kullanıldığından
-                emin olmak.
-              </li>
-              <li>Hesabınızı ve cihazınızı güvende tutmak.</li>
-              <li>
-                Hesabınızı yetkisiz kullanıcılarla paylaşmamak.
-              </li>
-            </ul>
-            <p>
-              Uygulamayı kullanmak için en az 18 yaşında olmanız veya ebeveyn
-              onayına sahip olmanız gerekmektedir.
-            </p>
-          </div>
-        </section>
-
-        {/* Premium Abonelik */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Premium Abonelik
-          </h2>
-          <div className="text-slate-200 leading-relaxed space-y-4">
-            <p>
-              LumiBaby, ek içeriklerin kilidini açan ve reklamcılığı kaldıran
-              isteğe bağlı bir premium abonelik sunar. Abonelik fiyatlandırması
-              ve özellikleri Uygulama içinde görüntülenir.
-            </p>
-            <div className="rounded-xl border border-violet-500/20 bg-violet-500/[0.05] p-4 space-y-3">
-              <p className="text-violet-200 text-sm leading-relaxed">
-                Abonelik otomatik olarak yenilenir. İstediğiniz zaman App Store
-                veya Google Play hesap ayarlarınızdan iptal edebilirsiniz.
-              </p>
-              <p className="text-violet-200 text-sm leading-relaxed">
-                Subscription automatically renews unless canceled. You can
-                cancel anytime in your App Store or Google Play account
-                settings.
-              </p>
+        {sections.map((section) => (
+          <section key={section.title}>
+            <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
+              {section.title}
+            </h2>
+            <div className="text-slate-200 leading-relaxed space-y-3">
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
-            <p>
-              Abone olarak, iptal edene kadar ödeme yönteminizden tekrarlayan
-              ücretlendirmeyi yetkilendirirsiniz.
-            </p>
-          </div>
-        </section>
+          </section>
+        ))}
 
-        {/* İptal */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            İptal
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            Aboneliğinizi istediğiniz zaman App Store (iPhone/iPad) veya Google
-            Play (Android) hesap ayarlarınızdan iptal edebilirsiniz. İptal,
-            mevcut fatura döneminin sonunda geçerli olur. İadeler
-            Apple&apos;ın ve Google&apos;ın ilgili iade politikalarına tabidir.
-          </p>
-        </section>
-
-        {/* Ücretsiz Katman */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Ücretsiz Katman &amp; Reklamcılık
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            Ücretsiz bir katman mevcuttur. Ücretsiz kullanıcılar Uygulama
-            içinde üçüncü taraf reklamlar görebilir. Premium&apos;a yükseltme
-            tüm reklamları kaldırır.
-          </p>
-        </section>
-
-        {/* Fikri Mülkiyet */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Fikri Mülkiyet
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            LumiBaby içindeki tüm içerikler, ninniler, sesler, hikayeler
-            ve Uygulamanın kendisi dahil olmak üzere, Lumisoft
-            Studio&apos;nun veya lisans verenlerinin mülkiyetindedir ve geçerli
-            fikri mülkiyet yasalarıyla korunmaktadır. Uygulamadaki içerikleri
-            çoğaltamaz, dağıtamaz veya türev eserler oluşturamazsınız.
-          </p>
-        </section>
-
-        {/* Sorumluluk Sınırlaması */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Sorumluluk Sınırlaması
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            Yasanın izin verdiği azami ölçüde, Lumisoft Studio, Uygulamayı
-            kullanımınızdan kaynaklanan dolaylı, tesadüfi, özel veya sonuç
-            olarak ortaya çıkan zararlardan sorumlu tutulamaz. Uygulama,
-            herhangi bir garanti verilmeksizin &ldquo;olduğu gibi&rdquo;
-            sunulmaktadır.
-          </p>
-        </section>
-
-        {/* Değişiklikler */}
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
-            Bu Koşullardaki Değişiklikler
-          </h2>
-          <p className="text-slate-200 leading-relaxed">
-            Bu Koşulları zaman zaman güncelleyebiliriz. Değişikliklerden sonra
-            Uygulamayı kullanmaya devam etmek, güncellenmiş Koşulları kabul
-            etmek anlamına gelir.
-          </p>
-        </section>
-
-        {/* İletişim */}
         <section>
           <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-violet-500/15">
             İletişim
