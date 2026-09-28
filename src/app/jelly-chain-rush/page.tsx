@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     languages: { "en-US": "/jelly-chain-rush", "tr-TR": "/tr/jelly-chain-rush" },
   },
   openGraph: {
-    title: "Jelly Chain Rush: Match 3 | Lumisoft Studios",
+    title: "Jelly Chain Rush: Match 3 | Lumisoft Studio",
     description: "A colorful mobile match-3 puzzle game available on the App Store and Google Play.",
     url: "/jelly-chain-rush",
     images: [{ url: "/images/icon.png", width: 1024, height: 1024, alt: "Jelly Chain Rush" }],

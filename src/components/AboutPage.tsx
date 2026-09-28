@@ -1,5 +1,6 @@
 import Link from "next/link";
-import BrandLogo from "@/components/BrandLogo";
+import Image from "next/image";
+import { allProducts } from "@/lib/products";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -10,10 +11,10 @@ type AboutPageProps = {
 
 const copy = {
   en: {
-    eyebrow: "About Lumisoft Studios",
+    eyebrow: "About Lumisoft Studio",
     title: "Independent and product-focused",
     intro:
-      "Lumisoft Studios develops mobile games and apps for iOS and Android, covering product design, engineering, release, and ongoing support.",
+      "Lumisoft Studio develops mobile games and apps for iOS and Android, covering product design, engineering, release, and ongoing support.",
     storyTitle: "The story",
     story:
       "Our catalog began with LumiBaby, a practical sleep-support app for parents and caregivers. It now includes released arcade games and puzzle projects in active development.",
@@ -49,10 +50,10 @@ const copy = {
     supportLabel: "Visit support",
   },
   tr: {
-    eyebrow: "Lumisoft Studios Hakkında",
+    eyebrow: "Lumisoft Studio Hakkında",
     title: "Bağımsız ve ürün odaklı",
     intro:
-      "Lumisoft Studios; ürün tasarımı, mühendislik, yayın ve sürekli desteği kapsayarak iOS ve Android için mobil oyunlar ve uygulamalar geliştirir.",
+      "Lumisoft Studio; ürün tasarımı, mühendislik, yayın ve sürekli desteği kapsayarak iOS ve Android için mobil oyunlar ve uygulamalar geliştirir.",
     storyTitle: "Hikaye",
     story:
       "Ürün kataloğumuz, ebeveynler ve bakım verenler için pratik bir uyku destek uygulaması olan LumiBaby ile başladı. Bugün yayındaki arcade oyunlarını ve aktif olarak geliştirilen bulmaca projelerini de içeriyor.",
@@ -96,38 +97,9 @@ export default function AboutPage({ lang = "en" }: AboutPageProps) {
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 pt-16">
+      <main id="main-content" className="product-main about-page">
         {/* Hero */}
-        <section className="relative overflow-hidden px-4 py-20 sm:py-28">
-          <div className="bg-grid absolute inset-0" aria-hidden="true" />
-          <div
-            className="pointer-events-none absolute inset-0"
-            aria-hidden="true"
-            style={{
-              background:
-                "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(109,40,217,0.26), transparent 75%)",
-            }}
-          />
-          <div className="relative mx-auto max-w-3xl text-center">
-            <div className="hero-enter hero-enter-1 mb-8 flex justify-center">
-              <BrandLogo
-                size={130}
-                priority
-                alt="Lumisoft Studios"
-                className="drop-shadow-[0_0_28px_rgba(129,140,248,0.4)]"
-              />
-            </div>
-            <p className="hero-enter hero-enter-2 eyebrow mb-4 text-violet-400">
-              {t.eyebrow}
-            </p>
-            <h1 className="hero-enter hero-enter-3 mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              {t.title}
-            </h1>
-            <p className="hero-enter hero-enter-4 mx-auto max-w-2xl text-lg leading-relaxed text-slate-300">
-              {t.intro}
-            </p>
-          </div>
-        </section>
+        <section className="about-hero studio-width"><p className="studio-kicker">{t.eyebrow}</p><h1>{lang === "tr" ? "Fikirden ilk dokunuşa." : "From an idea to the first tap."}</h1><div className="about-intro"><p>{t.intro}</p><div className="about-product-icons">{allProducts.map(p=><Link key={p.slug} href={p.href![lang]}><Image src={p.iconImage!} alt={p.name} width={64} height={64} /></Link>)}</div></div></section>
 
         {/* Story */}
         <section className="px-4 pb-8">

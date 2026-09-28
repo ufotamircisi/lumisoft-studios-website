@@ -1,0 +1,52 @@
+[
+  {
+    "file": "public/media/roto-game.webp",
+    "source": "C:/Users/erolo/RotatingBlockPuzzlePhaser/docs/screenshots/step5_after_rotation.png",
+    "kind": "Existing product repository asset"
+  },
+  {
+    "file": "public/media/roto-adventure.webp",
+    "source": "C:/Users/erolo/RotatingBlockPuzzlePhaser/docs/screenshots/step9_adventure_start.png",
+    "kind": "Existing product repository asset"
+  },
+  {
+    "file": "public/media/baby-routine.webp",
+    "source": "C:/Users/erolo/LumiBaby/storeeee/source-screenshots/routine_1.jpg",
+    "kind": "Existing product repository asset"
+  },
+  {
+    "file": "public/media/baby-sounds.webp",
+    "source": "C:/Users/erolo/LumiBaby/storeeee/source-screenshots/soundsg_1.jpg",
+    "kind": "Existing product repository asset"
+  },
+  {
+    "file": "public/media/jelly-world.webp",
+    "source": "C:/Users/erolo/JellyChainRush-v5-rebuild/src/assets/backgrounds/gameplay_candyland_bg.png",
+    "kind": "Existing product repository asset"
+  },
+  {
+    "file": "public/media/neon-world.webp",
+    "source": "C:/Users/erolo/NeonSiegePrototype/www/assets/neon-siege-splash.png",
+    "kind": "Existing product repository asset"
+  },
+  {
+    "file": "public/media/jelly-map.webp",
+    "source": "artifacts/jelly-map.png",
+    "kind": "Local product browser capture"
+  },
+  {
+    "file": "public/media/jelly-game.webp",
+    "source": "JellyChainRush-v5-rebuild/dist, tutorial dismissed in local browser; artifacts/jelly-game-final.png",
+    "kind": "Local product browser capture"
+  },
+  {
+    "file": "public/media/neon-game.webp",
+    "source": "NeonSiegePrototype/www, played in local browser; artifacts/neon-played.png",
+    "kind": "Local product browser capture"
+  },
+  {
+    "file": "public/media/neon-preview.mp4",
+    "source": "NeonSiegePrototype/www, recorded in local browser; artifacts/game-recordings/page@06440524e25dc0a7ab54fc8a73027c2a.webm",
+    "kind": "Actual gameplay; 6 seconds, 390px, 24fps, muted H.264, 84,490 bytes"
+  }
+]

@@ -4,7 +4,7 @@ import SupportPage from "@/components/SupportPage";
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Get help with Lumisoft Studios games and apps. Product support, common questions, and direct contact.",
+    "Get help with Lumisoft Studio games and apps. Product support, common questions, and direct contact.",
   alternates: {
     canonical: "/support",
     languages: { en: "/support", tr: "/tr/support" },

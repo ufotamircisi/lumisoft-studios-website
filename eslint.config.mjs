@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Node.js deployment utility scripts — not Next.js/TS app code:
     "scripts/**",
+    "artifacts/**",
+    ".playwright-mcp/**",
   ]),
 ]);
 

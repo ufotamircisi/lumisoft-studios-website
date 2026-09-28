@@ -56,9 +56,10 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
   ];
 
   return (
-    <footer className="mt-auto border-t border-white/[0.07] bg-[#060915]">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(4,1fr)]">
+    <footer className="studio-footer mt-auto">
+      <div className="studio-width py-14">
+        <p className="footer-wordmark" aria-hidden="true">Lumisoft Studio</p>
+        <div className="footer-grid">
           {/* Brand */}
           <div>
             <Link
@@ -66,7 +67,7 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
               className="mb-3 inline-flex items-center gap-2.5 text-base font-semibold text-white"
             >
               <BrandLogo size={30} />
-              Lumisoft Studios
+              Lumisoft Studio
             </Link>
             <p className="mb-5 max-w-xs text-sm leading-relaxed text-slate-400">
               {isTR
@@ -98,7 +99,7 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
           {/* Link columns */}
           {columns.map((col) => (
             <nav key={col.title} aria-label={col.title}>
-              <p className="eyebrow mb-4 text-slate-500">{col.title}</p>
+              <p className="eyebrow mb-4 text-slate-400">{col.title}</p>
               <ul className="space-y-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
@@ -126,7 +127,7 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/[0.07] pt-6 sm:flex-row">
           <p className="text-xs text-slate-500">
-            &copy; {new Date().getFullYear()} Lumisoft Studios.{" "}
+            &copy; {new Date().getFullYear()} Lumisoft Studio.{" "}
             {isTR ? "Tüm hakları saklıdır." : "All rights reserved."}
           </p>
           <div className="flex items-center gap-4">

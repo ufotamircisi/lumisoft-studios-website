@@ -86,7 +86,7 @@ export default function SupportPage({ lang = "en" }: SupportPageProps) {
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 pt-16">
+      <main id="main-content" className="product-main support-page">
         {/* Hero */}
         <section className="relative overflow-hidden px-4 py-20 sm:py-24">
           <div

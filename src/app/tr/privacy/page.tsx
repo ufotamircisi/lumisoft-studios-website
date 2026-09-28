@@ -4,7 +4,7 @@ import { StudioPrivacyPage } from "@/components/StudioLegalPages";
 export const metadata: Metadata = {
   title: "Gizlilik Politikası",
   description:
-    "Lumisoft Studios'un bu web sitesinde verileri nasıl işlediği ve her ürünün gizlilik politikasına bağlantılar.",
+    "Lumisoft Studio'nun bu web sitesinde verileri nasıl işlediği ve her ürünün gizlilik politikasına bağlantılar.",
   alternates: {
     canonical: "/tr/privacy",
     languages: { en: "/privacy", tr: "/tr/privacy" },

@@ -4,7 +4,7 @@ import { StudioTermsPage } from "@/components/StudioLegalPages";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "Terms of use for the Lumisoft Studios website, with links to each product's terms.",
+    "Terms of use for the Lumisoft Studio website, with links to each product's terms.",
   alternates: {
     canonical: "/terms",
     languages: { en: "/terms", tr: "/tr/terms" },

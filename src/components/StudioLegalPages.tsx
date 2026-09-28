@@ -85,8 +85,8 @@ export function StudioPrivacyPage({ lang = "en" }: { lang?: Lang }) {
         title={isTR ? "Gizlilik Politikası" : "Privacy Policy"}
         subtitle={
           isTR
-            ? "Lumisoft Studios web sitesi için geçerlidir"
-            : "Applies to the Lumisoft Studios website"
+            ? "Lumisoft Studio web sitesi için geçerlidir"
+            : "Applies to the Lumisoft Studio website"
         }
         lastUpdated={isTR ? "Temmuz 2026" : "July 2026"}
         lastUpdatedLabel={isTR ? "Son güncelleme:" : "Last updated:"}
@@ -181,8 +181,8 @@ export function StudioTermsPage({ lang = "en" }: { lang?: Lang }) {
         title={isTR ? "Kullanım Koşulları" : "Terms of Use"}
         subtitle={
           isTR
-            ? "Lumisoft Studios web sitesi için geçerlidir"
-            : "Applies to the Lumisoft Studios website"
+            ? "Lumisoft Studio web sitesi için geçerlidir"
+            : "Applies to the Lumisoft Studio website"
         }
         lastUpdated={isTR ? "Temmuz 2026" : "July 2026"}
         lastUpdatedLabel={isTR ? "Son güncelleme:" : "Last updated:"}
@@ -209,8 +209,8 @@ export function StudioTermsPage({ lang = "en" }: { lang?: Lang }) {
           <div className="space-y-4 leading-relaxed text-slate-200">
             <p>
               {isTR
-                ? "Bu sitedeki tüm içerik, logolar, ürün adları, görseller ve metinler Lumisoft Studios'a aittir veya lisanslıdır. İçerik, yazılı izin olmadan ticari amaçla kopyalanamaz veya dağıtılamaz."
-                : "All content on this site, including logos, product names, images, and text, belongs to or is licensed by Lumisoft Studios. Content may not be copied or distributed for commercial purposes without written permission."}
+                ? "Bu sitedeki tüm içerik, logolar, ürün adları, görseller ve metinler Lumisoft Studio'ya aittir veya lisanslıdır. İçerik, yazılı izin olmadan ticari amaçla kopyalanamaz veya dağıtılamaz."
+                : "All content on this site, including logos, product names, images, and text, belongs to or is licensed by Lumisoft Studio. Content may not be copied or distributed for commercial purposes without written permission."}
             </p>
           </div>
         </section>

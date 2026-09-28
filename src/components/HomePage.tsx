@@ -1,372 +1,43 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
-import BrandLogo from "@/components/BrandLogo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ProductCard from "@/components/ProductCard";
-import StoreBadges from "@/components/StoreBadges";
-import Reveal from "@/components/Reveal";
-import HeroGlow from "@/components/HeroGlow";
+import ScreenComposition from "@/components/ScreenComposition";
 import { games, apps } from "@/lib/products";
 
-type HomePageProps = {
-  lang?: "en" | "tr";
-};
-
-const copy = {
-  en: {
-    heroEyebrow: "Independent mobile software studio",
-    heroTitleA: "Games people enjoy.",
-    heroTitleB: "Apps people rely on.",
-    heroText:
-      "Lumisoft Studios develops focused mobile products for iOS and Android—from arcade games to practical tools for families.",
-    ctaGames: "Explore our games",
-    ctaApps: "See our apps",
-    gamesEyebrow: "Games",
-    gamesTitle: "Distinct games with clear mechanics",
-    gamesText:
-      "Arcade challenges and puzzle systems designed to be easy to understand and rewarding to revisit.",
-    appsEyebrow: "Apps",
-    appsTitle: "Practical support for daily life",
-    appsText: "Focused tools for real routines, designed to stay clear when the moment is busy.",
-    appFeatured: "Featured app",
-    valuesEyebrow: "The studio",
-    valuesTitle: "How we work",
-    values: [
-      {
-        title: "Clear product thinking",
-        text: "Each product starts with a specific need, a defined audience, and an experience that stays focused.",
-      },
-      {
-        title: "Responsible by design",
-        text: "Privacy, accessibility, and honest communication are product requirements, not footnotes.",
-      },
-      {
-        title: "Reliable delivery",
-        text: "We engineer for stable performance across modern iOS and Android devices and support what we ship.",
-      },
-    ],
-    aboutLink: "More about the studio",
-    contactTitle: "Say hello",
-    contactText:
-      "Questions, ideas, or partnership proposals? We read every message.",
-    aboutHref: "/about",
-  },
-  tr: {
-    heroEyebrow: "Bağımsız mobil yazılım stüdyosu",
-    heroTitleA: "Keyifle oynanan oyunlar.",
-    heroTitleB: "Güvenilen uygulamalar.",
-    heroText:
-      "Lumisoft Studios, arcade oyunlarından ailelere yönelik pratik araçlara kadar iOS ve Android için odaklı mobil ürünler geliştirir.",
-    ctaGames: "Oyunları keşfet",
-    ctaApps: "Uygulamalara bak",
-    gamesEyebrow: "Oyunlar",
-    gamesTitle: "Net mekaniklere sahip özgün oyunlar",
-    gamesText:
-      "Kolay anlaşılan ve yeniden oynamaya değer arcade mücadeleleri ile bulmaca sistemleri.",
-    appsEyebrow: "Uygulamalar",
-    appsTitle: "Günlük yaşam için pratik destek",
-    appsText: "Gerçek rutinlere odaklanan, yoğun anlarda bile anlaşılır kalan araçlar.",
-    appFeatured: "Öne çıkan uygulama",
-    valuesEyebrow: "Stüdyo",
-    valuesTitle: "Nasıl çalışıyoruz",
-    values: [
-      {
-        title: "Net ürün yaklaşımı",
-        text: "Her ürün belirli bir ihtiyaç, tanımlı bir kullanıcı ve odağını koruyan bir deneyimle başlar.",
-      },
-      {
-        title: "Sorumlu tasarım",
-        text: "Gizlilik, erişilebilirlik ve açık iletişim bizim için dipnot değil, ürün gereksinimidir.",
-      },
-      {
-        title: "Güvenilir teslimat",
-        text: "Modern iOS ve Android cihazlarda kararlı performans hedefler, yayınladığımız ürünleri destekleriz.",
-      },
-    ],
-    aboutLink: "Stüdyo hakkında daha fazlası",
-    contactTitle: "Merhaba deyin",
-    contactText:
-      "Sorular, fikirler veya iş birliği önerileri? Her mesajı okuyoruz.",
-    aboutHref: "/tr/about",
-  },
-};
-
-export default function HomePage({ lang = "en" }: HomePageProps) {
-  const t = copy[lang];
-  const lumibaby = apps[0];
-
-  return (
-    <>
-      <Header />
-      <main id="main-content" className="flex-1 pt-16">
-        {/* ── Hero ────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden px-4 pb-24 pt-20 sm:pb-32 sm:pt-28">
-          <div className="bg-grid absolute inset-0" aria-hidden="true" />
-          {/* layered lighting */}
-          <div
-            className="pointer-events-none absolute inset-0"
-            aria-hidden="true"
-            style={{
-              background:
-                "radial-gradient(ellipse 85% 65% at 50% 0%, rgba(109,40,217,0.3), rgba(79,70,229,0.1) 50%, transparent 78%)",
-            }}
-          />
-          <div
-            className="pointer-events-none absolute inset-0"
-            aria-hidden="true"
-            style={{
-              background:
-                "radial-gradient(ellipse 40% 45% at 18% 25%, rgba(99,102,241,0.14), transparent 70%), radial-gradient(ellipse 40% 45% at 82% 30%, rgba(168,85,247,0.1), transparent 70%)",
-            }}
-          />
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 h-px"
-            aria-hidden="true"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, rgba(167,139,250,0.5), transparent)",
-            }}
-          />
-          <div
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
-            aria-hidden="true"
-            style={{
-              background: "linear-gradient(to bottom, transparent, #080b1a)",
-            }}
-          />
-          {/* soft floating particles */}
-          <div className="particles" aria-hidden="true">
-            {Array.from({ length: 9 }).map((_, i) => (
-              <span key={i} />
-            ))}
-          </div>
-          <HeroGlow />
-
-          <div className="relative mx-auto max-w-4xl text-center">
-            <div className="hero-enter hero-enter-1 mb-10 flex justify-center">
-              <div className="animate-float relative">
-                <div
-                  className="absolute inset-0 scale-150 rounded-full blur-3xl"
-                  aria-hidden="true"
-                  style={{ background: "rgba(139,92,246,0.22)" }}
-                />
-                <BrandLogo
-                  size={200}
-                  priority
-                  alt="Lumisoft Studios"
-                  className="relative drop-shadow-[0_0_40px_rgba(129,140,248,0.4)] sm:scale-110"
-                />
-              </div>
-            </div>
-
-            <p className="hero-enter hero-enter-2 eyebrow mb-5 text-violet-400">
-              {t.heroEyebrow}
-            </p>
-
-            <h1 className="hero-enter hero-enter-3 mb-6 text-4xl font-bold leading-[1.08] tracking-tight sm:text-7xl sm:leading-[1.05]">
-              <span className="block text-white">{t.heroTitleA}</span>
-              <span className="text-gradient mt-2 block sm:mt-1">
-                {t.heroTitleB}
-              </span>
-            </h1>
-
-            <p className="hero-enter hero-enter-4 mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-              {t.heroText}
-            </p>
-
-            <div className="hero-enter hero-enter-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a href="#games" className="btn-primary w-full sm:w-auto">
-                {t.ctaGames}
-              </a>
-              <a href="#apps" className="btn-secondary w-full sm:w-auto">
-                {t.ctaApps}
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Games ───────────────────────────────────────────── */}
-        <section
-          id="games"
-          aria-labelledby="games-heading"
-          className="scroll-mt-20 px-4 py-16 sm:py-24"
-        >
-          <div className="mx-auto max-w-5xl">
-            <Reveal>
-              <div className="mb-10 max-w-2xl">
-                <p className="eyebrow mb-3 text-cyan-400">{t.gamesEyebrow}</p>
-                <h2
-                  id="games-heading"
-                  className="mb-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
-                >
-                  {t.gamesTitle}
-                </h2>
-                <p className="leading-relaxed text-slate-400">{t.gamesText}</p>
-              </div>
-            </Reveal>
-
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {games.map((game, i) => (
-                <Reveal key={game.slug} delay={(i % 2) * 90}>
-                  <ProductCard product={game} lang={lang} />
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Apps ────────────────────────────────────────────── */}
-        <section
-          id="apps"
-          aria-labelledby="apps-heading"
-          className="scroll-mt-20 border-t border-white/[0.06] px-4 py-16 sm:py-24"
-        >
-          <div className="mx-auto max-w-5xl">
-            <Reveal>
-              <div className="mb-10 max-w-2xl">
-                <p className="eyebrow mb-3 text-violet-400">{t.appsEyebrow}</p>
-                <h2
-                  id="apps-heading"
-                  className="mb-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
-                >
-                  {t.appsTitle}
-                </h2>
-                <p className="leading-relaxed text-slate-400">{t.appsText}</p>
-              </div>
-            </Reveal>
-
-            <Reveal>
-              <div className="card-glass overflow-hidden">
-                <div
-                  className="pointer-events-none absolute inset-0"
-                  aria-hidden="true"
-                  style={{
-                    background:
-                      "radial-gradient(ellipse 60% 90% at 15% 10%, rgba(109,40,217,0.18), transparent 70%)",
-                  }}
-                />
-                <div className="relative flex flex-col gap-8 p-7 sm:p-10 md:flex-row md:items-center">
-                  <div className="flex-shrink-0">
-                    <Image
-                      src={lumibaby.iconImage!}
-                      alt="LumiBaby"
-                      width={112}
-                      height={112}
-                      className="h-24 w-24 rounded-[24px] shadow-[0_8px_40px_rgba(109,40,217,0.45)] sm:h-28 sm:w-28"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="eyebrow mb-2 text-violet-400">
-                      {t.appFeatured}
-                    </p>
-                    <h3 className="mb-1 text-2xl font-bold tracking-tight text-white">
-                      {lumibaby.name}
-                    </h3>
-                    <p className="mb-3 text-sm font-medium text-violet-300">
-                      {lumibaby.tagline[lang]}
-                    </p>
-                    <p className="mb-6 max-w-xl leading-relaxed text-slate-300">
-                      {lumibaby.description[lang]}
-                    </p>
-                    <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                      <StoreBadges lang={lang} align="start" />
-                      <Link
-                        href={lumibaby.href![lang]}
-                        className="text-sm font-semibold text-violet-400 transition-colors hover:text-violet-300"
-                      >
-                        {lang === "tr" ? "Detayları gör →" : "See details →"}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ── Studio values ───────────────────────────────────── */}
-        <section
-          aria-labelledby="values-heading"
-          className="border-t border-white/[0.06] px-4 py-16 sm:py-24"
-        >
-          <div className="mx-auto max-w-5xl">
-            <Reveal>
-              <div className="mb-10 max-w-2xl">
-                <p className="eyebrow mb-3 text-indigo-400">
-                  {t.valuesEyebrow}
-                </p>
-                <h2
-                  id="values-heading"
-                  className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
-                >
-                  {t.valuesTitle}
-                </h2>
-              </div>
-            </Reveal>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
-              {t.values.map((v, i) => (
-                <Reveal key={v.title} delay={i * 90}>
-                  <div className="card-glass h-full p-6 sm:p-7">
-                    <h3 className="mb-2.5 text-base font-bold text-white">
-                      {v.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-slate-400">
-                      {v.text}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-            <Reveal delay={120}>
-              <div className="mt-8">
-                <Link
-                  href={t.aboutHref}
-                  className="text-sm font-semibold text-violet-400 transition-colors hover:text-violet-300"
-                >
-                  {t.aboutLink} →
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ── Contact ─────────────────────────────────────────── */}
-        <section
-          id="contact"
-          aria-labelledby="contact-heading"
-          className="relative overflow-hidden border-t border-white/[0.06] px-4 py-20 sm:py-28"
-        >
-          <div
-            className="pointer-events-none absolute inset-0"
-            aria-hidden="true"
-            style={{
-              background:
-                "radial-gradient(ellipse 70% 90% at 50% 100%, rgba(109,40,217,0.16), transparent 70%)",
-            }}
-          />
-          <Reveal>
-            <div className="relative mx-auto max-w-xl text-center">
-              <h2
-                id="contact-heading"
-                className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl"
-              >
-                {t.contactTitle}
-              </h2>
-              <p className="mb-8 leading-relaxed text-slate-300">
-                {t.contactText}
-              </p>
-              <a
-                href="mailto:support@lumisoftstudios.com"
-                className="btn-primary"
-              >
-                support@lumisoftstudios.com
-              </a>
-            </div>
-          </Reveal>
-        </section>
-      </main>
-      <Footer lang={lang} />
-    </>
-  );
+export default function HomePage({ lang = "en" }: { lang?: "en" | "tr" }) {
+ const tr = lang === "tr";
+ const baby = apps[0];
+ return <><Header /><main id="main-content" className="studio-home">
+  <section className="studio-hero studio-width">
+   <div className="hero-copy">
+    <p className="studio-kicker"><span className="status-dot" />{tr ? "Bağımsız fikirler. Gerçek ürünler." : "Independent minds. Real products."}</p>
+    <h1>{tr ? <>Küçük ekranlar.<br />Büyük dünyalar.</> : <>Small screens.<br />Big worlds.</>}</h1>
+    <p className="hero-description">{tr ? "Oynamanın heyecanı. Günlük hayatın ritmi. Biz Lumisoft Studio. iOS ve Android için oyunlar ve uygulamalar geliştiriyoruz." : "The thrill of play. The rhythm of everyday life. We’re Lumisoft Studio, building games and apps for iOS and Android."}</p>
+    <div className="studio-actions"><a className="studio-button" href="#games">{tr ? "Oyunları keşfet" : "Explore games"}<span aria-hidden="true">↗</span></a><a className="studio-text-link" href="#apps">{tr ? "Uygulamalarımız" : "Discover our apps"}<span aria-hidden="true">↗</span></a></div>
+   </div>
+   <ScreenComposition lang={lang} />
+   <div className="hero-caption"><span>{tr ? "Oyunlar ve uygulamalar, aynı yaratıcı ruh." : "Games and apps. One creative spirit."}</span><a href="#games">{tr ? "Keşfetmek için kaydır" : "Scroll to explore"}<span aria-hidden="true">↓</span></a></div>
+  </section>
+  <div className="product-index studio-width" aria-label={tr ? "Ürünler" : "Products"}>{[...games,baby].map(p=><Link key={p.slug} href={p.href![lang]}><Image src={p.iconImage!} width={40} height={40} alt="" /><span>{p.name}<small>{p.kind === "game" ? (tr ? "Oyun" : "Game") : (tr ? "Uygulama" : "App")}</small></span><span className="index-arrow" aria-hidden="true">↗</span></Link>)}</div>
+  <section id="games" className="games-section studio-width" aria-labelledby="games-heading">
+   <div className="section-heading"><div><p className="studio-kicker">{tr ? "Oyunlarımız" : "Made for play"}</p><h2 id="games-heading">{tr ? "Bir tur daha." : "One more round."}</h2></div><p>{tr ? "Her oyunda farklı bir dünya. Her dokunuşta yeni bir ihtimal." : "A different world in every game. A new possibility in every move."}</p></div>
+   {games.map((p,i)=><article key={p.slug} className={`game-chapter chapter-${p.slug}`}>
+    <div className="chapter-art">
+     {p.slug === "jelly-chain-rush" && <Image className="world-image" src="/media/jelly-world.webp" alt="" fill sizes="(max-width: 760px) 100vw, 60vw" />}
+     {p.slug === "neon-siege" && <div className="neon-orbits" aria-hidden="true"><i /><i /><i /></div>}
+     {p.slug === "roto-blocks" && <div className="rotation-orbit" aria-hidden="true" />}
+     <div className="chapter-device"><Image src={`/media/${["neon-game","jelly-game","roto-game"][i]}.webp`} alt={tr ? `${p.name} gerçek oyun ekranı` : `${p.name} gameplay screen`} width={390} height={844} sizes="(max-width: 760px) 220px, 280px" /></div>
+     <div className="art-caption"><span>{p.tagline[lang]}</span><span>iOS / Android</span></div>
+    </div>
+    <div className="chapter-copy"><Image src={p.iconImage!} width={64} height={64} alt="" className="product-icon" /><p className="studio-kicker">{tr ? "Şimdi yayında" : "Available now"}</p><h3>{p.name}</h3><p>{p.description[lang]}</p><Link href={p.href![lang]} className="studio-button secondary">{tr ? "Oyunu keşfet" : "Explore the game"}<span aria-hidden="true">↗</span></Link></div>
+   </article>)}
+  </section>
+  <section id="apps" className="apps-section" aria-labelledby="apps-heading"><div className="studio-width app-feature">
+   <div className="app-copy"><p className="studio-kicker">{tr ? "Hayata eşlik eden uygulamalar" : "Made for everyday"}</p><h2 id="apps-heading">{tr ? <>Biraz daha<br />huzur.</> : <>A little more<br />peace of mind.</>}</h2><div className="app-identity"><Image src={baby.iconImage!} width={56} height={56} alt="" /><div><h3>LumiBaby</h3><span>{tr ? "Bebek uyku desteği" : "Baby sleep support"}</span></div></div><p>{baby.description[lang]}</p><Link href={baby.href![lang]} className="studio-button dark">{tr ? "LumiBaby’yi keşfet" : "Meet LumiBaby"}<span aria-hidden="true">↗</span></Link></div>
+   <div className="app-screens"><div className="app-halo" aria-hidden="true" /><figure className="app-phone back"><Image src="/media/baby-sounds.webp" alt={tr ? "LumiBaby sakinleştirici sesler ekranı" : "LumiBaby soothing sounds screen"} width={691} height={1536} sizes="(max-width: 760px) 180px, 260px" /></figure><figure className="app-phone front"><Image src="/media/baby-routine.webp" alt={tr ? "LumiBaby uyku rutini ekranı" : "LumiBaby sleep routine screen"} width={691} height={1536} sizes="(max-width: 760px) 200px, 280px" /></figure></div>
+  </div></section>
+  <section className="studio-width studio-statement"><p className="studio-kicker">Lumisoft Studio</p><div className="statement-grid"><h2>{tr ? "Merakla başlar. Özenle gelişir." : "Built with curiosity. Shaped with care."}</h2><div><p>{tr ? "Oyunun heyecanını da, günlük hayatın küçük ihtiyaçlarını da önemsiyoruz. Tasarım, mühendislik ve sürekli desteği aynı çatı altında buluşturuyoruz." : "We care about the joy of a good game and the small things that make daily life easier. Product design, engineering, and ongoing support, all under one roof."}</p><Link href={tr ? "/tr/about" : "/about"} className="studio-text-link">{tr ? "Stüdyoyu tanıyın" : "Meet the studio"}<span aria-hidden="true">↗</span></Link></div></div><div className="studio-principles">{(tr ? [["Net bir amaç","Her üründe odaklı bir deneyim."],["Her ayrıntıda özen","Tasarım ve mühendislik bir arada."],["Yayından sonra da burada","Ulaşılabilir destek, açık iletişim."]] : [["Purpose in every product","Focused experiences, from the first tap."],["Care in every detail","Design and engineering working together."],["Here after launch","Accessible support and honest communication."]]).map(([a,b])=><div key={a}><h3>{a}</h3><p>{b}</p></div>)}</div></section>
+  <section id="contact" className="contact-band studio-width"><div><p className="studio-kicker">{tr ? "Konuşalım" : "Let’s talk"}</p><h2>{tr ? "Aklınızda bir şey mi var?" : "Something on your mind?"}</h2></div><Link href={tr ? "/tr/contact" : "/contact"} className="studio-button">{tr ? "İletişime geçin" : "Get in touch"}<span aria-hidden="true">↗</span></Link></section>
+ </main><Footer lang={lang} /></>;
 }

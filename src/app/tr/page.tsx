@@ -4,7 +4,7 @@ import HomePage from "@/components/HomePage";
 export const metadata: Metadata = {
   title: "Oyunlar ve Uygulamalar",
   description:
-    "Lumisoft Studios, iOS ve Android için odaklı mobil oyunlar ve günlük yaşama yönelik pratik uygulamalar geliştirir.",
+    "Lumisoft Studio, iOS ve Android için odaklı mobil oyunlar ve günlük yaşama yönelik pratik uygulamalar geliştirir.",
   alternates: {
     canonical: "/tr",
     languages: { en: "/", tr: "/tr" },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Lumisoft Studios",
+  name: "Lumisoft Studio",
   url: "https://www.lumisoftstudios.com",
   logo: "https://www.lumisoftstudios.com/images/lumisoft-studio-emblem.png",
   email: "support@lumisoftstudios.com",

@@ -2,16 +2,16 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#080b1a",
+  themeColor: "#101320",
 };
 
 export const metadata: Metadata = {
   title: {
-    default: "Lumisoft Studios | Games & Apps",
-    template: "%s | Lumisoft Studios",
+    default: "Lumisoft Studio | Games & Apps",
+    template: "%s | Lumisoft Studio",
   },
   description:
-    "Lumisoft Studios develops focused mobile games and practical apps for iOS and Android.",
+    "Lumisoft Studio develops focused mobile games and practical apps for iOS and Android.",
   metadataBase: new URL("https://www.lumisoftstudios.com"),
   icons: {
     icon: "/images/lumisoft-studio-emblem.png",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "Lumisoft Studios",
-    title: "Lumisoft Studios | Games & Apps",
+    siteName: "Lumisoft Studio",
+    title: "Lumisoft Studio | Games & Apps",
     description:
       "Independent studio developing focused mobile games and practical apps for iOS and Android.",
     images: [
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
         url: "/images/lumisoft-studio-emblem.png",
         width: 1536,
         height: 1536,
-        alt: "Lumisoft Studios",
+        alt: "Lumisoft Studio",
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: "Lumisoft Studios | Games & Apps",
+    title: "Lumisoft Studio | Games & Apps",
     description:
       "Independent studio developing focused mobile games and practical apps for iOS and Android.",
     images: ["/images/lumisoft-studio-emblem.png"],
@@ -52,7 +52,7 @@ export default function RootLayout({
       dir="ltr"
       className="h-full antialiased"
     >
-      <body className="min-h-full flex flex-col bg-[#080b1a] text-[#f2f4ff] font-sans">
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <a href="#main-content" className="skip-link">
           Skip to main content / Ana içeriğe geç
         </a>

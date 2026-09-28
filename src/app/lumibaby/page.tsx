@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
-import StoreBadges from "@/components/StoreBadges";
-import ProductArtwork from "@/components/ProductArtwork";
+import ProductHero from "@/components/ProductHero";
 
 export const metadata: Metadata = {
   title: "LumiBaby Version 2 | Baby Sleep Support",
@@ -96,93 +94,10 @@ export default function LumiBabyPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 pt-16">
+      <main id="main-content" className="product-main baby-detail">
 
         {/* ── Hero ─────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden px-4 py-24 sm:py-32">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse 80% 70% at 50% 0%, rgba(109,40,217,0.3), rgba(79,70,229,0.1) 50%, transparent 75%)",
-            }}
-          />
-          <div
-            className="absolute bottom-0 inset-x-0 h-24 pointer-events-none"
-            style={{
-              background: "linear-gradient(to bottom, transparent, #080b1a)",
-            }}
-          />
-
-          <div className="relative mx-auto grid max-w-5xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="text-center lg:text-left">
-              <div className="mb-7 flex justify-center lg:justify-start">
-                <div className="relative">
-                  <div
-                    className="absolute inset-0 rounded-3xl blur-2xl scale-110"
-                    style={{ background: "rgba(109,40,217,0.3)" }}
-                  />
-                  <Image
-                    src="/images/web/lumibaby-icon.webp"
-                    alt="LumiBaby"
-                    width={88}
-                    height={88}
-                    className="relative rounded-[22px] shadow-[0_8px_40px_rgba(109,40,217,0.4)]"
-                    priority
-                  />
-                </div>
-              </div>
-
-              <p className="eyebrow mb-4 text-violet-400">
-                LumiBaby · Version 2
-              </p>
-              <h1 className="mb-5 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                LumiBaby
-              </h1>
-              <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-slate-200 lg:mx-0">
-                A calm, supportive companion for the night shift. LumiBaby
-                helps parents listen, track, and soothe, so the whole family
-                can rest.
-              </p>
-
-              <div className="mb-8 flex justify-center lg:justify-start">
-                <StoreBadges />
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-                <Link
-                  href="/lumibaby/support"
-                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-violet-400/40 text-violet-200 hover:text-white hover:border-violet-400/70 text-sm font-semibold transition-colors"
-                >
-                  Support
-                </Link>
-                <Link
-                  href="/lumibaby/privacy"
-                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="/lumibaby/terms"
-                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/15 text-slate-200 hover:text-white hover:border-white/30 text-sm font-medium transition-colors"
-                >
-                  Terms of Use
-                </Link>
-              </div>
-            </div>
-
-            <div className="hidden lg:block">
-              <ProductArtwork
-                src="/images/web/lumibaby-icon.webp"
-                name="LumiBaby"
-                alt="LumiBaby official app icon"
-                label="Official product artwork"
-                accent="rgba(139, 92, 246, 0.3)"
-                priority
-              />
-            </div>
-          </div>
-        </section>
+        <ProductHero slug="lumibaby" lang="en" />
 
         {/* ── 1. Cry & Colic Detectors, featured ─────────────── */}
         <section className="px-4 pb-4">

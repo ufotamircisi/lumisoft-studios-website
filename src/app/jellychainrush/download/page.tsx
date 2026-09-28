@@ -12,7 +12,7 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Jelly Chain Rush Match 3 Download | Lumisoft Studios",
+    absolute: "Jelly Chain Rush Match 3 Download | Lumisoft Studio",
   },
   description:
     "Download Jelly Chain Rush Match 3 on the App Store or Google Play. Match candies, trigger chain reactions, collect rewards and build your sweet island.",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "https://lumisoftstudios.com/jellychainrush/download",
   },
   openGraph: {
-    title: "Jelly Chain Rush Match 3 Download | Lumisoft Studios",
+    title: "Jelly Chain Rush Match 3 Download | Lumisoft Studio",
     description:
       "Download Jelly Chain Rush Match 3 on the App Store or Google Play. Match candies, trigger chain reactions, collect rewards and build your sweet island.",
     url: "https://lumisoftstudios.com/jellychainrush/download",

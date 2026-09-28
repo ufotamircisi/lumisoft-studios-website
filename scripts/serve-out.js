@@ -6,6 +6,7 @@ const root = path.resolve("out");
 const port = Number(process.env.PORT || 4173);
 
 const contentTypes = {
+  ".mp4": "video/mp4",
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
   ".ico": "image/x-icon",

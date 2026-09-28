@@ -15,14 +15,14 @@ const DESCRIPTION =
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Roto Blocks Download | Lumisoft Studios",
+    absolute: "Roto Blocks Download | Lumisoft Studio",
   },
   description: DESCRIPTION,
   alternates: {
     canonical: "https://lumisoftstudios.com/rotoblocks/download",
   },
   openGraph: {
-    title: "Roto Blocks Download | Lumisoft Studios",
+    title: "Roto Blocks Download | Lumisoft Studio",
     description: DESCRIPTION,
     url: "https://lumisoftstudios.com/rotoblocks/download",
     siteName: "Lumisoft Studio",

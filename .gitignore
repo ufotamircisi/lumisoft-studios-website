@@ -42,3 +42,7 @@ next-env.d.ts
 
 # local asset backups (kept out of the repo)
 asset_backups/
+
+# Local visual QA captures and temporary capture utilities
+/artifacts/
+/.playwright-mcp/

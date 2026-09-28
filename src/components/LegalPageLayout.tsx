@@ -25,7 +25,7 @@ export default function LegalPageLayout({
   children,
 }: LegalPageLayoutProps) {
   return (
-    <main id="main-content" className="min-h-screen pt-16">
+    <main id="main-content" className="legal-shell min-h-screen">
       {/* Page header */}
       <div className="relative border-b border-violet-500/15 py-14 px-4 overflow-hidden">
         <div
