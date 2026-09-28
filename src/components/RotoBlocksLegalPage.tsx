@@ -10,6 +10,7 @@ type PageKind = "privacy" | "terms" | "support";
 type Section = {
   title: string;
   paragraphs: string[];
+  links?: { label: string; href: string }[];
 };
 
 const privacySections: Record<Lang, Section[]> = {
@@ -21,21 +22,54 @@ const privacySections: Record<Lang, Section[]> = {
       ],
     },
     {
-      title: "No Advertising or Purchases",
+      title: "Google AdMob Advertising",
       paragraphs: [
-        "The current version of Roto Blocks does not contain ads, use Google AdMob, offer in-app purchases, use billing, or provide subscriptions, coins, diamonds, or a marketplace.",
+        "Roto Blocks uses Google AdMob through the Google Mobile Ads SDK. Interstitial ads appear at natural gameplay transitions. Rewarded ads are shown only when you choose to watch an ad to continue in Adventure Mode.",
+        "The game does not show banner, app open, or native ads. It does not offer in-app purchases, subscriptions, or paid virtual currency.",
+      ],
+    },
+    {
+      title: "Information Processed by the Advertising SDK",
+      paragraphs: [
+        "Depending on the platform, available identifiers, your consent where applicable, and Google policies, the Google Mobile Ads SDK may collect or process device identifiers, advertising identifiers, IP addresses, diagnostics such as crash and performance information, usage data, and ad interaction data such as impressions, taps, and video views.",
+        "IP addresses may be used to estimate an approximate location. The game does not request location permission or access precise device location.",
+      ],
+    },
+    {
+      title: "How Advertising Data Is Used",
+      paragraphs: [
+        "Google may process this information for third-party advertising, analytics and ad measurement, diagnostics, fraud prevention, security, and compliance with applicable requirements. Advertising-related information may be shared with Google and its advertising service partners as described in Google policies.",
+        "Device identifiers are used for third-party advertising and analytics and are treated as data linked to the user, including through a device identifier, even though Roto Blocks has no account or login system. They are not used for tracking in the iOS app.",
+      ],
+    },
+    {
+      title: "iOS and App Tracking Transparency",
+      paragraphs: [
+        "The iOS app does not use App Tracking Transparency and does not ask permission to track users. Device ID data is used for Third-Party Advertising and Analytics, is linked to the user, and is not used for tracking as defined by Apple.",
+        "Not requesting tracking permission does not mean that no data is processed. The Google Mobile Ads SDK may still process the information described above, subject to platform restrictions and applicable consent.",
+      ],
+    },
+    {
+      title: "Google Policies and Privacy Choices",
+      paragraphs: [
+        "Google handles advertising data under its own policies, including its retention practices and available privacy controls. Processing depends on your platform, applicable user consent, and Google policies. You can review the privacy and advertising controls available on your device and in Google services.",
+        "For details about how Google uses information from apps that use its services, see the following resources:",
+      ],
+      links: [
+        { label: "Google Privacy Policy", href: "https://policies.google.com/privacy?hl=en" },
+        { label: "How Google uses information from sites or apps that use its services", href: "https://policies.google.com/technologies/partner-sites?hl=en" },
       ],
     },
     {
       title: "No Account or Sensitive Permissions",
       paragraphs: [
-        "Roto Blocks does not use user accounts and does not access your location, camera, microphone, or contacts.",
+        "Roto Blocks does not require an account or login and does not access your camera, microphone, or contacts. It does not request location permission.",
       ],
     },
     {
       title: "Local Game Data",
       paragraphs: [
-        "Game progress, settings, best scores, and similar gameplay data may be stored locally on your device. Removing the app or clearing its data may remove this information.",
+        "Game progress, settings, best scores, and similar gameplay data may be stored locally on your device. Removing the app or clearing its data may remove this information. This does not necessarily delete information already processed by Google.",
       ],
     },
     {
@@ -65,21 +99,54 @@ const privacySections: Record<Lang, Section[]> = {
       ],
     },
     {
-      title: "Reklam veya Satın Alma Yoktur",
+      title: "Google AdMob Reklamları",
       paragraphs: [
-        "Roto Blocks'un bu sürümünde reklam ve Google AdMob kullanılmaz; uygulama içi satın alma, faturalandırma, abonelik, coin, elmas veya market özelliği bulunmaz.",
+        "Roto Blocks, Google Mobile Ads SDK aracılığıyla Google AdMob kullanır. Geçiş reklamları (interstitial) oyunun doğal geçiş noktalarında gösterilir. Ödüllü reklamlar yalnızca Macera Modunda (Adventure Mode) devam etmek için reklam izlemeyi seçtiğinizde gösterilir.",
+        "Oyunda banner, uygulama açılış (app open) veya yerel (native) reklamlar gösterilmez. Uygulama içi satın alma, abonelik veya ücretli sanal para bulunmaz.",
+      ],
+    },
+    {
+      title: "Reklam SDK’sının İşlediği Bilgiler",
+      paragraphs: [
+        "Platforma, kullanılabilir tanımlayıcılara, gerekli olduğu durumlarda verdiğiniz onaya ve Google politikalarına bağlı olarak Google Mobile Ads SDK; cihaz tanımlayıcılarını, reklam tanımlayıcılarını, IP adreslerini, çökme ve performans bilgileri gibi tanılama verilerini, kullanım verilerini ve reklam gösterimleri, dokunmalar ile video izlemeleri gibi reklam etkileşim verilerini toplayabilir veya işleyebilir.",
+        "IP adresleri yaklaşık konumu tahmin etmek için kullanılabilir. Oyun konum izni istemez ve cihazın kesin konumuna erişmez.",
+      ],
+    },
+    {
+      title: "Reklam Verilerinin Kullanımı",
+      paragraphs: [
+        "Google bu bilgileri üçüncü taraf reklamları, analiz ve reklam ölçümü, tanılama, dolandırıcılığın önlenmesi, güvenlik ve geçerli gerekliliklere uyum amacıyla işleyebilir. Reklamlarla ilgili bilgiler, Google politikalarında açıklandığı şekilde Google ve reklam hizmeti ortaklarıyla paylaşılabilir.",
+        "Cihaz tanımlayıcıları üçüncü taraf reklamları ve analiz için kullanılır. Roto Blocks’ta hesap veya giriş sistemi bulunmasa da bu veriler, cihaz tanımlayıcısı üzerinden ilişkilendirme dahil, kullanıcıyla bağlantılı veriler olarak ele alınır. iOS uygulamasında takip amacıyla kullanılmaz.",
+      ],
+    },
+    {
+      title: "iOS ve Uygulama Takibi Şeffaflığı",
+      paragraphs: [
+        "iOS uygulaması App Tracking Transparency kullanmaz ve kullanıcıları takip etmek için izin istemez. Cihaz Kimliği (Device ID) verileri üçüncü taraf reklamları (Third-Party Advertising) ve analiz (Analytics) için kullanılır, kullanıcıyla bağlantılıdır ve Apple’ın tanımladığı anlamda takip amacıyla kullanılmaz.",
+        "Takip izni istenmemesi, hiçbir verinin işlenmediği anlamına gelmez. Google Mobile Ads SDK, platform kısıtlamalarına ve geçerli onay koşullarına bağlı olarak yukarıda açıklanan bilgileri işlemeye devam edebilir.",
+      ],
+    },
+    {
+      title: "Google Politikaları ve Gizlilik Tercihleri",
+      paragraphs: [
+        "Google, reklam verilerini saklama uygulamaları ve kullanılabilir gizlilik kontrolleri dahil kendi politikaları kapsamında işler. Veri işleme; platformunuza, geçerli kullanıcı onayına ve Google politikalarına bağlıdır. Cihazınızda ve Google hizmetlerinde sunulan gizlilik ve reklam kontrollerini inceleyebilirsiniz.",
+        "Google’ın hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullandığı hakkında ayrıntılar için şu kaynaklara bakabilirsiniz:",
+      ],
+      links: [
+        { label: "Google Gizlilik Politikası", href: "https://policies.google.com/privacy?hl=tr" },
+        { label: "Google’ın hizmetlerini kullanan sitelerden veya uygulamalardan gelen bilgileri kullanımı", href: "https://policies.google.com/technologies/partner-sites?hl=tr" },
       ],
     },
     {
       title: "Hesap veya Hassas İzin Yoktur",
       paragraphs: [
-        "Roto Blocks kullanıcı hesabı kullanmaz; konumunuza, kameranıza, mikrofonunuza veya kişilerinize erişmez.",
+        "Roto Blocks hesap oluşturmayı veya giriş yapmayı gerektirmez; kameranıza, mikrofonunuza veya kişilerinize erişmez. Konum izni istemez.",
       ],
     },
     {
       title: "Yerel Oyun Verileri",
       paragraphs: [
-        "Oyun ilerlemesi, ayarlar, en iyi skorlar ve benzeri oyun verileri cihazınızda yerel olarak saklanabilir. Uygulamanın kaldırılması veya verilerinin temizlenmesi bu bilgileri silebilir.",
+        "Oyun ilerlemesi, ayarlar, en iyi skorlar ve benzeri oyun verileri cihazınızda yerel olarak saklanabilir. Uygulamanın kaldırılması veya verilerinin temizlenmesi bu bilgileri silebilir. Bu işlem, Google tarafından daha önce işlenmiş bilgileri mutlaka silmez.",
       ],
     },
     {
@@ -108,7 +175,7 @@ const termsSections: Record<Lang, Section[]> = {
     { title: "Acceptance", paragraphs: ["By downloading, accessing, or using Roto Blocks, you agree to these Terms of Use. If you do not agree, do not use the game."] },
     { title: "About Roto Blocks", paragraphs: ["Roto Blocks is a free casual puzzle game developed by Lumisoft Studio."] },
     { title: "License", paragraphs: ["Lumisoft Studio grants you a limited, revocable, nonexclusive, nontransferable license to use Roto Blocks for personal and noncommercial purposes, subject to these terms."] },
-    { title: "Current Version", paragraphs: ["The current version of Roto Blocks does not include ads or purchases. Ads or a Remove Ads option may be added in a future version, and these terms may be updated at that time."] },
+    { title: "Current Version", paragraphs: ["Roto Blocks uses Google AdMob interstitial ads at natural gameplay transitions and rewarded ads only when you choose to watch an ad to continue in Adventure Mode. There are no banner, app open, or native ads, in-app purchases, subscriptions, or paid virtual currency. The Google Mobile Ads SDK may process device identifiers and other advertising-related data as explained in the Privacy Policy."] },
     { title: "User Conduct", paragraphs: ["You must not misuse, reverse engineer, automate, cheat, bypass security measures, distribute modified copies of, or interfere with Roto Blocks except where applicable law expressly permits otherwise."] },
     { title: "Intellectual Property", paragraphs: ["Roto Blocks and its code, gameplay content, visuals, audio, names, logos, and brand elements are owned by Lumisoft Studio or used by Lumisoft Studio under license. These terms do not transfer ownership to you."] },
     { title: "Availability", paragraphs: ["Lumisoft Studio may update, change, suspend, or discontinue parts of Roto Blocks. Internet access, compatible hardware, operating system support, and third party services may be required for some functions."] },
@@ -121,7 +188,7 @@ const termsSections: Record<Lang, Section[]> = {
     { title: "Kabul", paragraphs: ["Roto Blocks'u indirerek, erişerek veya kullanarak bu Kullanım Koşullarını kabul etmiş olursunuz. Kabul etmiyorsanız oyunu kullanmayın."] },
     { title: "Roto Blocks Hakkında", paragraphs: ["Roto Blocks, Lumisoft Studio tarafından geliştirilen ücretsiz bir gündelik bulmaca oyunudur."] },
     { title: "Kullanım Lisansı", paragraphs: ["Lumisoft Studio, bu koşullara bağlı olarak Roto Blocks'u kişisel ve ticari olmayan amaçlarla kullanmanız için sınırlı, geri alınabilir, münhasır olmayan ve devredilemez bir lisans verir."] },
-    { title: "Mevcut Sürüm", paragraphs: ["Roto Blocks'un bu sürümünde reklam veya satın alma yoktur. İleride reklam ya da Reklamları Kaldır seçeneği eklenirse bu koşullar güncellenebilir."] },
+    { title: "Mevcut Sürüm", paragraphs: ["Roto Blocks, oyunun doğal geçiş noktalarında Google AdMob geçiş reklamları ve yalnızca Macera Modunda (Adventure Mode) devam etmek için reklam izlemeyi seçtiğinizde ödüllü reklamlar kullanır. Banner, uygulama açılış (app open) veya yerel (native) reklamlar, uygulama içi satın alma, abonelik ya da ücretli sanal para bulunmaz. Google Mobile Ads SDK, Gizlilik Politikasında açıklandığı şekilde cihaz tanımlayıcılarını ve reklamlarla ilgili diğer verileri işleyebilir."] },
     { title: "Kullanıcı Davranışı", paragraphs: ["Geçerli yasaların açıkça izin verdiği durumlar dışında Roto Blocks'u kötüye kullanmak, tersine mühendislik uygulamak, otomasyon kullanmak, hile yapmak, güvenlik önlemlerini aşmak, değiştirilmiş kopyaları dağıtmak veya uygulamanın normal çalışmasına müdahale etmek yasaktır."] },
     { title: "Fikri Mülkiyet", paragraphs: ["Roto Blocks ile oyunun kodu, oyun içeriği, görselleri, sesleri, adları, logoları ve marka öğeleri Lumisoft Studio'ya aittir veya Lumisoft Studio tarafından lisans kapsamında kullanılır. Bu koşullar size mülkiyet devretmez."] },
     { title: "Erişilebilirlik", paragraphs: ["Lumisoft Studio, Roto Blocks'un bazı bölümlerini güncelleyebilir, değiştirebilir, askıya alabilir veya sonlandırabilir. Bazı işlevler için internet erişimi, uyumlu donanım, işletim sistemi desteği ve üçüncü taraf hizmetler gerekebilir."] },
@@ -139,7 +206,7 @@ const labels = {
     support: "Roto Blocks Support",
     subtitle: "Roto Blocks by Lumisoft Studio",
     updated: "Last updated",
-    date: "July 23, 2026",
+    date: "September 29, 2026",
     back: "Back to Roto Blocks",
     supportIntro: "For help with Roto Blocks, contact Lumisoft Studio at support@lumisoftstudios.com.",
     include: "Please include",
@@ -152,7 +219,7 @@ const labels = {
     support: "Roto Blocks Destek",
     subtitle: "Lumisoft Studio tarafından geliştirilen Roto Blocks",
     updated: "Son güncelleme",
-    date: "23 Temmuz 2026",
+    date: "29 Eylül 2026",
     back: "Roto Blocks sayfasına dön",
     supportIntro: "Roto Blocks ile ilgili destek için Lumisoft Studio'ya support@lumisoftstudios.com adresinden ulaşabilirsiniz.",
     include: "Lütfen şunları ekleyin",
@@ -214,6 +281,11 @@ export default function RotoBlocksLegalPage({ lang = "en", kind }: { lang?: Lang
                           )}
                         </Fragment>
                       ))}
+                    </p>
+                  ))}
+                  {section.links?.map((link) => (
+                    <p key={link.href}>
+                      <a href={link.href} className="text-cyan-300 underline underline-offset-4 transition-colors hover:text-cyan-200">{link.label}</a>
                     </p>
                   ))}
                 </div>
