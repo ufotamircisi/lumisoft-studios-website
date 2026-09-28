@@ -3,10 +3,12 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
+import ProductMotion from "@/components/ProductMotion";
+import BabyFeatureGroups from "@/components/BabyFeatureGroups";
 import ProductHero from "@/components/ProductHero";
 
 export const metadata: Metadata = {
-  title: "LumiBaby Version 2 | Baby Sleep Support",
+  title: "LumiBaby: Baby Sleep Support",
   description:
     "LumiBaby helps parents support baby sleep with cry detection, lullabies, sleep tracking, white noise, and sleep stories.",
   alternates: {
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
     languages: { "en-US": "/lumibaby", "tr-TR": "/tr/lumibaby" },
   },
   openGraph: {
-    title: "LumiBaby Version 2 | Baby Sleep Support",
+    title: "LumiBaby: Baby Sleep Support",
     description:
       "Cry detection, sleep tracking, calming audio, parent alerts, and practical bedtime support for families.",
     url: "/lumibaby",
@@ -94,7 +96,7 @@ export default function LumiBabyPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="product-main baby-detail">
+      <main id="main-content" className="product-main baby-detail"><ProductMotion />
 
         {/* ── Hero ─────────────────────────────────────────────── */}
         <ProductHero slug="lumibaby" lang="en" />
@@ -181,57 +183,7 @@ export default function LumiBabyPage() {
         </section>
 
         {/* ── 2-9. Feature grid ────────────────────────────────── */}
-        <section className="px-4 pt-4 pb-16">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {gridFeatures.map((f) => (
-                <div
-                  key={f.title}
-                  className="rounded-2xl border border-violet-500/15 p-6 transition-colors hover:border-violet-500/30 flex flex-col"
-                  style={{ background: "rgba(13,18,48,0.7)" }}
-                >
-                  <div className="text-3xl mb-4 select-none">{f.icon}</div>
-                  <h3 className="text-base font-bold text-white mb-3">
-                    {f.title}
-                  </h3>
-
-                  <div className="flex-1">
-                    {/* Prose description */}
-                    {f.desc && (
-                      <p className="text-sm text-slate-300 leading-relaxed mb-3">
-                        {f.desc}
-                      </p>
-                    )}
-
-                    {/* Bullet list */}
-                    {f.bullets && f.bullets.length > 0 && (
-                      <ul className="space-y-2 mb-3">
-                        {f.bullets.map((b) => (
-                          <li
-                            key={b}
-                            className="flex items-start gap-2 text-sm text-slate-300 leading-relaxed"
-                          >
-                            <span className="text-violet-500 mt-0.5 flex-shrink-0 leading-none">
-                              ›
-                            </span>
-                            {b}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-
-                    {/* Disclaimer note */}
-                    {f.note && (
-                      <p className="text-xs text-slate-500 leading-relaxed mt-auto pt-3 border-t border-white/[0.06]">
-                        {f.note}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <section className="baby-features"><BabyFeatureGroups features={gridFeatures} lang="en" /></section>
 
         {/* ── Premium ──────────────────────────────────────────── */}
         <section className="py-16 px-4 border-t border-violet-500/10">

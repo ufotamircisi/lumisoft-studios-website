@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GameShowcase from "@/components/GameShowcase";
 
 export const metadata: Metadata = {
-  title: "Neon Siege - Neon arcade brick breaker",
+  title: "Neon Siege: Arcade Brick Breaker",
   description:
     "Fast-paced neon brick breaker with shapes, skills, boosters, bombs, multipliers, upgrades, and intense levels.",
   alternates: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    title: "Neon Block Shapes",
-    text: "Glowing formations arrive in geometric waves that keep every level fresh.",
+    title: "Read the formation",
+    text: "Line up your shot against geometric formations of neon bricks.",
   },
   {
     title: "Skills & Boosters",
@@ -35,8 +35,8 @@ const features = [
     text: "Intense levels ramp up the challenge as you push deeper into the siege.",
   },
   {
-    title: "Short Arcade Sessions",
-    text: "Simple aim-and-shoot controls make it easy to start a focused run.",
+    title: "Aim, then release",
+    text: "Set the angle and release. The next shot is yours to line up.",
   },
   {
     title: "Performance Mode",

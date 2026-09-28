@@ -14,16 +14,16 @@ const copy = {
     eyebrow: "About Lumisoft Studio",
     title: "Independent and product-focused",
     intro:
-      "Lumisoft Studio develops mobile games and apps for iOS and Android, covering product design, engineering, release, and ongoing support.",
+      "We make Neon Siege, Jelly Chain Rush, Roto Blocks, and LumiBaby. An independent studio working on both sides of your home screen: games and everyday apps.",
     storyTitle: "The story",
     story:
-      "Our catalog began with LumiBaby, a practical sleep-support app for parents and caregivers. It now includes released arcade games and puzzle projects in active development.",
-    missionTitle: "Mission",
+      "Our catalog began with LumiBaby, a sleep support app for parents and caregivers. Neon Siege, Jelly Chain Rush, and Roto Blocks joined it. All four are now available for iOS and Android.",
+    missionTitle: "The work",
     mission:
-      "Create mobile products with a clear purpose, understandable interactions, and reliable day-to-day performance.",
-    visionTitle: "Vision",
+      "A brick breaker, a candy island, a rotating board, a bedtime routine. Each product starts with something you can do on your phone.",
+    visionTitle: "After release",
     vision:
-      "Build a focused catalog of games and apps that can be explained clearly, supported responsibly, and improved over time.",
+      "Release is part of the job. We also handle product updates, store listings, and the questions that reach our support inbox.",
     pillarsTitle: "What we hold ourselves to",
     pillars: [
       {
@@ -53,16 +53,16 @@ const copy = {
     eyebrow: "Lumisoft Studio Hakkında",
     title: "Bağımsız ve ürün odaklı",
     intro:
-      "Lumisoft Studio; ürün tasarımı, mühendislik, yayın ve sürekli desteği kapsayarak iOS ve Android için mobil oyunlar ve uygulamalar geliştirir.",
+      "Neon Siege, Jelly Chain Rush, Roto Blocks ve LumiBaby’yi biz geliştiriyoruz. Telefonunuzdaki oyunların da günlük uygulamaların da arkasında bağımsız bir stüdyo var.",
     storyTitle: "Hikaye",
     story:
-      "Ürün kataloğumuz, ebeveynler ve bakım verenler için pratik bir uyku destek uygulaması olan LumiBaby ile başladı. Bugün yayındaki arcade oyunlarını ve aktif olarak geliştirilen bulmaca projelerini de içeriyor.",
-    missionTitle: "Misyon",
+      "LumiBaby ile başladık: ebeveynler ve bakım verenler için bir uyku destek uygulaması. Ardından Neon Siege, Jelly Chain Rush ve Roto Blocks geldi. Dört ürünümüz de iOS ve Android’de yayında.",
+    missionTitle: "Ne yapıyoruz?",
     mission:
-      "Net bir amacı, anlaşılır etkileşimleri ve günlük kullanımda güvenilir performansı olan mobil ürünler geliştirmek.",
-    visionTitle: "Vizyon",
+      "Blok kırmak, şeker adası kurmak, tahtayı döndürmek, uyku rutini oluşturmak. Her ürün telefonda yapabileceğiniz somut bir şeyle başlıyor.",
+    visionTitle: "Yayından sonra",
     vision:
-      "Açıkça anlatılabilen, sorumlu biçimde desteklenen ve zaman içinde geliştirilen odaklı bir oyun ve uygulama kataloğu oluşturmak.",
+      "Yayın işin bir parçası. Ürün güncellemeleri, mağaza sayfaları ve destek adresimize gelen sorularla da biz ilgileniyoruz.",
     pillarsTitle: "Kendimizi bağlı tuttuğumuz standartlar",
     pillars: [
       {

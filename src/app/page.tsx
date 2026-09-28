@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomePage from "@/components/HomePage";
 
 export const metadata: Metadata = {
-  title: "Games & Apps",
+  title: { absolute: "Lumisoft Studio | Games & Apps for iOS & Android" },
   description:
     "Lumisoft Studio develops focused mobile games and practical apps for iOS and Android.",
   alternates: {

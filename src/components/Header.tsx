@@ -99,7 +99,7 @@ export default function Header() {
     <dialog ref={dialogRef} id="mobile-navigation" className="mobile-dialog" aria-label={isTR ? "Gezinme menüsü" : "Navigation menu"} onCancel={close}>
       <div className="mobile-menu-top"><span>Lumisoft Studio</span><button type="button" onClick={close} aria-label={isTR ? "Menüyü kapat" : "Close navigation menu"}>×</button></div>
       <nav aria-label={isTR ? "Mobil gezinme" : "Mobile navigation"}><Link href={homeHref} onClick={close}>{isTR ? "Ana sayfa" : "Home"}</Link>{navItems.map(item=><Link key={item.href} href={item.href} onClick={close}>{item.label}<span aria-hidden="true">↗</span></Link>)}<Link href={isTR ? "/tr/contact" : "/contact"} onClick={close}>{isTR ? "İletişim" : "Contact"}<span aria-hidden="true">↗</span></Link></nav>
-      <div className="mobile-menu-bottom">{languages}<span>Games & Apps for iOS + Android</span></div>
+      <div className="mobile-menu-bottom">{languages}<span>{isTR ? "iOS + Android için oyunlar ve uygulamalar" : "Games & Apps for iOS + Android"}</span></div>
     </dialog>
   </div></header>;
 }

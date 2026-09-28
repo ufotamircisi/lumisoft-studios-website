@@ -245,3 +245,94 @@ button { cursor:pointer; }
 .app-screens { min-height:570px; }
 @media(max-width:1100px) and (min-width:761px) { .app-screens { min-height:500px; } }
 @media(max-width:760px) { .hero-composition { width:min(94%,460px); } .app-screens { min-height:0; } .app-phone.back { top:40px; } }
+/* Product polish: the existing shell, palette and section order are unchanged. */
+.composition-arrival { height:100%; animation:studio-enter .9s var(--ease) both; }
+.composition-screens { animation:none; }
+.hero-screen { transform:translateY(0); }
+.studio-button span,.studio-text-link span,.index-arrow,.product-smart-link span { transition:transform .25s var(--ease); }
+.studio-button:hover span,.studio-text-link:hover span,.product-index>a:hover .index-arrow,.product-smart-link:hover span { transform:translate(2px,-2px); }
+.studio-button:active,.product-store-links>a:active { transform:translateY(1px) scale(.985); }
+.product-store-links>a { transition:background .25s,transform .25s; }
+.desktop-navigation>a { position:relative; }
+.desktop-navigation>a::after { content:""; position:absolute; height:1px; background:currentColor; bottom:4px; left:0; right:0; transform:scaleX(0); transform-origin:left; transition:transform .25s; }
+.desktop-navigation>a:hover::after,.desktop-navigation>a[aria-current]::after { transform:scaleX(1); }
+.studio-footer a { transition:color .2s; }
+.mobile-dialog[open] { animation:menu-arrive .24s var(--ease) both; }
+@keyframes menu-arrive { from { opacity:0; translate:0 -8px; } to { opacity:1; translate:0 0; } }
+.game-chapter { position:relative; isolation:isolate; --product-light:34,211,238; }
+.chapter-jelly-chain-rush { --product-light:244,114,182; }
+.chapter-roto-blocks { --product-light:56,189,248; }
+.game-chapter::after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 62% 55%,rgba(var(--product-light),.09),transparent 65%); opacity:0; transition:opacity 1.2s ease; }
+.game-chapter.in-view::after { opacity:1; }
+.chapter-copy h3 { text-wrap:balance; }
+.feature-visual figcaption { text-align:center; line-height:1.6; }
+.showcase-neon-siege .feature-visual { background:radial-gradient(ellipse at 50% 40%,#243351,#101a30 75%); }
+.showcase-jelly-chain-rush .feature-spread { grid-template-columns:1.1fr 1fr; }
+.showcase-jelly-chain-rush .feature-visual { grid-column:2; grid-row:1; background:#30233e; }
+.showcase-jelly-chain-rush .feature-list { grid-column:1; grid-row:1; }
+.showcase-jelly-chain-rush .feature-list article:first-child { border-color:#f472b65c; }
+.showcase-roto-blocks .feature-list { display:grid; grid-template-columns:1fr 1fr; gap:0 28px; }
+.showcase-roto-blocks .feature-list h3 { font-size:21px; }
+.showcase-roto-blocks .feature-list article { border-color:#38bdf842; }
+.showcase-roto-blocks .feature-visual { border-radius:12px; }
+.gameplay-preview video { display:block; aspect-ratio:390 / 844; object-fit:cover; }
+.gameplay-preview>p { color:#bac4d9; font-size:12px; line-height:1.6; margin-top:16px; }
+.baby-feature-group { display:grid; gap:55px; padding-block:50px; border-bottom:1px solid #ffffff16; align-items:center; }
+.baby-feature-group.with-screen { grid-template-columns:.85fr 1.25fr; }
+.baby-feature-screen { display:flex; flex-direction:column; align-items:center; padding:32px 24px; background:#dcd8ed; border-radius:24px; }
+.baby-feature-screen img { display:block; width:min(100%,270px); height:auto; border:5px solid #faf9ff; border-radius:27px; box-shadow:0 18px 35px #33284720; }
+.baby-feature-screen figcaption { font-size:12px; color:#59536f; margin-top:24px; text-align:center; }
+.baby-group-copy h2 { font-size:clamp(30px,3vw,44px); line-height:1.15; letter-spacing:-.04em; margin-bottom:28px; }
+.baby-group-items { display:grid; gap:24px; }
+.baby-group-items h3 { display:flex; align-items:center; gap:12px; font-size:18px; margin-bottom:12px; }
+.baby-group-items h3 span { font-size:22px; }
+.baby-group-items p,.baby-group-items li { color:#bdc5d8; font-size:14px; line-height:1.8; }
+.baby-group-items ul { padding-left:18px; list-style:disc; }
+.baby-group-items .baby-safety-note { color:#acb6cb; font-size:13px; margin-top:14px; padding-top:12px; border-top:1px solid #ffffff12; }
+.baby-feature-group:not(.with-screen) .baby-group-items { grid-template-columns:1fr 1fr; gap:45px; }
+@media(min-width:1000px) and (prefers-reduced-motion:no-preference) {
+  .hero-screen { animation:screen-drift 9s ease-in-out infinite; animation-play-state:paused; }
+  .screen-baby { animation-duration:12s; animation-delay:-3s; }
+  .screen-jelly { animation-duration:10s; animation-delay:-5s; }
+  .hero-composition.in-view .hero-screen { animation-play-state:running; }
+  .hero-composition:focus-within .hero-screen { animation-play-state:paused; }
+  .game-chapter.has-entered .chapter-device { animation:device-settle 1.1s var(--ease) both; }
+  .app-phone,.product-lumibaby .scene-primary { animation:calm-drift 14s ease-in-out infinite; animation-play-state:paused; }
+  .app-phone.back { animation-delay:-7s; }
+  .app-screens.in-view .app-phone,.product-lumibaby .in-view .scene-primary { animation-play-state:running; }
+  .baby-feature-group.has-entered .baby-feature-screen img { animation:device-settle 1.4s var(--ease) both; }
+}
+@keyframes screen-drift { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-7px); } }
+@keyframes calm-drift { 0%,100% { translate:0 0; } 50% { translate:0 -5px; } }
+@keyframes device-settle { from { translate:0 18px; scale:.975; } to { translate:0 0; scale:1; } }
+.motion-paused *, .motion-paused *::before, .motion-paused *::after { animation-play-state:paused!important; }
+@media(min-width:1101px) and (max-width:1499px) {
+  .hero-composition { width:90%; height:510px; }
+  .screen-jelly { top:92px; }
+  .studio-hero { padding-block:66px 84px; min-height:660px; }
+}
+@media(min-width:761px) and (max-width:999px) {
+  .hero-copy h1 { font-size:clamp(43px,6vw,58px); }
+  .showcase-roto-blocks .feature-list { grid-template-columns:1fr; }
+}
+@media(max-width:760px) {
+  .showcase-jelly-chain-rush .feature-spread { grid-template-columns:1fr; }
+  .showcase-jelly-chain-rush .feature-visual,.showcase-jelly-chain-rush .feature-list { grid-column:auto; grid-row:auto; }
+  .showcase-roto-blocks .feature-list { grid-template-columns:1fr; }
+  .baby-feature-group,.baby-feature-group.with-screen { grid-template-columns:1fr; gap:30px; padding-block:30px; }
+  .baby-feature-screen { width:100%; padding:28px; }
+  .baby-feature-screen img { width:220px; }
+  .baby-feature-group:not(.with-screen) .baby-group-items { grid-template-columns:1fr; gap:26px; }
+  .hero-caption>span { max-width:145px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-screen,.chapter-device,.app-phone,.scene-primary,.baby-feature-screen img { animation:none!important; }
+  .studio-button:active,.product-store-links>a:active,.studio-button:hover span,.studio-text-link:hover span { transform:none; }
+}
+/* Roto's purple board and gold pieces inform its geometric atmosphere. */
+.chapter-roto-blocks { --product-light:166,108,255; background:#222038; }
+.chapter-roto-blocks .chapter-art { background:#18172d; }
+.chapter-roto-blocks .rotation-orbit { border-color:#a66cff4a; }
+.chapter-roto-blocks .rotation-orbit::after { border-color:#ffc93a24; }
+.product-roto-blocks .product-scene,.showcase-roto-blocks .feature-visual { background:#24213b; }
+.showcase-roto-blocks .feature-list article { border-color:#a66cff42; }

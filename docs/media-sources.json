@@ -48,5 +48,17 @@
     "file": "public/media/neon-preview.mp4",
     "source": "NeonSiegePrototype/www, recorded in local browser; artifacts/game-recordings/page@06440524e25dc0a7ab54fc8a73027c2a.webm",
     "kind": "Actual gameplay; 6 seconds, 390px, 24fps, muted H.264, 84,490 bytes"
+  },
+  {
+    "file": "public/media/jelly-preview.mp4",
+    "source": "JellyChainRush-v5-rebuild/dist; local browser recording artifacts/polish-recordings/page@ac9814e99dda34a8c1d9a844f1d994e0.webm",
+    "kind": "Actual gameplay; 6.5 seconds, 390x844, 24fps, silent H.264, 272248 bytes",
+    "note": "Actual pointer swap: score 300 to 600; SHAKE: stock 5 to 4 and cascade to 1200."
+  },
+  {
+    "file": "public/media/roto-preview.mp4",
+    "source": "RotatingBlockPuzzlePhaser/dist; local browser recording artifacts/polish-recordings/page@bba1d1225c243d68ccf0746535a88914.webm",
+    "kind": "Actual gameplay; 6.5 seconds, 390x844, 24fps, silent H.264, 77245 bytes",
+    "note": "Three actual pointer drags; score 1, 4, 8; full clockwise board rotation and next set."
   }
 ]

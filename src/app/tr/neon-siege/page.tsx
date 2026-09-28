@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GameShowcase from "@/components/GameShowcase";
 
 export const metadata: Metadata = {
-  title: "Neon Siege - Neon arcade brick breaker",
+  title: "Neon Siege: Neon Blok Kırma",
   description:
     "Şekiller, yetenekler, güçlendiriciler, bombalar, çarpanlar, yükseltmeler ve yoğun seviyeler içeren hızlı tempolu neon brick breaker.",
   alternates: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    title: "Neon Blok Şekilleri",
-    text: "Parlayan formasyonlar geometrik dalgalar halinde gelir ve her seviyeyi taze tutar.",
+    title: "Blok dizilimini oku",
+    text: "Neon blokların geometrik dizilimine göre atışını ayarla.",
   },
   {
     title: "Yetenekler ve Güçlendiriciler",
@@ -33,11 +33,11 @@ const features = [
   },
   {
     title: "Seviye İlerlemesi",
-    text: "Kuşatmanın derinlerine indikçe zorluk artan yoğun seviyeler.",
+    text: "Bölümlerde ilerledikçe blokları kırmak zorlaşır.",
   },
   {
-    title: "Kısa Arcade Oturumları",
-    text: "Basit nişan al ve fırlat kontrolleri, odaklı bir oyuna hızlıca başlamayı kolaylaştırır.",
+    title: "Nişan al ve bırak",
+    text: "Açıyı ayarla ve bırak. Sıradaki atışın yönü yine sende.",
   },
   {
     title: "Performans Modu",
