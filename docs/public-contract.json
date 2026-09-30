@@ -78,7 +78,7 @@
     "src/app/tr/roto-blocks/gizlilik/page.tsx": "b16217e9e3182d2bed882a5fd3a99d14fe314e9951dbf31a4d66f5834afc4c7d",
     "src/app/tr/roto-blocks/kullanim-kosullari/page.tsx": "788e9398b65adc4e441da3724035ecb90e496f148bc727fec0f51f37ddc0d6a3",
     "src/app/tr/terms/page.tsx": "31ce5aba7459fc4f32c87206e5d40868e549756d416b8e48cfcfcf98581c7fa2",
-    "src/components/RotoBlocksLegalPage.tsx": "edcf23db732ff47e3fe513765dff0ee1ff4c76ebc9d601cbcd5e51e0052c8ffd",
+    "src/components/RotoBlocksLegalPage.tsx": "0c8cb5f7e3aa8106198f6b5eab55dad984818fa033424c03c6b54c273b53d0f8",
     "src/components/StudioLegalPages.tsx": "7ef400ffdd1fa972fcc70d9f177109c7f350e5918c83fd38240801c25d9f52e7",
     "src/lib/jellyChainRushDeviceRedirect.cjs": "dbbe84953d28cf96cc9b27386773e9aa8fe5d1d85456f66efafdabc9190d87d4",
     "src/lib/products.ts": "d19979a3245fb3fa6b5a7534a460048b56a7f0b8d96317822aa87978cedcfd72",

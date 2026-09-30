@@ -39,14 +39,14 @@ const privacySections: Record<Lang, Section[]> = {
       title: "How Advertising Data Is Used",
       paragraphs: [
         "Google may process this information for third-party advertising, analytics and ad measurement, diagnostics, fraud prevention, security, and compliance with applicable requirements. Advertising-related information may be shared with Google and its advertising service partners as described in Google policies.",
-        "Device identifiers are used for third-party advertising and analytics and are treated as data linked to the user, including through a device identifier, even though Roto Blocks has no account or login system. They are not used for tracking in the iOS app.",
+        "Device identifiers, including an advertising identifier when available and permitted, may be used for third-party advertising and analytics. This data may be linked to you through your device and may be used for tracking as defined by Apple when you authorize tracking, even though Roto Blocks has no account or login system.",
       ],
     },
     {
-      title: "iOS and App Tracking Transparency",
+      title: "iOS, App Tracking Transparency, and Consent Management",
       paragraphs: [
-        "The iOS app does not use App Tracking Transparency and does not ask permission to track users. Device ID data is used for Third-Party Advertising and Analytics, is linked to the user, and is not used for tracking as defined by Apple.",
-        "Not requesting tracking permission does not mean that no data is processed. The Google Mobile Ads SDK may still process the information described above, subject to platform restrictions and applicable consent.",
+        "On iOS, Roto Blocks uses Apple’s App Tracking Transparency framework and may ask for your permission before accessing the advertising identifier or using data for tracking across other companies’ apps and websites.",
+        "If you allow tracking, the advertising identifier and related data may be used for personalized advertising, third-party advertising, analytics, and ad measurement where permitted. In regions where consent is required, Roto Blocks uses Google’s User Messaging Platform (UMP) to request and manage choices about personalized ads, advertising storage, and related data processing. UMP consent and Apple’s App Tracking Transparency permission are separate choices. If you choose Ask App Not to Track, withhold consent, or tracking is otherwise unavailable, the game remains fully playable and ads may still be shown in a limited or non-personalized form.",
       ],
     },
     {
@@ -116,14 +116,14 @@ const privacySections: Record<Lang, Section[]> = {
       title: "Reklam Verilerinin Kullanımı",
       paragraphs: [
         "Google bu bilgileri üçüncü taraf reklamları, analiz ve reklam ölçümü, tanılama, dolandırıcılığın önlenmesi, güvenlik ve geçerli gerekliliklere uyum amacıyla işleyebilir. Reklamlarla ilgili bilgiler, Google politikalarında açıklandığı şekilde Google ve reklam hizmeti ortaklarıyla paylaşılabilir.",
-        "Cihaz tanımlayıcıları üçüncü taraf reklamları ve analiz için kullanılır. Roto Blocks’ta hesap veya giriş sistemi bulunmasa da bu veriler, cihaz tanımlayıcısı üzerinden ilişkilendirme dahil, kullanıcıyla bağlantılı veriler olarak ele alınır. iOS uygulamasında takip amacıyla kullanılmaz.",
+        "Cihaz tanımlayıcıları ve kullanılabilir ve izin verilmiş olduğunda reklam tanımlayıcısı, üçüncü taraf reklamları ve analiz için kullanılabilir. Roto Blocks’ta hesap veya giriş sistemi bulunmasa da bu veriler cihazınız üzerinden sizinle ilişkilendirilebilir ve takip izni verdiğinizde Apple’ın tanımladığı anlamda takip amacıyla kullanılabilir.",
       ],
     },
     {
-      title: "iOS ve Uygulama Takibi Şeffaflığı",
+      title: "iOS, Uygulama Takibi Şeffaflığı ve Onay Yönetimi",
       paragraphs: [
-        "iOS uygulaması App Tracking Transparency kullanmaz ve kullanıcıları takip etmek için izin istemez. Cihaz Kimliği (Device ID) verileri üçüncü taraf reklamları (Third-Party Advertising) ve analiz (Analytics) için kullanılır, kullanıcıyla bağlantılıdır ve Apple’ın tanımladığı anlamda takip amacıyla kullanılmaz.",
-        "Takip izni istenmemesi, hiçbir verinin işlenmediği anlamına gelmez. Google Mobile Ads SDK, platform kısıtlamalarına ve geçerli onay koşullarına bağlı olarak yukarıda açıklanan bilgileri işlemeye devam edebilir.",
+        "Roto Blocks, iOS’ta Apple’ın Uygulama Takibi Şeffaflığı (App Tracking Transparency) çerçevesini kullanır ve reklam tanımlayıcısına erişmeden veya verileri başka şirketlerin uygulamaları ve web siteleri arasında takip amacıyla kullanmadan önce izninizi isteyebilir.",
+        "Takibe izin verirseniz reklam tanımlayıcısı ve ilgili veriler, izin verilen durumlarda kişiselleştirilmiş reklamlar, üçüncü taraf reklamları, analiz ve reklam ölçümü için kullanılabilir. Roto Blocks, onayın gerekli olduğu bölgelerde kişiselleştirilmiş reklamlar, reklam depolama ve ilgili veri işleme seçeneklerini istemek ve yönetmek için Google Kullanıcı Mesajlaşma Platformu’nu (User Messaging Platform — UMP) kullanır. UMP onayı ile Apple’ın Uygulama Takibi Şeffaflığı izni birbirinden ayrı tercihlerdir. Takip izni veya onay vermezseniz ya da takip başka bir nedenle kullanılamıyorsa oyun tamamen oynanabilir kalır; reklamlar sınırlı ya da kişiselleştirilmemiş biçimde gösterilebilir.",
       ],
     },
     {
@@ -206,7 +206,7 @@ const labels = {
     support: "Roto Blocks Support",
     subtitle: "Roto Blocks by Lumisoft Studio",
     updated: "Last updated",
-    date: "September 29, 2026",
+    date: "October 1, 2026",
     back: "Back to Roto Blocks",
     supportIntro: "For help with Roto Blocks, contact Lumisoft Studio at support@lumisoftstudios.com.",
     include: "Please include",
@@ -219,7 +219,7 @@ const labels = {
     support: "Roto Blocks Destek",
     subtitle: "Lumisoft Studio tarafından geliştirilen Roto Blocks",
     updated: "Son güncelleme",
-    date: "29 Eylül 2026",
+    date: "1 Ekim 2026",
     back: "Roto Blocks sayfasına dön",
     supportIntro: "Roto Blocks ile ilgili destek için Lumisoft Studio'ya support@lumisoftstudios.com adresinden ulaşabilirsiniz.",
     include: "Lütfen şunları ekleyin",
