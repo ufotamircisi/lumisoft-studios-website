@@ -6,6 +6,22 @@ import BrandLogo from "@/components/BrandLogo";
 import { usePathname } from "next/navigation";
 
 const routeMap: Record<string, string> = {
+  "/midchain": "/tr/midchain",
+  "/midchain/privacy": "/tr/midchain/gizlilik",
+  "/midchain/terms": "/tr/midchain/kullanim-kosullari",
+  "/midchain/support": "/tr/midchain/destek",
+  "/tr/midchain": "/midchain",
+  "/tr/midchain/gizlilik": "/midchain/privacy",
+  "/tr/midchain/kullanim-kosullari": "/midchain/terms",
+  "/tr/midchain/destek": "/midchain/support",
+  "/wandermio": "/tr/ogrenimo",
+  "/wandermio/privacy": "/tr/ogrenimo/gizlilik",
+  "/wandermio/terms": "/tr/ogrenimo/kullanim-kosullari",
+  "/wandermio/support": "/tr/ogrenimo/destek",
+  "/tr/ogrenimo": "/wandermio",
+  "/tr/ogrenimo/gizlilik": "/wandermio/privacy",
+  "/tr/ogrenimo/kullanim-kosullari": "/wandermio/terms",
+  "/tr/ogrenimo/destek": "/wandermio/support",
   "/": "/tr",
   "/lumibaby": "/tr/lumibaby",
   "/lumibaby/download": "/tr/lumibaby",

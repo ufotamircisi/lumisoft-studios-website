@@ -3,13 +3,15 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
-import { allProducts } from "@/lib/products";
+import { allProducts, productName } from "@/lib/products";
 
 type SupportPageProps = {
   lang?: "en" | "tr";
 };
 
 const supportHrefs: Record<string, { en: string; tr: string }> = {
+  midchain: { en: "/midchain/support", tr: "/tr/midchain/destek" },
+  wandermio: { en: "/wandermio/support", tr: "/tr/ogrenimo/destek" },
   lumibaby: { en: "/lumibaby/support", tr: "/tr/lumibaby/destek" },
   "neon-siege": { en: "/neon-siege/support", tr: "/tr/neon-siege/destek" },
   "jelly-chain-rush": { en: "/contact", tr: "/tr/contact" },
@@ -142,7 +144,7 @@ export default function SupportPage({ lang = "en" }: SupportPageProps) {
                     </div>
                     <div className="min-w-0 flex-1">
                       <h2 className="text-base font-bold text-white">
-                        {p.name}
+                        {productName(p,lang)}
                       </h2>
                       <p className="truncate text-sm text-slate-400">
                         {p.tagline[lang]}

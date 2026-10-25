@@ -4,6 +4,7 @@ export interface Product {
   slug: string;
   kind: "game" | "app";
   name: string;
+  localizedName?: { en: string; tr: string };
   status: ProductStatus;
   iconImage?: string;
   glyph?: string;
@@ -42,6 +43,14 @@ export const STORE_URLS = {
 };
 
 export const games: Product[] = [
+  {
+    slug: "midchain", kind: "game", name: "MIDCHAIN", status: "in-development",
+    iconImage: "/media/midchain/icon.webp", accent: "#7dd3e8", accentSoft: "rgba(125,211,232,0.16)",
+    href: { en: "/midchain", tr: "/tr/midchain" },
+    tagline: { en: "An Ocean Survival Game", tr: "Okyanusta hayatta kalma oyunu" },
+    description: { en: "Hunt below. Hide from above. Live in the middle of the food chain, and carry your lineage into the next generation.", tr: "Aşağıda avlan. Yukarıdan saklan. Besin zincirinin ortasında hayatta kal, soyunu bir sonraki nesle taşı." },
+    platforms: ["iOS", "Android"],
+  },
   {
     slug: "neon-siege",
     kind: "game",
@@ -125,7 +134,19 @@ export const apps: Product[] = [
     platforms: ["iOS", "Android"],
     stores: STORE_URLS.lumibaby,
   },
+  {
+  slug: "wandermio", kind: "app", name: "Wandermio", localizedName: { en: "Wandermio", tr: "Öğrenimo" }, status: "in-development",
+  iconImage: "/media/wandermio/icon.webp", accent: "#8ad0f2", accentSoft: "rgba(138,208,242,0.16)",
+  href: { en: "/wandermio", tr: "/tr/ogrenimo" },
+  tagline: { en: "Learning adventures for ages 2–12", tr: "2–12 yaş için öğrenme maceraları" },
+  description: { en: "Letters, stories, numbers and little discoveries. Age-based learning worlds with Buddy, local progress and a dedicated parent area.", tr: "Harfler, hikâyeler, sayılar ve küçük keşifler. Buddy ile yaşa göre öğrenme dünyaları, cihazda saklanan ilerleme ve veli alanı." },
+  platforms: ["iOS", "Android"],
+  },
 ];
+
+export function productName(product: Product, lang: "en" | "tr") {
+  return product.localizedName?.[lang] ?? product.name;
+}
 
 export const allProducts: Product[] = [...games, ...apps];
 

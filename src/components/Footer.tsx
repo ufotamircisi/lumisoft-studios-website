@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
-import { games, apps, STORE_URLS } from "@/lib/products";
+import { games, apps, STORE_URLS, productName } from "@/lib/products";
 
 export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
   const isTR = lang === "tr";
@@ -41,7 +41,7 @@ export default function Footer({ lang = "en" }: { lang?: "en" | "tr" }) {
       title: isTR ? "Uygulamalar" : "Apps",
       links: apps.map((a) => ({
         href: a.href?.[l],
-        label: a.name,
+        label: productName(a,l),
         soon: !a.href,
       })),
     },

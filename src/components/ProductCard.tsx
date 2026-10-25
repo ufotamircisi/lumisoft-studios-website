@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "@/lib/products";
+import { productName, type Product } from "@/lib/products";
 
 interface ProductCardProps {
   product: Product;
@@ -74,7 +74,7 @@ export default function ProductCard({ product, lang = "en" }: ProductCardProps) 
       </div>
 
       <h3 className="mb-1 text-lg font-bold tracking-tight text-white">
-        {product.name}
+        {productName(product,lang)}
       </h3>
       <p className="mb-3 text-sm font-medium" style={{ color: product.accent }}>
         {product.tagline[lang]}

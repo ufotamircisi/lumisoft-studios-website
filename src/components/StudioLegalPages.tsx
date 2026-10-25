@@ -14,6 +14,8 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 }
 
 const productPolicies: { name: string; en: string; tr: string }[] = [
+  { name: "MIDCHAIN", en: "/midchain/privacy", tr: "/tr/midchain/gizlilik" },
+  { name: "Wandermio", en: "/wandermio/privacy", tr: "/tr/ogrenimo/gizlilik" },
   { name: "LumiBaby", en: "/lumibaby/privacy", tr: "/tr/lumibaby/gizlilik" },
   {
     name: "Neon Siege",
@@ -33,6 +35,8 @@ const productPolicies: { name: string; en: string; tr: string }[] = [
 ];
 
 const productTerms: { name: string; en: string; tr: string }[] = [
+  { name: "MIDCHAIN", en: "/midchain/terms", tr: "/tr/midchain/kullanim-kosullari" },
+  { name: "Wandermio", en: "/wandermio/terms", tr: "/tr/ogrenimo/kullanim-kosullari" },
   { name: "LumiBaby", en: "/lumibaby/terms", tr: "/tr/lumibaby/kullanim-kosullari" },
   {
     name: "Neon Siege",
@@ -66,7 +70,7 @@ function ProductLinkList({
             href={item[lang]}
             className="flex items-center justify-between rounded-xl border border-violet-500/20 bg-violet-500/[0.06] px-4 py-3 text-sm font-medium text-violet-200 transition-colors hover:border-violet-400/45 hover:text-white"
           >
-            {item.name}
+            {lang === "tr" && item.name === "Wandermio" ? "Öğrenimo" : item.name}
             <span aria-hidden="true">→</span>
           </Link>
         </li>
@@ -88,7 +92,7 @@ export function StudioPrivacyPage({ lang = "en" }: { lang?: Lang }) {
             ? "Lumisoft Studio web sitesi için geçerlidir"
             : "Applies to the Lumisoft Studio website"
         }
-        lastUpdated={isTR ? "Temmuz 2026" : "July 2026"}
+        lastUpdated={isTR ? "25 Ekim 2026" : "October 25, 2026"}
         lastUpdatedLabel={isTR ? "Son güncelleme:" : "Last updated:"}
         backHref={isTR ? "/tr" : "/"}
         backLinkText={isTR ? "← Ana sayfaya dön" : "← Back to home"}
@@ -184,7 +188,7 @@ export function StudioTermsPage({ lang = "en" }: { lang?: Lang }) {
             ? "Lumisoft Studio web sitesi için geçerlidir"
             : "Applies to the Lumisoft Studio website"
         }
-        lastUpdated={isTR ? "Temmuz 2026" : "July 2026"}
+        lastUpdated={isTR ? "25 Ekim 2026" : "October 25, 2026"}
         lastUpdatedLabel={isTR ? "Son güncelleme:" : "Last updated:"}
         backHref={isTR ? "/tr" : "/"}
         backLinkText={isTR ? "← Ana sayfaya dön" : "← Back to home"}

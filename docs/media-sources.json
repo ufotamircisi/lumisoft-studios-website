@@ -60,5 +60,212 @@
     "source": "RotatingBlockPuzzlePhaser/dist; local browser recording artifacts/polish-recordings/page@bba1d1225c243d68ccf0746535a88914.webm",
     "kind": "Actual gameplay; 6.5 seconds, 390x844, 24fps, silent H.264, 77245 bytes",
     "note": "Three actual pointer drags; score 1, 4, 8; full clockwise board rotation and next set."
+  },
+  {
+    "source": "F:/Projeler/below/art/branding/icon/icon-master-1024.png",
+    "target": "/media/midchain/icon.webp",
+    "width": 256,
+    "height": 256,
+    "bytes": 13910,
+    "file": "public/media/midchain/icon.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/01_food_chain_w169.jpg",
+    "target": "/media/midchain/hero.webp",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 38172,
+    "file": "public/media/midchain/hero.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/02_hunt_w169.jpg",
+    "target": "/media/midchain/hunt.webp",
+    "width": 1200,
+    "height": 675,
+    "bytes": 31026,
+    "file": "public/media/midchain/hunt.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/03_hide_w169.jpg",
+    "target": "/media/midchain/hide.webp",
+    "width": 1200,
+    "height": 675,
+    "bytes": 13036,
+    "file": "public/media/midchain/hide.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/06_deep_w169.jpg",
+    "target": "/media/midchain/deep.webp",
+    "width": 1200,
+    "height": 675,
+    "bytes": 13796,
+    "file": "public/media/midchain/deep.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/07_lifecycle_w169.jpg",
+    "target": "/media/midchain/lifecycle.webp",
+    "width": 1200,
+    "height": 675,
+    "bytes": 8200,
+    "file": "public/media/midchain/lifecycle.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/08_species_levrek_sq.jpg",
+    "target": "/media/midchain/levrek.webp",
+    "width": 480,
+    "height": 480,
+    "bytes": 3570,
+    "file": "public/media/midchain/levrek.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/08_species_balon_sq.jpg",
+    "target": "/media/midchain/balon.webp",
+    "width": 480,
+    "height": 480,
+    "bytes": 5226,
+    "file": "public/media/midchain/balon.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/08_species_kalamar_sq.jpg",
+    "target": "/media/midchain/kalamar.webp",
+    "width": 480,
+    "height": 480,
+    "bytes": 3998,
+    "file": "public/media/midchain/kalamar.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/08_species_fener_sq.jpg",
+    "target": "/media/midchain/fener.webp",
+    "width": 480,
+    "height": 480,
+    "bytes": 4644,
+    "file": "public/media/midchain/fener.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/05_zone_reef_p916.jpg",
+    "target": "/media/midchain/reef.webp",
+    "width": 480,
+    "height": 853,
+    "bytes": 18068,
+    "file": "public/media/midchain/reef.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/05_zone_wreck_p916.jpg",
+    "target": "/media/midchain/wreck.webp",
+    "width": 480,
+    "height": 853,
+    "bytes": 11736,
+    "file": "public/media/midchain/wreck.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/05_zone_open_p916.jpg",
+    "target": "/media/midchain/open.webp",
+    "width": 480,
+    "height": 853,
+    "bytes": 8764,
+    "file": "public/media/midchain/open.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/05_zone_dark_p916.jpg",
+    "target": "/media/midchain/dark.webp",
+    "width": 480,
+    "height": 853,
+    "bytes": 8744,
+    "file": "public/media/midchain/dark.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/05_zone_abyss_p916.jpg",
+    "target": "/media/midchain/abyss.webp",
+    "width": 480,
+    "height": 853,
+    "bytes": 3922,
+    "file": "public/media/midchain/abyss.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/below/art/store/source/01_food_chain_w169.jpg",
+    "target": "/media/midchain/hero-small.webp",
+    "width": 960,
+    "height": 540,
+    "bytes": 14818,
+    "file": "public/media/midchain/hero-small.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/ogrenimo/assets/branding/generated/icon.png",
+    "target": "/media/wandermio/icon.webp",
+    "width": 256,
+    "height": 256,
+    "bytes": 12080,
+    "file": "public/media/wandermio/icon.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/ogrenimo/dist (actual tr world runtime, 1280x800)",
+    "target": "/media/wandermio/world-tr.webp",
+    "width": 1280,
+    "height": 800,
+    "bytes": 33928,
+    "file": "public/media/wandermio/world-tr.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/ogrenimo/dist (actual tr letters runtime, 1280x800)",
+    "target": "/media/wandermio/letters-tr.webp",
+    "width": 1280,
+    "height": 800,
+    "bytes": 30386,
+    "file": "public/media/wandermio/letters-tr.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/ogrenimo/dist (actual tr activities runtime, 1280x800)",
+    "target": "/media/wandermio/activities-tr.webp",
+    "width": 1280,
+    "height": 800,
+    "bytes": 46164,
+    "file": "public/media/wandermio/activities-tr.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/ogrenimo/dist (actual en world runtime, 1280x800)",
+    "target": "/media/wandermio/world-en.webp",
+    "width": 1280,
+    "height": 800,
+    "bytes": 33822,
+    "file": "public/media/wandermio/world-en.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/ogrenimo/dist (actual en letters runtime, 1280x800)",
+    "target": "/media/wandermio/letters-en.webp",
+    "width": 1280,
+    "height": 800,
+    "bytes": 28672,
+    "file": "public/media/wandermio/letters-en.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
+  },
+  {
+    "source": "F:/Projeler/ogrenimo/dist (actual en activities runtime, 1280x800)",
+    "target": "/media/wandermio/activities-en.webp",
+    "width": 1280,
+    "height": 800,
+    "bytes": 39914,
+    "file": "public/media/wandermio/activities-en.webp",
+    "kind": "Real project asset or actual runtime capture, optimized WebP derivative"
   }
 ]

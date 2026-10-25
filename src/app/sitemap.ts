@@ -5,6 +5,22 @@ export const dynamic = "force-static";
 const BASE_URL = "https://www.lumisoftstudios.com";
 
 const routes = [
+  "/midchain",
+  "/midchain/privacy",
+  "/midchain/terms",
+  "/midchain/support",
+  "/tr/midchain",
+  "/tr/midchain/gizlilik",
+  "/tr/midchain/kullanim-kosullari",
+  "/tr/midchain/destek",
+  "/wandermio",
+  "/wandermio/privacy",
+  "/wandermio/terms",
+  "/wandermio/support",
+  "/tr/ogrenimo",
+  "/tr/ogrenimo/gizlilik",
+  "/tr/ogrenimo/kullanim-kosullari",
+  "/tr/ogrenimo/destek",
   "/",
   "/about",
   "/support",

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { allProducts } from "@/lib/products";
+import { allProducts, productName } from "@/lib/products";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -17,7 +17,7 @@ const copy = {
       "We make Neon Siege, Jelly Chain Rush, Roto Blocks, and LumiBaby. An independent studio working on both sides of your home screen: games and everyday apps.",
     storyTitle: "The story",
     story:
-      "Our catalog began with LumiBaby, a sleep support app for parents and caregivers. Neon Siege, Jelly Chain Rush, and Roto Blocks joined it. All four are now available for iOS and Android.",
+      "Our catalog began with LumiBaby, a sleep support app for parents and caregivers. Neon Siege, Jelly Chain Rush, and Roto Blocks joined it. All four are now available for iOS and Android. We are also developing MIDCHAIN, an ocean survival game, and Wandermio, a learning app for children.",
     missionTitle: "The work",
     mission:
       "A brick breaker, a candy island, a rotating board, a bedtime routine. Each product starts with something you can do on your phone.",
@@ -56,7 +56,7 @@ const copy = {
       "Neon Siege, Jelly Chain Rush, Roto Blocks ve LumiBaby’yi biz geliştiriyoruz. Telefonunuzdaki oyunların da günlük uygulamaların da arkasında bağımsız bir stüdyo var.",
     storyTitle: "Hikaye",
     story:
-      "LumiBaby ile başladık: ebeveynler ve bakım verenler için bir uyku destek uygulaması. Ardından Neon Siege, Jelly Chain Rush ve Roto Blocks geldi. Dört ürünümüz de iOS ve Android’de yayında.",
+      "LumiBaby ile başladık: ebeveynler ve bakım verenler için bir uyku destek uygulaması. Ardından Neon Siege, Jelly Chain Rush ve Roto Blocks geldi. Bu dört ürün iOS ve Android’de yayında. Ayrıca okyanusta hayatta kalma oyunu MIDCHAIN ve çocuklar için öğrenme uygulaması Öğrenimo’yu geliştiriyoruz.",
     missionTitle: "Ne yapıyoruz?",
     mission:
       "Blok kırmak, şeker adası kurmak, tahtayı döndürmek, uyku rutini oluşturmak. Her ürün telefonda yapabileceğiniz somut bir şeyle başlıyor.",
@@ -99,7 +99,7 @@ export default function AboutPage({ lang = "en" }: AboutPageProps) {
       <Header />
       <main id="main-content" className="product-main about-page">
         {/* Hero */}
-        <section className="about-hero studio-width"><p className="studio-kicker">{t.eyebrow}</p><h1>{lang === "tr" ? "Fikirden ilk dokunuşa." : "From an idea to the first tap."}</h1><div className="about-intro"><p>{t.intro}</p><div className="about-product-icons">{allProducts.map(p=><Link key={p.slug} href={p.href![lang]}><Image src={p.iconImage!} alt={p.name} width={64} height={64} /></Link>)}</div></div></section>
+        <section className="about-hero studio-width"><p className="studio-kicker">{t.eyebrow}</p><h1>{lang === "tr" ? "Fikirden ilk dokunuşa." : "From an idea to the first tap."}</h1><div className="about-intro"><p>{t.intro}</p><div className="about-product-icons">{allProducts.map(p=><Link key={p.slug} href={p.href![lang]}><Image src={p.iconImage!} alt={productName(p,lang)} width={64} height={64} /></Link>)}</div></div></section>
 
         {/* Story */}
         <section className="px-4 pb-8">
