@@ -17,7 +17,7 @@ const copy = {
       "We make Neon Siege, Jelly Chain Rush, Roto Blocks, and LumiBaby. An independent studio working on both sides of your home screen: games and everyday apps.",
     storyTitle: "The story",
     story:
-      "Our catalog began with LumiBaby, a sleep support app for parents and caregivers. Neon Siege, Jelly Chain Rush, and Roto Blocks joined it. All four are now available for iOS and Android. We are also developing MIDCHAIN, an ocean survival game, and Wandermio, a learning app for children.",
+      "Our catalog began with LumiBaby, a sleep support app for parents and caregivers. Neon Siege, Jelly Chain Rush, and Roto Blocks joined it. All four are now available for iOS and Android. We are also developing MIDCHAIN, an ocean survival game, and Wondermio, a learning app for children.",
     missionTitle: "The work",
     mission:
       "A brick breaker, a candy island, a rotating board, a bedtime routine. Each product starts with something you can do on your phone.",

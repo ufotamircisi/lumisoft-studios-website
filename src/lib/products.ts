@@ -135,11 +135,11 @@ export const apps: Product[] = [
     stores: STORE_URLS.lumibaby,
   },
   {
-  slug: "wandermio", kind: "app", name: "Wandermio", localizedName: { en: "Wandermio", tr: "Öğrenimo" }, status: "in-development",
+  slug: "wandermio", kind: "app", name: "Wondermio", localizedName: { en: "Wondermio", tr: "Öğrenimo" }, status: "in-development",
   iconImage: "/media/wandermio/icon.webp", accent: "#8ad0f2", accentSoft: "rgba(138,208,242,0.16)",
   href: { en: "/wandermio", tr: "/tr/ogrenimo" },
   tagline: { en: "Learning adventures for ages 2–12", tr: "2–12 yaş için öğrenme maceraları" },
-  description: { en: "Letters, stories, numbers and little discoveries. Age-based learning worlds with Buddy, local progress and a dedicated parent area.", tr: "Harfler, hikâyeler, sayılar ve küçük keşifler. Buddy ile yaşa göre öğrenme dünyaları, cihazda saklanan ilerleme ve veli alanı." },
+  description: { en: "Letters, stories, numbers and little discoveries. Age-based learning worlds, local progress and a dedicated parent area.", tr: "Harfler, hikâyeler, sayılar ve küçük keşifler. Yaşa göre öğrenme dünyaları, cihazda saklanan ilerleme ve veli alanı." },
   platforms: ["iOS", "Android"],
   },
 ];

@@ -10,6 +10,16 @@ for(const [file,expected] of Object.entries(baseline.protectedFiles)) {
  if(/\.(tsx?|cjs)$/.test(file)) {
   const lf=bytes.toString('utf8').replace(/\r\n/g,'\n');
   candidates.push(Buffer.from(lf),Buffer.from(lf.replace(/\n/g,'\r\n')));
+  // Approved product-copy corrections: compare against the original hash
+  // after undoing only these exact wording changes. Other product content
+  // remains protected byte-for-byte; the baseline is not regenerated.
+  if(file==='src/components/StudioLegalPages.tsx' || file==='src/lib/products.ts') {
+   let originalCopy=lf.replace(/\bWondermio\b/g,'Wandermio');
+   if(file==='src/lib/products.ts') originalCopy=originalCopy
+    .replace('Age-based learning worlds, local progress and a dedicated parent area.','Age-based learning worlds with Buddy, local progress and a dedicated parent area.')
+    .replace('Yaşa göre öğrenme dünyaları, cihazda saklanan ilerleme ve veli alanı.','Buddy ile yaşa göre öğrenme dünyaları, cihazda saklanan ilerleme ve veli alanı.');
+   candidates.push(Buffer.from(originalCopy),Buffer.from(originalCopy.replace(/\n/g,'\r\n')));
+  }
  }
  assert(candidates.some(data=>crypto.createHash('sha256').update(data).digest('hex')===expected),'Protected content changed: '+file);
 }

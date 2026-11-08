@@ -60,59 +60,431 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
     },
   },
   wandermio: {
-    privacy: {
-      en: { lead: "Wandermio, called Öğrenimo in Turkish, is a children’s learning app by Lumisoft Studio. This policy is written for parents and guardians and describes the current development version.", sections: [
-        section("Children’s information stays local", "The app stores child profiles and learning progress in a database on the device. This includes an optional nickname, profile colour, age group or grade, language, optional mascot name, activity results, skill summaries and preferences. A real name or exact birth date is not required. We do not receive this local database."),
-        section("No account, advertising or tracking", "The current app has no user accounts, advertising, analytics, crash-reporting or tracking SDKs. Its app code makes no network requests, and the current Android release build has no internet permission. The app does not request camera, microphone or location access, and does not record children’s voices or take their photos. There are no child-to-child chat or social features."),
-        section("Parents, backups and deletion", "Settings, reports, backups and purchase controls are behind a parental gate. You can create a backup and choose where it goes using your device’s share menu. Such backups contain local profile and progress information; protect them and check the privacy practices of any destination you select.", "The parent area includes a control to delete all local data. Deleting local data does not delete backups you previously exported. Remove those separately. Uninstalling or changing devices may lose progress; we cannot retrieve a local database for you."),
-        section("Learning materials and sharing", "Homework codes describe selected content, not a child’s name, profile, age or results. Generated worksheets do not print child profile information. Sharing is initiated by an adult through the device; there is no teacher account or server receiving learning progress."),
-        section("Purchases and future changes", "Family Premium is planned, but real store purchasing is not configured in the current version. We do not collect payment information. If purchases, cloud services or other network features are introduced, this policy and the relevant store disclosures will be updated to describe them before release."),
-        section("When a parent contacts us", "If you email support@lumisoftstudios.com, we receive your email address and what you choose to send. We use this only to handle your request and retain it as needed for support or applicable obligations. Please do not send children’s full names, photos or backup files unless they are necessary to resolve an agreed support request.", "Parents or guardians can ask us to access, correct or delete support correspondence. If you believe a child has sent us personal information, contact us so we can address it. We cannot access locally stored child profiles; manage them in the app."),
-        section("Updates and contact", "The date above identifies the current policy. Questions about children’s privacy or this policy can be sent to support@lumisoftstudios.com."),
-      ]},
-      tr: { lead: "Öğrenimo, İngilizcede Wandermio adıyla sunulan, Lumisoft Studio’nun çocuklara yönelik öğrenme uygulamasıdır. Bu politika veliler ve yasal temsilciler için hazırlanmıştır; mevcut geliştirme sürümünü açıklar.", sections: [
-        section("Çocuk bilgileri cihazda kalır", "Uygulama, çocuk profillerini ve öğrenme ilerlemesini cihazdaki veritabanında saklar. İsteğe bağlı takma ad, profil rengi, yaş grubu veya sınıf, dil, isteğe bağlı maskot adı, etkinlik sonuçları, beceri özetleri ve tercihler buna dahildir. Gerçek isim veya tam doğum tarihi gerekmez. Bu yerel veritabanı bize gönderilmez."),
-        section("Hesap, reklam ve izleme yok", "Mevcut uygulamada kullanıcı hesabı, reklam, analiz, çökme raporlama veya izleme SDK’sı yoktur. Uygulama kodu ağ isteği yapmaz ve mevcut Android sürüm derlemesinde internet izni bulunmaz. Kamera, mikrofon veya konum erişimi istenmez; çocukların sesi kaydedilmez, fotoğrafı çekilmez. Çocuklar arası sohbet veya sosyal özellik yoktur."),
-        section("Veliler, yedekleme ve silme", "Ayarlar, raporlar, yedekleme ve satın alma kontrolleri veli kapısının arkasındadır. Yedek oluşturabilir ve cihazın paylaşım menüsüyle nereye gönderileceğini seçebilirsiniz. Yedekler yerel profil ve ilerleme bilgisi içerir; bunları koruyun ve seçtiğiniz hedefin gizlilik uygulamalarını inceleyin.", "Veli alanından tüm yerel verileri silebilirsiniz. Yerel verileri silmek, daha önce dışa aktardığınız yedekleri silmez; onları ayrıca kaldırın. Uygulamayı kaldırmak veya cihaz değiştirmek ilerlemeyi kaybettirebilir; yerel veritabanını sizin için geri getiremeyiz."),
-        section("Öğrenme materyalleri ve paylaşım", "Ödev kodları seçilen içerikleri tanımlar; çocuğun adını, profilini, yaşını veya sonuçlarını taşımaz. Oluşturulan çalışma kâğıtlarına çocuk profil bilgileri basılmaz. Paylaşımı yetişkin cihaz üzerinden başlatır; öğrenme ilerlemesini alan bir öğretmen hesabı veya sunucu yoktur."),
-        section("Satın alma ve gelecekteki değişiklikler", "Aile Premium planlanmaktadır; ancak mevcut sürümde gerçek mağaza satın alması yapılandırılmamıştır. Ödeme bilgisi toplamıyoruz. Satın alma, bulut hizmeti veya başka ağ özellikleri eklenirse yayın öncesinde bu politika ve ilgili mağaza beyanları güncellenecektir."),
-        section("Veli bize yazdığında", "support@lumisoftstudios.com adresine yazarsanız e-posta adresinizi ve göndermeyi seçtiğiniz bilgileri alırız. Bunları yalnız talebinizi ele almak için kullanır, destek veya geçerli yükümlülükler için gerektiği sürece tutarız. Üzerinde anlaşılan bir destek talebi için gerekli olmadıkça çocukların tam adını, fotoğrafını veya yedek dosyalarını göndermeyin.", "Veli veya yasal temsilci, destek yazışmalarına erişim, düzeltme veya silme talep edebilir. Bir çocuğun bize kişisel bilgi gönderdiğini düşünüyorsanız durumu ele alabilmemiz için yazın. Cihazda tutulan çocuk profillerine erişemeyiz; bunları uygulama içinden yönetin."),
-        section("Güncellemeler ve iletişim", "Yukarıdaki tarih güncel politikayı belirtir. Çocuk gizliliği veya bu politikayla ilgili soruları support@lumisoftstudios.com adresine iletebilirsiniz."),
-      ]},
+  "privacy": {
+    "en": {
+      "lead": "Wondermio, called Öğrenimo in Turkish, is a learning app for children ages 2–12 by Lumisoft Studio. This policy is for parents and guardians and describes the current pre-release app and its purchase and advertising arrangements.",
+      "sections": [
+        {
+          "title": "Profiles and learning progress",
+          "paragraphs": [
+            "No account or exact birth date is required. Optional nicknames, age group or grade, language, learning preferences, activity results, skill summaries and mascot preferences are stored in a database on the device. Lumisoft Studio does not receive that database. There is no child-to-child chat or social feed."
+          ]
+        },
+        {
+          "title": "Parents, sharing and deletion",
+          "paragraphs": [
+            "Parent and teacher tools, settings, purchases and legal information are behind a parental gate. A parental gate does not replace parental consent where the law requires it.",
+            "Adults can export a backup or report using the device share menu and choose its destination. Exported files may contain local profile or progress information. Protect those files and review the destination’s privacy practices. The app’s local deletion controls do not delete previously exported copies. Uninstalling can erase local progress, which we cannot recover from a server."
+          ]
+        },
+        {
+          "title": "Teacher tools and the camera",
+          "paragraphs": [
+            "Adults can create and print selected story and puzzle worksheets on the device; child profile information is not added. Extra story worksheets follow Premium story access. Homework creation, assignment and code sharing are no longer available. Optional teacher QR scanning requests camera access only when an adult opens that feature and chooses to allow it. Images are processed for the QR code; the app does not take or save photos, record video or audio, or upload camera images. Microphone and precise-location access are not requested.",
+            "The Android QR scanner uses Google ML Kit. Google describes processing device and app information, a per-installation identifier, performance and error information, and API usage events for diagnostics and usage analytics. This technical processing also applies when ads are off. QR images are processed on the device; the app does not send the image or decoded code to a verification server. Google’s privacy policy applies.",
+            "The teacher verification service is not active in the current pre-release version. A QR code cannot grant a verified teacher entitlement by itself. No teacher identity or child progress is sent to a verification server in this version."
+          ]
+        },
+        {
+          "title": "Advertising on Android",
+          "paragraphs": [
+            "The Android app includes Google Mobile Ads (AdMob) and uses internet access for advertising and store services. Live ads are currently disabled while children’s advertising requirements and placement behavior are checked. Development builds can use labelled Google test ads. A test ad is still a network service; it does not mean no data is sent.",
+            "If advertising is enabled in a later reviewed Android release, requests must be child-directed, under the age of consent, restricted to G-rated content and non-personalized. The Android advertising-ID and Privacy Sandbox advertising permissions are blocked. Google’s SDK may process IP-derived approximate location, app/ad interactions, diagnostics and device or app identifiers for advertising, measurement and fraud prevention. Google describes its processing at https://policies.google.com/privacy. Child profile and learning-progress records are not supplied to the ad network.",
+            "There are no rewarded ads that unlock learning content. Family Premium, an eligible trial and a valid Remove Ads purchase prevent ad requests. Live ads will not be enabled until the applicable child-safety and legal-consent requirements are satisfied. Required GDPR or other legal notices are separate from Apple tracking permission and will not be skipped."
+          ]
+        },
+        {
+          "title": "iPhone and iPad: no tracking advertising",
+          "paragraphs": [
+            "Ads are disabled on iPhone and iPad, and the iOS app does not link the Google Mobile Ads SDK. The app does not request App Tracking Transparency permission, access IDFA, use personalized or cross-app behavioral ads, create device fingerprints or use replacement identifiers for tracking. A provider that requires tracking will not be used.",
+            "Any future iOS advertising must meet Apple Kids Category requirements, including appropriate human review of creatives, and have its SDK and data transfers checked before activation. The current source and SDK manifests have been inspected; final signed-build and device data-flow checks are still required before store privacy answers are finalized. The iOS app has no separate analytics or crash-reporting SDK. Android advertising and QR SDK diagnostics are described above."
+          ]
+        },
+        {
+          "title": "Premium and store purchases",
+          "paragraphs": [
+            "Family Premium has monthly and yearly subscription plans. Where offered by the store to an eligible account, a 7-day trial becomes a paid subscription unless cancelled in time. The store shows the local price, renewal period and charge after the trial before confirmation. Subscriptions renew until cancelled.",
+            "Remove Ads is a separate, permanent, non-consumable purchase that removes ads and does not unlock Premium content. It is not offered for sale on a platform while that platform has no ads. Store products are being prepared and are not yet on public sale. No payment is taken by this website.",
+            "Apple or Google processes payment details under its own terms. The app reads the store’s purchase confirmation and keeps entitlement information locally for purchase verification, restoration and offline access. Card details are not sent to Lumisoft Studio. Deleting the app does not cancel a subscription."
+          ]
+        },
+        {
+          "title": "Support correspondence and your rights",
+          "paragraphs": [
+            "If you contact support@lumisoftstudios.com, we receive your email address and the information you choose to send. We use it to handle the request and keep it only as needed for support and applicable obligations. Avoid children’s full names, photos, passwords and backup files unless specifically needed for an agreed support case.",
+            "Parents or guardians can request access, correction or deletion of support correspondence. Local profile data can be managed in the app. We cannot directly access Google-held advertising data; use Google’s privacy controls or contact us for guidance. Applicable rights depend on your location. Contact us if you believe a child sent us personal information."
+          ]
+        },
+        {
+          "title": "Changes and contact",
+          "paragraphs": [
+            "This page is updated when the app’s data practices change. Store privacy disclosures must match the actual released build. For questions, contact support@lumisoftstudios.com."
+          ]
+        }
+      ]
     },
-    terms: {
-      en: { lead: "These terms apply to Wandermio (Öğrenimo in Turkish), including its current development version. A parent or guardian should review them and supervise a child’s use.", sections: [
-        section("Learning with the app", "Wandermio offers activities for ages 2–12. Choose an appropriate profile and content level, and take regular breaks. Activities support practice and exploration; they do not guarantee learning outcomes or replace teaching, assessment or professional advice."),
-        section("Permitted use and ownership", "You may use the app for personal learning and use its generated learning materials for their intended educational purpose. The app’s code, name, mascot, artwork and content remain the property of Lumisoft Studio or its licensors. Do not unlawfully redistribute the app, resell its content or misuse its systems."),
-        section("Parents and local data", "Adults manage profiles, settings and backups through the parent area. The parental gate helps separate adult controls; it does not replace supervision. Progress is stored locally. Protect exported backups and understand that removing app data or changing devices can lose progress."),
-        section("Availability and purchases", "The app is in development for iOS and Android. Features and supported devices may change. Real store purchases are not configured in the current version; no subscription price or release date is promised here. Any future purchase will be shown to a parent with its applicable store terms before payment."),
-        section("Responsibility and changes", "We cannot guarantee uninterrupted or error-free operation. To the extent permitted by law, Lumisoft Studio is not responsible for indirect losses from use or unavailability. These terms do not exclude statutory consumer rights or liabilities that cannot lawfully be excluded. Updated terms will be published on this page."),
-        section("Contact", "Parents and guardians can contact support@lumisoftstudios.com about these terms or the app."),
-      ]},
-      tr: { lead: "Bu koşullar, mevcut geliştirme sürümü dahil Öğrenimo (İngilizce adı Wandermio) için geçerlidir. Veli veya yasal temsilci koşulları incelemeli ve çocuğun kullanımına eşlik etmelidir.", sections: [
-        section("Uygulamayla öğrenme", "Öğrenimo, 2–12 yaş için etkinlikler sunar. Uygun profil ve içerik düzeyi seçin, düzenli mola verin. Etkinlikler alıştırma ve keşfi destekler; öğrenme sonucu garanti etmez, öğretimin, değerlendirmenin veya uzman görüşünün yerini almaz."),
-        section("İzin verilen kullanım ve mülkiyet", "Uygulamayı kişisel öğrenme için, oluşturduğu öğrenme materyallerini amaçlarına uygun eğitim çalışmalarında kullanabilirsiniz. Kod, isim, maskot, görseller ve içerik Lumisoft Studio’ya veya lisans sahiplerine aittir. Uygulamayı hukuka aykırı dağıtmayın, içeriğini yeniden satmayın veya sistemlerini kötüye kullanmayın."),
-        section("Veli ve yerel veriler", "Profilleri, ayarları ve yedekleri yetişkinler veli alanından yönetir. Veli kapısı yetişkin kontrollerini ayırmaya yardımcı olur; gözetimin yerini almaz. İlerleme cihazda saklanır. Dışa aktarılan yedekleri koruyun; uygulama verilerini kaldırmanın veya cihaz değiştirmenin ilerlemeyi kaybettirebileceğini dikkate alın."),
-        section("Kullanılabilirlik ve satın alma", "Uygulama iOS ve Android için geliştiriliyor. Özellikler ve desteklenen cihazlar değişebilir. Mevcut sürümde gerçek mağaza satın alması yapılandırılmamıştır; burada abonelik fiyatı veya yayın tarihi taahhüt edilmez. Gelecekteki bir satın alma, ödeme öncesi ilgili mağaza koşullarıyla veliye gösterilecektir."),
-        section("Sorumluluk ve değişiklikler", "Kesintisiz veya hatasız çalışma garanti edemeyiz. Yasaların izin verdiği ölçüde Lumisoft Studio, kullanımdan veya kullanılamamadan doğan dolaylı kayıplardan sorumlu değildir. Bu koşullar, hukuken kaldırılamayan tüketici haklarını veya sorumlulukları ortadan kaldırmaz. Güncellenen koşullar bu sayfada yayınlanır."),
-        section("İletişim", "Veliler ve yasal temsilciler, koşullar veya uygulama hakkında support@lumisoftstudios.com adresine yazabilir."),
-      ]},
-    },
-    support: {
-      en: { lead: "Help for parents and guardians using Wandermio, called Öğrenimo in Turkish. The app is in development for iOS and Android and is not yet publicly available in stores.", sections: [
-        section("Ask us for help", "Contact support@lumisoftstudios.com with your device model, operating system, app version, language and the activity where you noticed a problem. Please remove children’s names and other personal information from screenshots."),
-        section("Profiles and learning", "Choose a child’s age group and language in their profile. The parent area contains learning preferences and progress reports. Turkish and English offer their own activities; content may differ by age and language."),
-        section("Keep your progress", "Progress is stored locally. Before reinstalling or changing devices, use the parent area’s backup tools and keep the exported file safe. Clearing all data does not remove previously exported files. We cannot recover local progress from a server."),
-        section("Sound and purchases", "Check device volume and the app’s sound settings if an activity is silent. Some narration uses device speech. Real store purchasing is not configured in the current development version; it does not take payment. Contact us if you need help understanding the parent area."),
-        section("Privacy requests", "A parent or guardian can use the app’s local deletion controls or contact us about support correspondence. See the Privacy Policy for the information stored on the device and how exported backups are handled."),
-      ]},
-      tr: { lead: "Öğrenimo’yu kullanan veliler ve yasal temsilciler için yardım. İngilizce adı Wandermio olan uygulama, iOS ve Android için geliştiriliyor; henüz mağazalarda herkese açık değil.", sections: [
-        section("Yardım isteyin", "Cihaz modeli, işletim sistemi, uygulama sürümü, dil ve sorun yaşadığınız etkinlikle birlikte support@lumisoftstudios.com adresine yazın. Ekran görüntülerinden çocuk adlarını ve diğer kişisel bilgileri kaldırın."),
-        section("Profiller ve öğrenme", "Çocuğun yaş grubunu ve dilini profilinden seçin. Veli alanında öğrenme tercihleri ve ilerleme raporları bulunur. Türkçe ve İngilizce kendi etkinliklerini sunar; içerik yaşa ve dile göre değişebilir."),
-        section("İlerlemenizi koruyun", "İlerleme cihazda saklanır. Yeniden kurulum veya cihaz değişikliği öncesinde veli alanının yedekleme araçlarını kullanın ve dışa aktarılan dosyayı güvenli tutun. Tüm verileri temizlemek, önceden dışa aktarılan dosyaları silmez. Yerel ilerlemeyi bir sunucudan geri getiremeyiz."),
-        section("Ses ve satın alma", "Bir etkinlik sessizse cihaz sesini ve uygulamanın ses ayarlarını kontrol edin. Bazı anlatımlar cihazın konuşma hizmetini kullanır. Mevcut geliştirme sürümünde gerçek mağaza satın alması yapılandırılmamıştır; ödeme alınmaz. Veli alanıyla ilgili yardım için bize yazabilirsiniz."),
-        section("Gizlilik talepleri", "Veli veya yasal temsilci, uygulamanın yerel silme kontrollerini kullanabilir ya da destek yazışmaları hakkında bize ulaşabilir. Cihazda saklanan bilgiler ve dışa aktarılan yedekler için Gizlilik Politikası’nı inceleyin."),
-      ]},
-    },
+    "tr": {
+      "lead": "Öğrenimo, İngilizce adıyla Wondermio, Lumisoft Studio’nun 2–12 yaş için geliştirdiği öğrenme uygulamasıdır. Bu politika veliler ve yasal temsilciler için hazırlanmıştır; mevcut yayın öncesi sürümü, satın alma ve reklam düzenini açıklar.",
+      "sections": [
+        {
+          "title": "Profiller ve öğrenme ilerlemesi",
+          "paragraphs": [
+            "Hesap veya tam doğum tarihi gerekmez. İsteğe bağlı takma ad, yaş grubu veya sınıf, dil, öğrenme tercihleri, etkinlik sonuçları, beceri özetleri ve maskot tercihleri cihazdaki veritabanında saklanır. Bu veritabanı Lumisoft Studio’ya gönderilmez. Çocuklar arası sohbet veya sosyal akış yoktur."
+          ]
+        },
+        {
+          "title": "Yetişkin alanı, paylaşım ve silme",
+          "paragraphs": [
+            "Veli ve öğretmen araçları, ayarlar, satın alma ve yasal bilgiler yetişkin kontrolünün arkasındadır. Bu kontrol, kanunun gerektirdiği veli rızasının yerine geçmez.",
+            "Yetişkinler cihazın paylaşım menüsünden yedek veya rapor dışa aktarabilir ve hedefini seçebilir. Dosyalar yerel profil veya ilerleme bilgisi içerebilir. Bunları koruyun ve seçtiğiniz hedefin gizlilik uygulamalarını inceleyin. Uygulamadaki silme kontrolleri daha önce dışa aktarılan kopyaları silmez. Uygulamayı kaldırmak yerel ilerlemeyi silebilir; bir sunucudan geri getiremeyiz."
+          ]
+        },
+        {
+          "title": "Öğretmen araçları ve kamera",
+          "paragraphs": [
+            "Yetişkinler cihazda seçili hikâye ve bulmaca çalışma kâğıtları oluşturup yazdırabilir; çocuk profil bilgisi eklenmez. Ek hikâye çalışma kâğıtları Premium hikâye erişimine bağlıdır. Ödev oluşturma, atama ve kod paylaşımı kaldırılmıştır. İsteğe bağlı öğretmen QR taraması, yalnız yetişkin bu özelliği açıp izin vermeyi seçtiğinde kamera izni ister. Görüntü QR kodu için işlenir; fotoğraf çekilmez veya saklanmaz, video veya ses kaydedilmez, kamera görüntüsü yüklenmez. Mikrofon ve hassas konum izni istenmez.",
+            "Android QR tarayıcısı Google ML Kit kullanır. Google, cihaz ve uygulama bilgileri, kurulum tanımlayıcısı, performans ve hata bilgileri ile API kullanım olaylarını teknik tanılama ve kullanım analizi için işlediğini açıklar. Bu teknik veri işlemesi reklamlar kapalıyken de geçerlidir. QR görüntüleri cihazda işlenir; uygulama görüntüyü veya okunan kodu bir doğrulama sunucusuna göndermez. Google’ın gizlilik politikası uygulanır.",
+            "Mevcut yayın öncesi sürümde öğretmen doğrulama hizmeti etkin değildir. QR kodu tek başına doğrulanmış öğretmen hakkı sağlamaz. Bu sürümde doğrulama sunucusuna öğretmen kimliği veya çocuk ilerlemesi gönderilmez."
+          ]
+        },
+        {
+          "title": "Android reklamları",
+          "paragraphs": [
+            "Android uygulaması Google Mobile Ads (AdMob) içerir; reklam ve mağaza hizmetleri için internet erişimi vardır. Çocuklara yönelik reklam kuralları ve yerleşim davranışı doğrulanana kadar canlı reklamlar kapalıdır. Geliştirme sürümleri Google’ın işaretli test reklamlarını kullanabilir. Test reklamı da bir ağ hizmetidir; veri gönderilmediği anlamına gelmez.",
+            "İleride incelenmiş bir Android sürümünde reklam etkinleştirilirse istekler çocuklara yönelik, rıza yaşının altında, G içerik derecesiyle ve kişiselleştirilmeden yapılmalıdır. Android reklam kimliği ve Privacy Sandbox reklam izinleri engellidir. Google SDK’sı IP’den çıkarılan yaklaşık konum, uygulama/reklam etkileşimleri, teşhis ve cihaz veya uygulama kimliklerini reklam, ölçüm ve sahtekârlığı önleme amacıyla işleyebilir. Google veri işlemesini https://policies.google.com/privacy adresinde açıklar. Çocuk profili ve öğrenme ilerlemesi reklam ağına verilmez.",
+            "Öğrenme içeriğini açan ödüllü reklam yoktur. Aile Premium, uygun deneme ve geçerli Reklam Kaldır hakkı reklam isteğini engeller. Çocuk güvenliği ve yasal rıza gereksinimleri karşılanmadan canlı reklam açılmaz. GDPR ve diğer gerekli yasal bildirimler Apple takip izninden ayrıdır ve atlanmaz."
+          ]
+        },
+        {
+          "title": "iPhone ve iPad: takip reklamı yok",
+          "paragraphs": [
+            "iPhone ve iPad’de reklamlar kapalıdır; Google Mobile Ads SDK’sı iOS uygulamasına bağlanmaz. Uygulama App Tracking Transparency izni istemez, IDFA’ya erişmez, kişiselleştirilmiş veya uygulamalar arası davranışsal reklam kullanmaz; cihaz parmak izi veya takip amaçlı alternatif kimlik oluşturmaz. Takip gerektiren sağlayıcı kullanılmaz.",
+            "Gelecekte iOS reklamı düşünülürse kreatiflerin uygun insan incelemesi dahil Apple Kids Category koşulları sağlanmalı, SDK ve veri aktarımı etkinleştirme öncesi denetlenmelidir. Kaynak ve SDK manifestleri incelendi; mağaza gizlilik cevapları kesinleştirilmeden önce son imzalı derleme ve gerçek cihaz veri akışı kontrolü gereklidir. iOS uygulamasında bağımsız analiz veya çökme raporlama SDK’sı yoktur. Android reklam ve QR bileşenlerinin teknik veri işlemesi yukarıda açıklanır."
+          ]
+        },
+        {
+          "title": "Premium ve mağaza satın almaları",
+          "paragraphs": [
+            "Aile Premium aylık ve yıllık abonelik planlarına sahiptir. Mağaza uygun hesaba sunarsa 7 günlük deneme, zamanında iptal edilmezse ücretli aboneliğe dönüşür. Yerel fiyat, yenileme dönemi ve deneme sonrası ücret onaydan önce mağazada gösterilir. Abonelik iptal edilene kadar yenilenir.",
+            "Reklam Kaldır ayrı, kalıcı ve tüketilmeyen bir satın almadır; reklamları kaldırır, Premium içerik açmaz. Reklam olmayan platformda satışa sunulmaz. Mağaza ürünleri hazırlanıyor; henüz herkese açık satış yoktur. Bu web sitesinden ödeme alınmaz.",
+            "Ödeme bilgilerini Apple veya Google kendi koşullarıyla işler. Uygulama mağazanın satın alma teyidini okur; doğrulama, geri yükleme ve çevrimdışı erişim için hak bilgisini yerel saklar. Kart bilgileri Lumisoft Studio’ya gönderilmez. Uygulamayı silmek aboneliği iptal etmez."
+          ]
+        },
+        {
+          "title": "Destek yazışmaları ve haklarınız",
+          "paragraphs": [
+            "support@lumisoftstudios.com adresine yazdığınızda e-posta adresinizi ve paylaşmayı seçtiğiniz bilgileri alırız. Bunları talebi yanıtlamak için kullanır, destek ve geçerli yükümlülükler için gerektiği sürece tutarız. Üzerinde anlaşılan destek talebi gerektirmedikçe çocukların tam adını, fotoğrafını, parola veya yedek dosyalarını göndermeyin.",
+            "Veliler destek yazışmalarına erişim, düzeltme veya silme talep edebilir. Yerel profilleri uygulamadan yönetebilirsiniz. Google’ın tuttuğu reklam verilerine doğrudan erişemeyiz; Google’ın gizlilik araçlarını kullanabilir veya yönlendirme için bize yazabilirsiniz. Haklar bulunduğunuz yere göre değişir. Bir çocuğun bize kişisel bilgi gönderdiğini düşünüyorsanız iletişime geçin."
+          ]
+        },
+        {
+          "title": "Değişiklikler ve iletişim",
+          "paragraphs": [
+            "Veri davranışı değiştiğinde bu sayfa güncellenir. Mağaza gizlilik beyanları gerçek yayınlanan derlemeyle eşleşmelidir. Sorular için support@lumisoftstudios.com adresine yazabilirsiniz."
+          ]
+        }
+      ]
+    }
   },
+  "terms": {
+    "tr": {
+      "lead": "Öğrenimo (İngilizce adı Wondermio) için kullanım, abonelik ve satın alma koşulları. Uygulama henüz herkese açık mağaza satışına sunulmamıştır. Satın alma yalnız mağaza uygun ürün ve fiyatı sunduğunda yapılabilir.",
+      "sections": [
+        {
+          "title": "Kapsam",
+          "paragraphs": [
+            "Bu koşullar Öğrenimo uygulamasının kullanımını düzenler. Uygulamayı indiren ve kullanan veli ya da yasal temsilci bu koşulları kabul etmiş sayılır. Uygulama çocukların bir yetişkinin gözetiminde kullanması için tasarlanmıştır.",
+            "Uygulama App Store’dan indirildiyse Apple’ın Standart Lisanslı Uygulama Son Kullanıcı Lisans Sözleşmesi (EULA) de geçerlidir; bu koşullar onu tamamlar."
+          ]
+        },
+        {
+          "title": "Kullanım hakkı",
+          "paragraphs": [
+            "Lumisoft Studio, uygulamayı kişisel, ailevi ve sınıf içi eğitim amacıyla kullanmanız için devredilemez ve münhasır olmayan bir kullanım hakkı verir. Uygulamanın içeriği, karakterleri, çizimleri ve seslerinin bütün hakları Lumisoft Studio tarafından saklıdır; izinsiz kopyalanamaz ya da satılamaz."
+          ]
+        },
+        {
+          "title": "Eğitim içeriği",
+          "paragraphs": [
+            "İçerikler MEB öğretim programları ve ilgili ülke programları esas alınarak hazırlanır. Program eşleştirmesinin tamamlanmamış bölümleri uygulamada ve belgelerde açıkça belirtilir. Uygulama okulun ve öğretmenin yerine geçmez; veli raporları tanı ya da sınav sonucu değildir."
+          ]
+        },
+        {
+          "title": "Ücretsiz sürüm ve Aile Premium",
+          "paragraphs": [
+            "Uygulama ücretsiz indirilir. Ücretsiz sürümde bütün harf dünyaları, her konunun ilk oyunları, seçili hikâyeler ve bir çocuk profili bulunur. Android’deki ücretsiz sürümde oyun sonlarında çocuklara uygun reklamlar gösterilebilir.",
+            "Aile Premium aylık ya da yıllık ücretli bir aboneliktir; bütün içerikleri açar ve sürdüğü sürece reklamları kapatır. Reklam Kaldır tek seferlik bir satın almadır; reklamları kalıcı olarak kapatır, Premium içerikleri açmaz. Koşulları ayrı “Abonelik ve Satın Alma Koşulları” metnindedir.",
+            "Temel öğrenme kazanımları ücretsiz tamamlanabilir. Premium bittiğinde ek içerikler gizlenir; çocuk profilleri ve ilerleme silinmez. Öğretmen QR erişimi, hizmet etkinleştirildiğinde yalnızca reklamları kaldırır ve Premium ek kütüphaneyi açmaz."
+          ]
+        },
+        {
+          "title": "Uygun kullanım",
+          "paragraphs": [
+            "Uygulamanın güvenlik önlemlerini, yetişkin kontrolünü ya da satın alma doğrulamasını aşmaya çalışmak, uygulamayı değiştirerek dağıtmak yasaktır."
+          ]
+        },
+        {
+          "title": "Sorumluluk",
+          "paragraphs": [
+            "Uygulamayı özenle hazırlar ve güncelleriz; yine de hatasız ya da kesintisiz çalışacağını garanti edemeyiz. Kayıtlar yalnızca cihazda tutulduğu için cihaz kaybında veriler kaybolabilir; Ebeveyn Paneli’ndeki yedekleme özelliğini kullanmanızı öneririz. Yürürlükteki tüketici mevzuatından doğan haklarınız saklıdır."
+          ]
+        },
+        {
+          "title": "Değişiklikler ve iletişim",
+          "paragraphs": [
+            "Bu koşullar değişirse yeni metin uygulamada ve mağaza sayfasındaki bağlantıda yayımlanır.",
+            "Sorularınız ve talepleriniz için uygulamanın Google Play ya da App Store sayfasındaki geliştirici iletişim adresine yazabilirsiniz."
+          ]
+        },
+        {
+          "title": "Ürünler",
+          "paragraphs": [
+            "Aile Premium aylık ve yıllık olmak üzere iki otomatik yenilenen abonelik olarak sunulur. Premium; bütün oyunları, bütün hikâyeleri, birden fazla çocuk profilini ve ayrıntılı gelişim raporlarını açar ve sürdüğü sürece (deneme dahil) reklamları kapatır.",
+            "Reklam Kaldır tek seferlik, yenilenmeyen bir satın almadır. Ücretsiz sürümdeki reklamları kalıcı olarak kapatır; Premium içerikleri açmaz ve ücretsiz sürümün kapsamını değiştirmez. İki platformda aynı ürün modeli hedeflenir. Reklamlar etkinleşene ve mağazadaki tek seferlik fiyat ilgili ülkedeki aylık Premium fiyatıyla eşleşene kadar satış sunulmaz.",
+            "Güncel fiyat, para birimi ve abonelik dönemi satın almadan önce mağazanın gösterdiği şekilde ekranda yer alır. Fiyatlara yürürlükteki vergiler dahildir ve ülkeden ülkeye değişebilir.",
+            "Satın alma ekranına Ebeveyn Paneli ya da Öğretmen Paneli > Premium ve Reklam Kaldır yolundan, yetişkin kontrolünden sonra ulaşılır. İki panel aynı satın alma ve hak kaydını kullanır."
+          ]
+        },
+        {
+          "title": "Ücretsiz deneme",
+          "paragraphs": [
+            "Mağaza size sunuyorsa ilk aboneliğinizde ücretsiz deneme başlatabilirsiniz. Deneme hakkı mağaza hesabı başına bir kez verilir ve uygunluğa mağaza karar verir; daha önce deneme kullandıysanız ekranda deneme gösterilmez.",
+            "Deneme süresince abonelik ücreti alınmaz. Deneme bitmeden iptal etmezseniz abonelik, ekranda gösterilen fiyattan ve dönemle otomatik olarak başlar.",
+            "Ödeme yönteminizi doğrulamak için mağaza ya da bankanız geçici bir ön provizyon gösterebilir; bu tutar abonelik ücreti değildir.",
+            "Deneme sırasında başka bir plan satın alırsanız denemenin kalan süresi sona erer."
+          ]
+        },
+        {
+          "title": "Ödeme ve yenileme",
+          "paragraphs": [
+            "Ücret, onayınızla birlikte (deneme varsa deneme bitince) Google Play ya da Apple hesabınıza yansıtılır. Reklam Kaldır için ücret bir kez alınır.",
+            "App Store: Abonelik, dönem bitiminden en az 24 saat önce otomatik yenileme kapatılmazsa aynı süre ve fiyatla yenilenir; yenileme ücreti dönem bitmeden önceki 24 saat içinde alınır.",
+            "Google Play: Abonelik, iptal edilene kadar her dönem sonunda yenilenir. Deneme ya da dönem bitmeden istediğiniz zaman iptal edebilirsiniz.",
+            "Fiyat değişikliklerinde mağaza sizi kendi kurallarına göre önceden bilgilendirir."
+          ]
+        },
+        {
+          "title": "İptal ve yönetim",
+          "paragraphs": [
+            "Aboneliği uygulamadaki Premium ve Reklam Kaldır > Aboneliği Yönet düğmesiyle ya da doğrudan Google Play (Ödemeler ve abonelikler) veya iPhone/iPad Ayarlar > Apple hesabınız > Abonelikler bölümünden iptal edebilirsiniz.",
+            "İptal ettiğinizde Premium, ödenmiş dönemin sonuna kadar açık kalır. Sonra uygulama ücretsiz sürümle devam eder; çocuk profilleri, ilerleme kayıtları ve oluşturulmuş bütün profiller korunur.",
+            "Premium sona erdiğinde Android’deki ücretsiz sürümde reklamlar yeniden gösterilebilir. Reklam Kaldır satın aldıysanız reklamlar kapalı kalır.",
+            "Uygulamayı silmek aboneliği iptal etmez."
+          ]
+        },
+        {
+          "title": "İade ve iptal edilen satın almalar",
+          "paragraphs": [
+            "İade talepleri mağazanın kendi kurallarıyla değerlendirilir: Google Play için Google Play iade politikası, App Store için Apple’ın iade süreci geçerlidir.",
+            "Mağaza bir aboneliği iade eder ya da iptal ederse Premium mağazanın bildirdiği tarihte kapanır. Reklam Kaldır iade edilir ya da mağazaca iptal edilirse, uygulama mağazaya yeniden ulaştığında reklamlar geri gelebilir."
+          ]
+        },
+        {
+          "title": "Satın alımları geri yükleme",
+          "paragraphs": [
+            "Uygulamayı yeniden kurduğunuzda ya da yeni bir cihaza geçtiğinizde, aynı mağaza hesabıyla Premium ve Reklam Kaldır > Satın Alımları Geri Yükle düğmesini kullanabilirsiniz. Aile Premium ve Reklam Kaldır mağaza hesabınıza bağlıdır; uygulama bunun için hesap açtırmaz ve cihaz kimliği toplamaz.",
+            "Çocuk profilleri ve ilerleme kayıtları cihazdadır; bunları taşımak için yedekleme özelliğini kullanın."
+          ]
+        },
+        {
+          "title": "İnternet olmadan",
+          "paragraphs": [
+            "Öğrenmek için internet gerekmez. Satın aldığınız haklar mağazanın cihazdaki son onayına göre çevrimdışı da geçerli kalır ve mağazaya yeniden ulaşıldığında güncellenir."
+          ]
+        },
+        {
+          "title": "İletişim",
+          "paragraphs": [
+            "support@lumisoftstudios.com"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "lead": "Terms of use, subscriptions and purchases for Wondermio (Öğrenimo in Turkish). The app is not yet on public sale. Purchases are available only when the store offers the relevant product and price.",
+      "sections": [
+        {
+          "title": "Scope",
+          "paragraphs": [
+            "These terms cover the use of Wondermio. A parent or legal guardian who downloads and uses the app accepts them. The app is designed to be used by children with an adult's supervision.",
+            "If you downloaded the app from the App Store, Apple's Standard Licensed Application End User License Agreement (EULA) also applies; these terms add to it."
+          ]
+        },
+        {
+          "title": "Licence",
+          "paragraphs": [
+            "Lumisoft Studio gives you a non-transferable, non-exclusive right to use the app for personal, family and classroom learning. The app's content, characters, illustrations and sounds belong to Lumisoft Studio and may not be copied or sold without permission."
+          ]
+        },
+        {
+          "title": "Learning content",
+          "paragraphs": [
+            "Content is written against the Turkish national curriculum and the curricula of the other countries the app supports. Where a curriculum is only partly covered, the app and its documents say so. The app does not replace school or a teacher, and parent reports are not a diagnosis or a test result."
+          ]
+        },
+        {
+          "title": "Free version and Family Premium",
+          "paragraphs": [
+            "The app is free to download. The free version includes every letter world, the first games of every topic, selected stories and one child profile. On Android, the free version may show child-safe ads at the end of a game.",
+            "Family Premium is a paid monthly or yearly subscription; it opens all content and turns ads off while it lasts. Remove Ads is a one-time purchase; it turns ads off for good and does not open Premium content. Their terms are in the separate Subscription & Purchase Terms.",
+            "Core learning outcomes can be completed for free. When Premium ends, extras are hidden and child profiles and progress are retained. Once verification is available, teacher QR access removes ads without opening the Premium extra library."
+          ]
+        },
+        {
+          "title": "Acceptable use",
+          "paragraphs": [
+            "Do not try to get around the app's safety features, the adult check or purchase verification, or distribute modified copies of the app."
+          ]
+        },
+        {
+          "title": "Liability",
+          "paragraphs": [
+            "We build and update the app with care, but we cannot promise it will always work without errors or interruptions. Records are kept only on the device and may be lost with it, so we recommend the backup feature in the Parent Panel. Your rights under consumer law are not affected."
+          ]
+        },
+        {
+          "title": "Changes and contact",
+          "paragraphs": [
+            "If these terms change, the new text is published in the app and at the link on the store page.",
+            "For questions and requests, write to the developer contact address on the app's Google Play or App Store page."
+          ]
+        },
+        {
+          "title": "Products",
+          "paragraphs": [
+            "Family Premium is offered as two auto-renewable subscriptions, monthly and yearly. Premium opens every game, every story, more child profiles and detailed progress reports, and turns ads off while it lasts (trial included).",
+            "Remove Ads is a one-time purchase that never renews. It turns ads in the free version off for good; it does not open Premium content or change what the free version includes. The same product model is planned for both platforms. Remove Ads is offered only when ads are enabled and its store price matches one month of Premium in the same country.",
+            "The current price, currency and subscription period are shown on screen before you buy, exactly as the store provides them. Prices include applicable taxes and may vary by country.",
+            "The purchase screen is reached from Parent Panel or Teacher Panel > Premium & Remove Ads, after the adult check. Both panels use the same purchases and the same record of what you own."
+          ]
+        },
+        {
+          "title": "Free trial",
+          "paragraphs": [
+            "If the store offers it to you, your first subscription can start with a free trial. A trial is given once per store account and the store decides who is eligible; if you have used a trial before, none is shown.",
+            "You are not charged for the subscription during the trial. Unless you cancel before the trial ends, the subscription starts automatically at the price and period shown on screen.",
+            "Your store or bank may show a temporary authorization to verify your payment method; it is not a subscription charge.",
+            "If you buy a different plan during a trial, the rest of the trial ends."
+          ]
+        },
+        {
+          "title": "Payment and renewal",
+          "paragraphs": [
+            "Payment is charged to your Google Play or Apple account when you confirm (or when the trial ends, if there is one). Remove Ads is charged once.",
+            "App Store: the subscription renews for the same period and price unless auto-renew is turned off at least 24 hours before the end of the current period; your account is charged for renewal within the 24 hours before the period ends.",
+            "Google Play: the subscription renews at the end of each period until you cancel. You can cancel at any time before the trial or the period ends.",
+            "If a price changes, the store tells you in advance under its own rules."
+          ]
+        },
+        {
+          "title": "Cancelling and managing",
+          "paragraphs": [
+            "Cancel with Premium & Remove Ads > Manage subscription in the app, or directly in Google Play (Payments and subscriptions) or on iPhone/iPad in Settings > your Apple Account > Subscriptions.",
+            "After you cancel, Premium stays on until the end of the period you paid for. The app then continues as the free version; child profiles, progress and every profile you created are kept.",
+            "When Premium ends, ads may be shown again in the free version on Android. If you bought Remove Ads, ads stay off.",
+            "Deleting the app does not cancel the subscription."
+          ]
+        },
+        {
+          "title": "Refunds and cancelled purchases",
+          "paragraphs": [
+            "Refund requests are handled by the store under its own rules: Google Play's refund policy for Google Play, Apple's refund process for the App Store.",
+            "When the store refunds or revokes a subscription, Premium ends on the date the store reports. If Remove Ads is refunded or revoked by the store, ads may return once the app reaches the store again."
+          ]
+        },
+        {
+          "title": "Restoring purchases",
+          "paragraphs": [
+            "After reinstalling the app or moving to a new device, use Premium & Remove Ads > Restore Purchases with the same store account. Family Premium and Remove Ads belong to your store account; the app does not ask you to create an account for this and collects no device ID.",
+            "Child profiles and progress live on the device; use the backup feature to move them."
+          ]
+        },
+        {
+          "title": "Without the internet",
+          "paragraphs": [
+            "Learning never needs the internet. What you bought keeps working offline according to the store's last confirmation on the device and is updated when the store can be reached again."
+          ]
+        },
+        {
+          "title": "Contact",
+          "paragraphs": [
+            "support@lumisoftstudios.com"
+          ]
+        }
+      ]
+    }
+  },
+  "support": {
+    "en": {
+      "lead": "Help for parents and teachers using Wondermio, called Öğrenimo in Turkish. Store testing is being prepared; there is no public release yet.",
+      "sections": [
+        {
+          "title": "Contact us",
+          "paragraphs": [
+            "Email support@lumisoftstudios.com with your device model, operating system, app version, language and a short description. Remove children’s names and personal information from screenshots. Never send passwords or store verification codes."
+          ]
+        },
+        {
+          "title": "Progress and teacher tools",
+          "paragraphs": [
+            "Profiles and learning progress stay on the device. Use the adult area’s backup tools before reinstalling or changing devices. We cannot restore a deleted local database. Selected worksheets are available without Premium; extra story worksheets follow Premium access. Homework and lesson-plan tools are no longer available. Teacher QR verification is not active; scanning a code does not grant verified access."
+          ]
+        },
+        {
+          "title": "Camera and sound",
+          "paragraphs": [
+            "Teacher QR scanning is optional and behind the parental gate. If you deny camera access, other learning activities remain available. No photos, video or audio are saved. For sound issues, check the device volume and app settings; some narration uses device speech."
+          ]
+        },
+        {
+          "title": "Premium, trials and restoration",
+          "paragraphs": [
+            "Monthly and yearly Premium products are being prepared. A 7-day trial is offered only to store-eligible accounts. Use Restore Purchases with the same store account. Manage or cancel in your Apple or Google subscription settings. Deleting the app does not cancel a subscription. Refunds are handled by the store."
+          ]
+        },
+        {
+          "title": "Advertising and privacy",
+          "paragraphs": [
+            "Live ads remain off. iPhone and iPad do not request ATT permission or use IDFA. Android’s ad integration is child-directed and non-personalized; it will not be enabled before compliance checks. Remove Ads is not sold where no ads are present. Use the local deletion controls for app data and email us for support-correspondence requests."
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "lead": "Veliler ve öğretmenler için Öğrenimo desteği. İngilizce adımız Wondermio. Mağaza testleri hazırlanıyor; henüz herkese açık yayın yoktur.",
+      "sections": [
+        {
+          "title": "Bize ulaşın",
+          "paragraphs": [
+            "Cihaz modeli, işletim sistemi, uygulama sürümü, dil ve sorunun kısa açıklamasıyla support@lumisoftstudios.com adresine yazın. Ekran görüntülerinden çocuk adlarını ve kişisel bilgileri kaldırın. Parola veya mağaza doğrulama kodu göndermeyin."
+          ]
+        },
+        {
+          "title": "İlerleme ve öğretmen araçları",
+          "paragraphs": [
+            "Profiller ve öğrenme ilerlemesi cihazda kalır. Yeniden kurulum veya cihaz değişikliği öncesi yetişkin alanından yedek alın. Silinmiş yerel veritabanını geri getiremeyiz. Seçili çalışma kâğıtları Premium gerektirmez; ek hikâye çalışma kâğıtları Premium erişimine bağlıdır. Ödev ve ders planı araçları kaldırılmıştır. Öğretmen QR doğrulama hizmeti etkin değildir; kod okutmak doğrulanmış erişim sağlamaz."
+          ]
+        },
+        {
+          "title": "Kamera ve ses",
+          "paragraphs": [
+            "Öğretmen QR taraması isteğe bağlıdır ve yetişkin kontrolünün arkasındadır. Kamera iznini reddetmek diğer öğrenme etkinliklerini engellemez. Fotoğraf, video veya ses kaydedilmez. Ses sorunu için cihaz sesini ve uygulama ayarlarını kontrol edin; bazı anlatımlar cihazın konuşma hizmetini kullanır."
+          ]
+        },
+        {
+          "title": "Premium, deneme ve geri yükleme",
+          "paragraphs": [
+            "Aylık ve yıllık Premium ürünleri hazırlanıyor. 7 günlük denemeyi yalnız mağazanın uygun gördüğü hesaplar kullanabilir. Aynı mağaza hesabıyla Satın Alımları Geri Yükle seçeneğini kullanın. Aboneliği Apple veya Google abonelik ayarlarından yönetin veya iptal edin. Uygulamayı silmek aboneliği iptal etmez. İadeyi mağaza değerlendirir."
+          ]
+        },
+        {
+          "title": "Reklamlar ve gizlilik",
+          "paragraphs": [
+            "Canlı reklamlar kapalıdır. iPhone ve iPad ATT izni istemez, IDFA kullanmaz. Android reklam entegrasyonu çocuklara yönelik ve kişiselleştirilmemiştir; uygunluk kontrolleri bitmeden açılmaz. Reklam olmayan platformda Reklam Kaldır satılmaz. Uygulama verilerini yerel silme kontrolleriyle yönetin; destek yazışmaları için bize yazın."
+          ]
+        }
+      ]
+    }
+  }
+}
 };

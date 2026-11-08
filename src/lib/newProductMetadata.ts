@@ -19,7 +19,7 @@ const legalSegments = {
   support: { en: "support", tr: "destek" },
 };
 export function newProductName(product: NewProduct, lang: ProductLocale) {
-  return product === "midchain" ? "MIDCHAIN" : lang === "tr" ? "Öğrenimo" : "Wandermio";
+  return product === "midchain" ? "MIDCHAIN" : lang === "tr" ? "Öğrenimo" : "Wondermio";
 }
 export function newProductPath(product: NewProduct, lang: ProductLocale, kind?: LegalKind) {
   return newProductRoutes[product][lang] + (kind ? "/" + legalSegments[kind][lang] : "") + "/";
@@ -31,7 +31,7 @@ export function newProductMetadata(product: NewProduct, lang: ProductLocale, kin
     ? tr ? `${name} için ${legalLabels[kind][lang].toLocaleLowerCase("tr")}. Güncel uygulama davranışı, yardım ve Lumisoft Studio iletişim bilgileri.` : `${legalLabels[kind][lang]} for ${name}. Current app practices, help and contact details from Lumisoft Studio.`
     : product === "midchain"
       ? tr ? "Besin zincirinin ortasında hayatta kal. Dört tür, beş okyanus bölgesi ve bir sonraki nesle uzanan yaşam döngüsü. MIDCHAIN geliştiriliyor." : "Hunt below. Hide from above. An ocean survival game with four species, five environments and a life that continues into the next generation. In development."
-      : tr ? "2–12 yaş için harfler, okuma, matematik ve mantık oyunları. Türkçe ve İngilizce öğrenme dünyaları, yerel ilerleme ve veli alanı. Öğrenimo geliştiriliyor." : "Learning games for children ages 2–12. Explore phonics, reading, math and logic in Turkish and English, with local progress and a parent area. Wandermio is in development.";
+      : tr ? "2–12 yaş için harfler, okuma, matematik ve mantık oyunları. Türkçe ve İngilizce öğrenme dünyaları, yerel ilerleme ve veli alanı. Öğrenimo geliştiriliyor." : "Learning games for children ages 2–12. Explore phonics, reading, math and logic in Turkish and English, with local progress and a parent area. Wondermio is in development.";
   const url = SITE_URL + newProductPath(product, lang, kind);
   const image = product === "midchain" ? "/media/midchain/hero.webp" : `/media/wandermio/world-${lang}.webp`;
   return {

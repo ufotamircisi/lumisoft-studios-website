@@ -10,7 +10,7 @@ function Paragraph({ text }: { text: string }) {
 }
 export default function NewProductLegalPage({ product, kind, lang }: { product: NewProduct; kind: LegalKind; lang: ProductLocale }) {
   const document=newProductLegal[product][kind][lang], name=newProductName(product,lang), tr=lang==="tr";
-  return <><Header /><LegalPageLayout title={`${name}: ${legalLabels[kind][lang]}`} subtitle="Lumisoft Studio" lastUpdated={tr?"25 Ekim 2026":"October 25, 2026"} lastUpdatedLabel={tr?"Son güncelleme:":"Last updated:"} backHref={newProductPath(product,lang)} backLinkText={tr?`${name} sayfasına dön`:`Back to ${name}`} appIcon={`/media/${product}/icon.webp`}>
+  return <><Header /><LegalPageLayout title={`${name}: ${legalLabels[kind][lang]}`} subtitle="Lumisoft Studio" lastUpdated={product === "wandermio" ? (tr ? "29 Ekim 2026" : "October 29, 2026") : (tr ? "25 Ekim 2026" : "October 25, 2026")} lastUpdatedLabel={tr?"Son güncelleme:":"Last updated:"} backHref={newProductPath(product,lang)} backLinkText={tr?`${name} sayfasına dön`:`Back to ${name}`} appIcon={`/media/${product}/icon.webp`}>
     <p className="text-lg leading-relaxed text-slate-200">{document.lead}</p>
     <NewProductLinks product={product} lang={lang} />
     {document.sections.map(section=><section key={section.title}><h2 className="mb-4 border-b border-violet-500/15 pb-2 text-xl font-semibold text-white">{section.title}</h2><div className="space-y-4 leading-relaxed text-slate-200">{section.paragraphs.map((text,i)=><Paragraph key={i} text={text} />)}</div></section>)}
