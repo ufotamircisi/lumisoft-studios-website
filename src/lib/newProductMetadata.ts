@@ -27,7 +27,9 @@ export function newProductPath(product: NewProduct, lang: ProductLocale, kind?: 
 export function newProductMetadata(product: NewProduct, lang: ProductLocale, kind?: LegalKind): Metadata {
   const tr = lang === "tr", name = newProductName(product, lang);
   const title = name + ": " + (kind ? legalLabels[kind][lang] : product === "midchain" ? "An Ocean Survival Game" : tr ? "Çocuklar için öğrenme oyunları" : "Learning games for children");
-  const description = kind
+  const description = product === "wandermio" && kind === "privacy"
+    ? tr ? "Öğrenimo gizlilik politikası: cihazdaki çocuk profilleri, AdMob test reklamları, RevenueCat satın alma doğrulaması, silme ve ebeveyn hakları." : "Wondermio privacy policy: on-device child profiles, AdMob test ads, RevenueCat purchase verification, deletion and parental rights."
+    : kind
     ? tr ? `${name} için ${legalLabels[kind][lang].toLocaleLowerCase("tr")}. Güncel uygulama davranışı, yardım ve Lumisoft Studio iletişim bilgileri.` : `${legalLabels[kind][lang]} for ${name}. Current app practices, help and contact details from Lumisoft Studio.`
     : product === "midchain"
       ? tr ? "Besin zincirinin ortasında hayatta kal. Dört tür, beş okyanus bölgesi ve bir sonraki nesle uzanan yaşam döngüsü. MIDCHAIN geliştiriliyor." : "Hunt below. Hide from above. An ocean survival game with four species, five environments and a life that continues into the next generation. In development."

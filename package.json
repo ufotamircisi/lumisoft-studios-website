@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "build:cloudflare": "next build && node scripts/normalize-export.cjs && node scripts/verify-out.js && node scripts/verify-links.js && node scripts/verify-download-route.js && node scripts/verify-rotoblocks-download-route.js && node scripts/verify-new-products.cjs",
+    "build:cloudflare": "next build && node scripts/normalize-export.cjs && node scripts/verify-out.js && node scripts/verify-links.js && node scripts/verify-download-route.js && node scripts/verify-rotoblocks-download-route.js && node scripts/verify-new-products.cjs && node scripts/verify-wondermio-privacy.cjs",
     "verify:links": "node scripts/verify-links.js",
     "verify:download": "node scripts/verify-download-route.js",
     "verify:download:rotoblocks": "node scripts/verify-rotoblocks-download-route.js",
@@ -15,7 +15,8 @@
     "optimize:images": "node scripts/optimize-images.mjs",
     "postbuild": "node scripts/normalize-export.cjs",
     "verify:contracts": "node scripts/verify-public-contract.cjs",
-    "verify:products": "node scripts/verify-new-products.cjs"
+    "verify:products": "node scripts/verify-new-products.cjs",
+    "verify:privacy": "node scripts/verify-wondermio-privacy.cjs"
   },
   "dependencies": {
     "next": "16.2.6",

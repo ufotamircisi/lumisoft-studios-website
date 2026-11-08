@@ -1,3 +1,4 @@
+import { wondermioPrivacy } from "./wondermioPrivacy";
 import type { LegalKind, NewProduct, ProductLocale } from "./newProductMetadata";
 
 type Section = { title: string; paragraphs: string[] };
@@ -60,132 +61,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
     },
   },
   wandermio: {
-  "privacy": {
-    "en": {
-      "lead": "Wondermio, called Öğrenimo in Turkish, is a learning app for children ages 2–12 by Lumisoft Studio. This policy is for parents and guardians and describes the current pre-release app and its purchase and advertising arrangements.",
-      "sections": [
-        {
-          "title": "Profiles and learning progress",
-          "paragraphs": [
-            "No account or exact birth date is required. Optional nicknames, age group or grade, language, learning preferences, activity results, skill summaries and mascot preferences are stored in a database on the device. Lumisoft Studio does not receive that database. There is no child-to-child chat or social feed."
-          ]
-        },
-        {
-          "title": "Parents, sharing and deletion",
-          "paragraphs": [
-            "Parent and teacher tools, settings, purchases and legal information are behind a parental gate. A parental gate does not replace parental consent where the law requires it.",
-            "Adults can export a backup or report using the device share menu and choose its destination. Exported files may contain local profile or progress information. Protect those files and review the destination’s privacy practices. The app’s local deletion controls do not delete previously exported copies. Uninstalling can erase local progress, which we cannot recover from a server."
-          ]
-        },
-        {
-          "title": "Teacher tools and the camera",
-          "paragraphs": [
-            "Adults can create and print selected story and puzzle worksheets on the device; child profile information is not added. Extra story worksheets follow Premium story access. Homework creation, assignment and code sharing are no longer available. Optional teacher QR scanning requests camera access only when an adult opens that feature and chooses to allow it. Images are processed for the QR code; the app does not take or save photos, record video or audio, or upload camera images. Microphone and precise-location access are not requested.",
-            "The Android QR scanner uses Google ML Kit. Google describes processing device and app information, a per-installation identifier, performance and error information, and API usage events for diagnostics and usage analytics. This technical processing also applies when ads are off. QR images are processed on the device; the app does not send the image or decoded code to a verification server. Google’s privacy policy applies.",
-            "The teacher verification service is not active in the current pre-release version. A QR code cannot grant a verified teacher entitlement by itself. No teacher identity or child progress is sent to a verification server in this version."
-          ]
-        },
-        {
-          "title": "Advertising on Android",
-          "paragraphs": [
-            "The Android app includes Google Mobile Ads (AdMob) and uses internet access for advertising and store services. Live ads are currently disabled while children’s advertising requirements and placement behavior are checked. Development builds can use labelled Google test ads. A test ad is still a network service; it does not mean no data is sent.",
-            "If advertising is enabled in a later reviewed Android release, requests must be child-directed, under the age of consent, restricted to G-rated content and non-personalized. The Android advertising-ID and Privacy Sandbox advertising permissions are blocked. Google’s SDK may process IP-derived approximate location, app/ad interactions, diagnostics and device or app identifiers for advertising, measurement and fraud prevention. Google describes its processing at https://policies.google.com/privacy. Child profile and learning-progress records are not supplied to the ad network.",
-            "There are no rewarded ads that unlock learning content. Family Premium, an eligible trial and a valid Remove Ads purchase prevent ad requests. Live ads will not be enabled until the applicable child-safety and legal-consent requirements are satisfied. Required GDPR or other legal notices are separate from Apple tracking permission and will not be skipped."
-          ]
-        },
-        {
-          "title": "iPhone and iPad: no tracking advertising",
-          "paragraphs": [
-            "Ads are disabled on iPhone and iPad, and the iOS app does not link the Google Mobile Ads SDK. The app does not request App Tracking Transparency permission, access IDFA, use personalized or cross-app behavioral ads, create device fingerprints or use replacement identifiers for tracking. A provider that requires tracking will not be used.",
-            "Any future iOS advertising must meet Apple Kids Category requirements, including appropriate human review of creatives, and have its SDK and data transfers checked before activation. The current source and SDK manifests have been inspected; final signed-build and device data-flow checks are still required before store privacy answers are finalized. The iOS app has no separate analytics or crash-reporting SDK. Android advertising and QR SDK diagnostics are described above."
-          ]
-        },
-        {
-          "title": "Premium and store purchases",
-          "paragraphs": [
-            "Family Premium has monthly and yearly subscription plans. Where offered by the store to an eligible account, a 7-day trial becomes a paid subscription unless cancelled in time. The store shows the local price, renewal period and charge after the trial before confirmation. Subscriptions renew until cancelled.",
-            "Remove Ads is a separate, permanent, non-consumable purchase that removes ads and does not unlock Premium content. It is not offered for sale on a platform while that platform has no ads. Store products are being prepared and are not yet on public sale. No payment is taken by this website.",
-            "Apple or Google processes payment details under its own terms. The app reads the store’s purchase confirmation and keeps entitlement information locally for purchase verification, restoration and offline access. Card details are not sent to Lumisoft Studio. Deleting the app does not cancel a subscription."
-          ]
-        },
-        {
-          "title": "Support correspondence and your rights",
-          "paragraphs": [
-            "If you contact support@lumisoftstudios.com, we receive your email address and the information you choose to send. We use it to handle the request and keep it only as needed for support and applicable obligations. Avoid children’s full names, photos, passwords and backup files unless specifically needed for an agreed support case.",
-            "Parents or guardians can request access, correction or deletion of support correspondence. Local profile data can be managed in the app. We cannot directly access Google-held advertising data; use Google’s privacy controls or contact us for guidance. Applicable rights depend on your location. Contact us if you believe a child sent us personal information."
-          ]
-        },
-        {
-          "title": "Changes and contact",
-          "paragraphs": [
-            "This page is updated when the app’s data practices change. Store privacy disclosures must match the actual released build. For questions, contact support@lumisoftstudios.com."
-          ]
-        }
-      ]
-    },
-    "tr": {
-      "lead": "Öğrenimo, İngilizce adıyla Wondermio, Lumisoft Studio’nun 2–12 yaş için geliştirdiği öğrenme uygulamasıdır. Bu politika veliler ve yasal temsilciler için hazırlanmıştır; mevcut yayın öncesi sürümü, satın alma ve reklam düzenini açıklar.",
-      "sections": [
-        {
-          "title": "Profiller ve öğrenme ilerlemesi",
-          "paragraphs": [
-            "Hesap veya tam doğum tarihi gerekmez. İsteğe bağlı takma ad, yaş grubu veya sınıf, dil, öğrenme tercihleri, etkinlik sonuçları, beceri özetleri ve maskot tercihleri cihazdaki veritabanında saklanır. Bu veritabanı Lumisoft Studio’ya gönderilmez. Çocuklar arası sohbet veya sosyal akış yoktur."
-          ]
-        },
-        {
-          "title": "Yetişkin alanı, paylaşım ve silme",
-          "paragraphs": [
-            "Veli ve öğretmen araçları, ayarlar, satın alma ve yasal bilgiler yetişkin kontrolünün arkasındadır. Bu kontrol, kanunun gerektirdiği veli rızasının yerine geçmez.",
-            "Yetişkinler cihazın paylaşım menüsünden yedek veya rapor dışa aktarabilir ve hedefini seçebilir. Dosyalar yerel profil veya ilerleme bilgisi içerebilir. Bunları koruyun ve seçtiğiniz hedefin gizlilik uygulamalarını inceleyin. Uygulamadaki silme kontrolleri daha önce dışa aktarılan kopyaları silmez. Uygulamayı kaldırmak yerel ilerlemeyi silebilir; bir sunucudan geri getiremeyiz."
-          ]
-        },
-        {
-          "title": "Öğretmen araçları ve kamera",
-          "paragraphs": [
-            "Yetişkinler cihazda seçili hikâye ve bulmaca çalışma kâğıtları oluşturup yazdırabilir; çocuk profil bilgisi eklenmez. Ek hikâye çalışma kâğıtları Premium hikâye erişimine bağlıdır. Ödev oluşturma, atama ve kod paylaşımı kaldırılmıştır. İsteğe bağlı öğretmen QR taraması, yalnız yetişkin bu özelliği açıp izin vermeyi seçtiğinde kamera izni ister. Görüntü QR kodu için işlenir; fotoğraf çekilmez veya saklanmaz, video veya ses kaydedilmez, kamera görüntüsü yüklenmez. Mikrofon ve hassas konum izni istenmez.",
-            "Android QR tarayıcısı Google ML Kit kullanır. Google, cihaz ve uygulama bilgileri, kurulum tanımlayıcısı, performans ve hata bilgileri ile API kullanım olaylarını teknik tanılama ve kullanım analizi için işlediğini açıklar. Bu teknik veri işlemesi reklamlar kapalıyken de geçerlidir. QR görüntüleri cihazda işlenir; uygulama görüntüyü veya okunan kodu bir doğrulama sunucusuna göndermez. Google’ın gizlilik politikası uygulanır.",
-            "Mevcut yayın öncesi sürümde öğretmen doğrulama hizmeti etkin değildir. QR kodu tek başına doğrulanmış öğretmen hakkı sağlamaz. Bu sürümde doğrulama sunucusuna öğretmen kimliği veya çocuk ilerlemesi gönderilmez."
-          ]
-        },
-        {
-          "title": "Android reklamları",
-          "paragraphs": [
-            "Android uygulaması Google Mobile Ads (AdMob) içerir; reklam ve mağaza hizmetleri için internet erişimi vardır. Çocuklara yönelik reklam kuralları ve yerleşim davranışı doğrulanana kadar canlı reklamlar kapalıdır. Geliştirme sürümleri Google’ın işaretli test reklamlarını kullanabilir. Test reklamı da bir ağ hizmetidir; veri gönderilmediği anlamına gelmez.",
-            "İleride incelenmiş bir Android sürümünde reklam etkinleştirilirse istekler çocuklara yönelik, rıza yaşının altında, G içerik derecesiyle ve kişiselleştirilmeden yapılmalıdır. Android reklam kimliği ve Privacy Sandbox reklam izinleri engellidir. Google SDK’sı IP’den çıkarılan yaklaşık konum, uygulama/reklam etkileşimleri, teşhis ve cihaz veya uygulama kimliklerini reklam, ölçüm ve sahtekârlığı önleme amacıyla işleyebilir. Google veri işlemesini https://policies.google.com/privacy adresinde açıklar. Çocuk profili ve öğrenme ilerlemesi reklam ağına verilmez.",
-            "Öğrenme içeriğini açan ödüllü reklam yoktur. Aile Premium, uygun deneme ve geçerli Reklam Kaldır hakkı reklam isteğini engeller. Çocuk güvenliği ve yasal rıza gereksinimleri karşılanmadan canlı reklam açılmaz. GDPR ve diğer gerekli yasal bildirimler Apple takip izninden ayrıdır ve atlanmaz."
-          ]
-        },
-        {
-          "title": "iPhone ve iPad: takip reklamı yok",
-          "paragraphs": [
-            "iPhone ve iPad’de reklamlar kapalıdır; Google Mobile Ads SDK’sı iOS uygulamasına bağlanmaz. Uygulama App Tracking Transparency izni istemez, IDFA’ya erişmez, kişiselleştirilmiş veya uygulamalar arası davranışsal reklam kullanmaz; cihaz parmak izi veya takip amaçlı alternatif kimlik oluşturmaz. Takip gerektiren sağlayıcı kullanılmaz.",
-            "Gelecekte iOS reklamı düşünülürse kreatiflerin uygun insan incelemesi dahil Apple Kids Category koşulları sağlanmalı, SDK ve veri aktarımı etkinleştirme öncesi denetlenmelidir. Kaynak ve SDK manifestleri incelendi; mağaza gizlilik cevapları kesinleştirilmeden önce son imzalı derleme ve gerçek cihaz veri akışı kontrolü gereklidir. iOS uygulamasında bağımsız analiz veya çökme raporlama SDK’sı yoktur. Android reklam ve QR bileşenlerinin teknik veri işlemesi yukarıda açıklanır."
-          ]
-        },
-        {
-          "title": "Premium ve mağaza satın almaları",
-          "paragraphs": [
-            "Aile Premium aylık ve yıllık abonelik planlarına sahiptir. Mağaza uygun hesaba sunarsa 7 günlük deneme, zamanında iptal edilmezse ücretli aboneliğe dönüşür. Yerel fiyat, yenileme dönemi ve deneme sonrası ücret onaydan önce mağazada gösterilir. Abonelik iptal edilene kadar yenilenir.",
-            "Reklam Kaldır ayrı, kalıcı ve tüketilmeyen bir satın almadır; reklamları kaldırır, Premium içerik açmaz. Reklam olmayan platformda satışa sunulmaz. Mağaza ürünleri hazırlanıyor; henüz herkese açık satış yoktur. Bu web sitesinden ödeme alınmaz.",
-            "Ödeme bilgilerini Apple veya Google kendi koşullarıyla işler. Uygulama mağazanın satın alma teyidini okur; doğrulama, geri yükleme ve çevrimdışı erişim için hak bilgisini yerel saklar. Kart bilgileri Lumisoft Studio’ya gönderilmez. Uygulamayı silmek aboneliği iptal etmez."
-          ]
-        },
-        {
-          "title": "Destek yazışmaları ve haklarınız",
-          "paragraphs": [
-            "support@lumisoftstudios.com adresine yazdığınızda e-posta adresinizi ve paylaşmayı seçtiğiniz bilgileri alırız. Bunları talebi yanıtlamak için kullanır, destek ve geçerli yükümlülükler için gerektiği sürece tutarız. Üzerinde anlaşılan destek talebi gerektirmedikçe çocukların tam adını, fotoğrafını, parola veya yedek dosyalarını göndermeyin.",
-            "Veliler destek yazışmalarına erişim, düzeltme veya silme talep edebilir. Yerel profilleri uygulamadan yönetebilirsiniz. Google’ın tuttuğu reklam verilerine doğrudan erişemeyiz; Google’ın gizlilik araçlarını kullanabilir veya yönlendirme için bize yazabilirsiniz. Haklar bulunduğunuz yere göre değişir. Bir çocuğun bize kişisel bilgi gönderdiğini düşünüyorsanız iletişime geçin."
-          ]
-        },
-        {
-          "title": "Değişiklikler ve iletişim",
-          "paragraphs": [
-            "Veri davranışı değiştiğinde bu sayfa güncellenir. Mağaza gizlilik beyanları gerçek yayınlanan derlemeyle eşleşmelidir. Sorular için support@lumisoftstudios.com adresine yazabilirsiniz."
-          ]
-        }
-      ]
-    }
-  },
+  privacy: wondermioPrivacy,
   "terms": {
     "tr": {
       "lead": "Öğrenimo (İngilizce adı Wondermio) için kullanım, abonelik ve satın alma koşulları. Uygulama henüz herkese açık mağaza satışına sunulmamıştır. Satın alma yalnız mağaza uygun ürün ve fiyatı sunduğunda yapılabilir.",
@@ -212,7 +88,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
         {
           "title": "Ücretsiz sürüm ve Aile Premium",
           "paragraphs": [
-            "Uygulama ücretsiz indirilir. Ücretsiz sürümde bütün harf dünyaları, her konunun ilk oyunları, seçili hikâyeler ve bir çocuk profili bulunur. Android’deki ücretsiz sürümde oyun sonlarında çocuklara uygun reklamlar gösterilebilir.",
+            "Uygulama ücretsiz indirilir. Ücretsiz sürümde bütün harf dünyaları, her konunun ilk oyunları, seçili hikâyeler ve bir çocuk profili bulunur. Reklam kullanılabilen ücretsiz iOS ve Android derlemelerinde, sonuç ekranından çıkışta çocuklara yönelik ayarlarla geçiş reklamı gösterilebilir; mevcut test derlemeleri yalnız test reklamı kullanır.",
             "Aile Premium aylık ya da yıllık ücretli bir aboneliktir; bütün içerikleri açar ve sürdüğü sürece reklamları kapatır. Reklam Kaldır tek seferlik bir satın almadır; reklamları kalıcı olarak kapatır, Premium içerikleri açmaz. Koşulları ayrı “Abonelik ve Satın Alma Koşulları” metnindedir.",
             "Temel öğrenme kazanımları ücretsiz tamamlanabilir. Premium bittiğinde ek içerikler gizlenir; çocuk profilleri ve ilerleme silinmez. Öğretmen QR erişimi, hizmet etkinleştirildiğinde yalnızca reklamları kaldırır ve Premium ek kütüphaneyi açmaz."
           ]
@@ -268,7 +144,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
           "paragraphs": [
             "Aboneliği uygulamadaki Premium ve Reklam Kaldır > Aboneliği Yönet düğmesiyle ya da doğrudan Google Play (Ödemeler ve abonelikler) veya iPhone/iPad Ayarlar > Apple hesabınız > Abonelikler bölümünden iptal edebilirsiniz.",
             "İptal ettiğinizde Premium, ödenmiş dönemin sonuna kadar açık kalır. Sonra uygulama ücretsiz sürümle devam eder; çocuk profilleri, ilerleme kayıtları ve oluşturulmuş bütün profiller korunur.",
-            "Premium sona erdiğinde Android’deki ücretsiz sürümde reklamlar yeniden gösterilebilir. Reklam Kaldır satın aldıysanız reklamlar kapalı kalır.",
+            "Premium sona erdiğinde reklam kullanılabilen ücretsiz derlemede reklamlar yeniden gösterilebilir. Reklam Kaldır satın aldıysanız reklamlar kapalı kalır.",
             "Uygulamayı silmek aboneliği iptal etmez."
           ]
         },
@@ -282,7 +158,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
         {
           "title": "Satın alımları geri yükleme",
           "paragraphs": [
-            "Uygulamayı yeniden kurduğunuzda ya da yeni bir cihaza geçtiğinizde, aynı mağaza hesabıyla Premium ve Reklam Kaldır > Satın Alımları Geri Yükle düğmesini kullanabilirsiniz. Aile Premium ve Reklam Kaldır mağaza hesabınıza bağlıdır; uygulama bunun için hesap açtırmaz ve cihaz kimliği toplamaz.",
+            "Uygulamayı yeniden kurduğunuzda ya da yeni bir cihaza geçtiğinizde, aynı mağaza hesabıyla Premium ve Reklam Kaldır > Satın Alımları Geri Yükle düğmesini kullanabilirsiniz. Aile Premium ve Reklam Kaldır mağaza hesabınıza bağlıdır; uygulama bunun için hesap açtırmaz. Satın alma doğrulaması RevenueCat üzerinden yapılır; teknik veri işlemesi Gizlilik Politikası’nda açıklanır.",
             "Çocuk profilleri ve ilerleme kayıtları cihazdadır; bunları taşımak için yedekleme özelliğini kullanın."
           ]
         },
@@ -325,7 +201,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
         {
           "title": "Free version and Family Premium",
           "paragraphs": [
-            "The app is free to download. The free version includes every letter world, the first games of every topic, selected stories and one child profile. On Android, the free version may show child-safe ads at the end of a game.",
+            "The app is free to download. The free version includes every letter world, the first games of every topic, selected stories and one child profile. In free iOS and Android builds with ads available, an interstitial using child-directed settings may appear when leaving a result screen; current test builds use only test ads.",
             "Family Premium is a paid monthly or yearly subscription; it opens all content and turns ads off while it lasts. Remove Ads is a one-time purchase; it turns ads off for good and does not open Premium content. Their terms are in the separate Subscription & Purchase Terms.",
             "Core learning outcomes can be completed for free. When Premium ends, extras are hidden and child profiles and progress are retained. Once verification is available, teacher QR access removes ads without opening the Premium extra library."
           ]
@@ -381,7 +257,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
           "paragraphs": [
             "Cancel with Premium & Remove Ads > Manage subscription in the app, or directly in Google Play (Payments and subscriptions) or on iPhone/iPad in Settings > your Apple Account > Subscriptions.",
             "After you cancel, Premium stays on until the end of the period you paid for. The app then continues as the free version; child profiles, progress and every profile you created are kept.",
-            "When Premium ends, ads may be shown again in the free version on Android. If you bought Remove Ads, ads stay off.",
+            "When Premium ends, ads may be shown again in a free build with advertising available. If you bought Remove Ads, ads stay off.",
             "Deleting the app does not cancel the subscription."
           ]
         },
@@ -395,7 +271,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
         {
           "title": "Restoring purchases",
           "paragraphs": [
-            "After reinstalling the app or moving to a new device, use Premium & Remove Ads > Restore Purchases with the same store account. Family Premium and Remove Ads belong to your store account; the app does not ask you to create an account for this and collects no device ID.",
+            "After reinstalling the app or moving to a new device, use Premium & Remove Ads > Restore Purchases with the same store account. Family Premium and Remove Ads belong to your store account; the app does not ask you to create an account for this. RevenueCat verifies purchases; technical data processing is explained in the Privacy Policy.",
             "Child profiles and progress live on the device; use the backup feature to move them."
           ]
         },
@@ -445,7 +321,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
         {
           "title": "Advertising and privacy",
           "paragraphs": [
-            "Live ads remain off. iPhone and iPad do not request ATT permission or use IDFA. Android’s ad integration is child-directed and non-personalized; it will not be enabled before compliance checks. Remove Ads is not sold where no ads are present. Use the local deletion controls for app data and email us for support-correspondence requests."
+            "AdMob is integrated on iOS and Android. iOS build 7 and Android versionCode 12 use Google test ads; live units remain disabled. Requests use child-directed, G-rated, non-personalized settings. iOS does not request ATT permission; Android’s advertising-ID permissions are removed. Premium and Remove Ads prevent new ad requests. RevenueCat purchase processing and Android QR technical metrics are separate. Manage profiles locally and email us for support or RevenueCat deletion requests."
           ]
         }
       ]
@@ -480,7 +356,7 @@ export const newProductLegal: Record<NewProduct, Record<LegalKind, Record<Produc
         {
           "title": "Reklamlar ve gizlilik",
           "paragraphs": [
-            "Canlı reklamlar kapalıdır. iPhone ve iPad ATT izni istemez, IDFA kullanmaz. Android reklam entegrasyonu çocuklara yönelik ve kişiselleştirilmemiştir; uygunluk kontrolleri bitmeden açılmaz. Reklam olmayan platformda Reklam Kaldır satılmaz. Uygulama verilerini yerel silme kontrolleriyle yönetin; destek yazışmaları için bize yazın."
+            "AdMob iOS ve Android’e entegredir. iOS build 7 ve Android versionCode 12 Google test reklamları kullanır; gerçek birimler kapalıdır. İstekler çocuklara yönelik, G içerik sınırlı ve kişiselleştirilmemiştir. iOS ATT izni istemez; Android reklam kimliği izinleri kaldırılmıştır. Premium ve Reklamları Kaldır yeni reklam isteklerini engeller. RevenueCat satın alma işlemesi ve Android QR teknik ölçümleri ayrıdır. Profilleri uygulamadan yönetin; destek veya RevenueCat silme talepleri için bize yazın."
           ]
         }
       ]
